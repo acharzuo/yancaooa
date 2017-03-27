@@ -1,0 +1,86 @@
+{
+	"index.html": {
+		"resources": [
+			"baritemHtml/home.html",
+			"css/own.css",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"js/ajax.js",
+			"js/load.js",
+			"fonts/iconfont.ttf",
+			"js/md5.js"
+		],
+		"refer": [
+			"baritemHtml/home.html",
+			"template-main.html",
+			"baritemHtml/mine.html",
+			"baritemHtml/xinyuandan.html",
+			"Mine/login.html",
+			"baritemHtml/category.html",
+			"baritemHtml/cart.html",
+			"product-detail-tem.html"
+		]
+	},
+	"baritemHtml/mine.html": {
+		"resources": [
+			"img/bg.jpeg",
+			"css/own.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf"
+		]
+	},
+	"Mine/login.html": {
+		"resources": [
+			"js/own.js",
+			"fonts/mui.ttf",
+			"css/own.css",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf"
+		]
+	},
+	"baritemHtml/cart.html": {
+		"resources": [
+			"js/wl_ajax.js"
+		]
+	},
+	"product-detail-tem.html": {
+		"resources": [
+			"img/jump.gif",
+			"css/own.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"js/load.js",
+			"js/md5.js"
+		]
+	},
+	"baritemHtml/home.html": {
+		"resources": [
+			"css/own.css",
+			"js/own.js",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"js/ajax.js"
+		]
+	},
+	"baritemHtml/xinyuandan.html": {
+		"resources": [
+			"css/own.css",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"baritemHtml/category.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	}
+}

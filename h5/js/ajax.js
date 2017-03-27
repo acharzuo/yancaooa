@@ -1,12 +1,12 @@
 
 var new_element=document.createElement("script");
 new_element.setAttribute("type","text/javascript");
-new_element.setAttribute("src","../js/md5.js");// 在这里引入了a.js
+new_element.setAttribute("src","js/md5.js");// 在这里引入了a.js
 document.body.appendChild(new_element);
 
 var load_element=document.createElement("script");
 load_element.setAttribute("type","text/javascript");
-load_element.setAttribute("src","../js/load.js");// 在这里引入了a.js
+load_element.setAttribute("src","js/load.js");// 在这里引入了a.js
 document.body.appendChild(load_element);
 
 
@@ -39,22 +39,23 @@ document.body.appendChild(load_element);
 	}
 	//获取发送数据的
 	 function getdata(options,apiName){
-		var timestamp = getTimestamp();
-		var sign = hex_md5(getSign(options));
-		var data = {
-			app_key:app_key,
-			method:apiName,
-			timestamp:timestamp,
-			v:'v1.0',
-			sign_method:'md5',
-			session_key:session_key,
-			sign:sign,
-		};
-		
-		for (var key in options) {
-			data[key] = options[key];
-		}
-		return data;
+//		var timestamp = getTimestamp();
+//		var sign = hex_md5(getSign(options));
+//		var data = {
+//			app_key:app_key,
+//			method:apiName,
+//			timestamp:timestamp,
+//			v:'v1.0',
+//			sign_method:'md5',
+//			session_key:session_key,
+//			sign:sign,
+//		};
+//		
+//		for (var key in options) {
+//			data[key] = options[key];
+//		}
+//		return data;
+		return options;
 	}
 	 
 	function logData(data){
@@ -323,9 +324,9 @@ document.body.appendChild(load_element);
 	}
 	//获取推荐商品
 	w.ajax_get_Recommend = function(options){
-		startLoad();
+		//startLoad();
 		// var data = getdata(options,'com.huihoo.product.get_hot_products');
-		mui.ajax("http://localhost:8020/api/app/shop",{
+		mui.ajax("http://192.168.0.102:8029/api/app/shop",{
 			data:options,
 			dataType:'json',
 			type:'get',
@@ -333,7 +334,7 @@ document.body.appendChild(load_element);
 			success:function(data){
 				logData(data);
 				setTimeout(function(){
-					endLoad();
+					// endLoad();
 					getRecommendSuccess(data);
 				},500);
 				

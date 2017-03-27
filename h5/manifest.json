@@ -189,5 +189,133 @@
 				}
 			}
 		}
+	},
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"baritemHtml/home.html",
+					"css/own.css",
+					"js/mui.min.js",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"js/ajax.js",
+					"js/load.js",
+					"fonts/iconfont.ttf",
+					"js/md5.js"
+				],
+				"refer": [
+					"template-main.html",
+					"baritemHtml/mine.html",
+					"baritemHtml/xinyuandan.html",
+					"Mine/login.html",
+					"baritemHtml/category.html",
+					"baritemHtml/cart.html",
+					"product-detail-tem.html"
+				],
+				"priority": 0
+			},
+			"baritemHtml/mine.html": {
+				"resources": [
+					"img/bg.jpeg",
+					"css/own.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"Mine/login.html": {
+				"resources": [
+					"js/own.js",
+					"fonts/mui.ttf",
+					"css/own.css",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"fonts/iconfont.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"baritemHtml/cart.html": {
+				"resources": [
+					"js/wl_ajax.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"product-detail-tem.html": {
+				"resources": [
+					"img/jump.gif",
+					"css/own.css",
+					"js/mui.min.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"js/load.js",
+					"js/md5.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"baritemHtml/home.html": {
+				"resources": [
+					"css/own.css",
+					"js/own.js",
+					"js/mui.min.js",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"js/ajax.js"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"baritemHtml/xinyuandan.html": {
+				"resources": [
+					"css/own.css",
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"baritemHtml/category.html": {
+				"resources": [
+					"js/mui.min.js",
+					"css/mui.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"Mine/my-dingdan-needtem.html",
+				"js/mui.pullToRefresh.js",
+				"js/mui.picker.min.js",
+				"js/mui.pullToRefresh.material.js",
+				"Mine/changeEmail-needtem.html",
+				"Mine/address.html",
+				"category/category-detail-needtem.html",
+				"css/mui.picker.css",
+				"css/mui.css",
+				"js/city.data-3.js",
+				"Mine/changepsd-needtem.html",
+				"img/touxiang.jpg",
+				"Mine/change-address-needtem.html",
+				"Mine/remenberpsd-needtem.html",
+				"css/mui.picker.all.css",
+				"Home/product-detail-needtem.html",
+				"css/mui.picker.min.css",
+				"js/mui.js",
+				"css/mui.poppicker.css",
+				"img/3.jpg",
+				"Mine/register-needtem.html",
+				"img/bg.png"
+			]
+		}
 	}
 }
