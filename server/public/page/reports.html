@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>诊断报告</title>	
+        <link rel="stylesheet" href="../stylesheets/style.css"/>
+        <script type="text/javascript"  src="../js/moment.min.js"></script>
+        <script type="text/javascript"  src="../js/comment.js"></script>
+        <script type="text/javascript"  src="../js/_url.js"></script>
+	</head>
+	<body>
+		<div id="box">
+           <div class="header">
+                <img class="logo" src="../images/logo.png"/>
+                <div class="top-title">诊断报告</div>
+            </div>
+            <div class="main">
+                <div class="reportsMain">
+                    <ul>
+                        <li><b>姓名：</b><span class="name"> </span><span class="firstLeft"><b>年龄:</b><span class="age"></span></span></li>
+                        <li><b>生辰：</b><span class="birthday"></span></li>
+                        <li><b>主诉：</b><span class="selfReported"></span></li>
+                        <li><b>病史：</b><span class="medicalHistory"></span></li>
+                    </ul>
+                </div>
+                <div class="reportsPlan">
+                    <dl>
+                        <dt>病症</dt>
+                        <dd class="disease"></dd>
+                        <dt>经络结论</dt>
+                        <dd class="conclusion"></dd>
+                        <dt>情绪</dt>
+                        <dd class="emotion"></dd>
+                        <dt>性格</dt>
+                        <dd class="character"></dd>
+                        <dt>治疗方案</dt>
+                        <dd class="treatPlan"></dd>
+                        <dt>养生方案</dt>
+                        <dd class="healthPlan"></dd>
+                        <dt>养生食疗方案</dt>
+                        <dd class="dietPlan"></dd>
+                    </dl>
+                </div>
+                <div class="back">
+                    <a  href="javascript:window.opener=null;window.open('','_self');window.close();">关闭</a>
+                </div>
+            </div>
+        </div>
+	</body>
+	<script type="text/javascript">
+        function get(url){  
+            var req = createXMLHTTPRequest();  
+            if(req){  
+                req.open("GET", url, true);  
+                req.onreadystatechange = function(){  
+                    if(req.readyState == 4){  
+                        if(req.status == 200){  
+                            var data = JSON.parse(req.responseText)
+                            console.log(data)
+                            if(data.code===0){
+                                 classInner('name',data.result[0].name?data.result[0].name:'暂无记录');
+                                 classInner('age',data.result[0].birthday?moment().format('YYYY')-moment(data.result[0].birthday).format('YYYY'):'暂无记录');
+                                 classInner('birthday',data.result[0].birthday?moment(data.result[0].birthday).format('YYYY-MM-DD'):'暂无记录');
+                                 classInner('selfReported',data.result[0].selfReported?data.result[0].selfReported:'暂无记录');
+                                 classInner('medicalHistory',data.result[0].medicalHistory?data.result[0].medicalHistory:'暂无记录');
+                                 if(data.result[0].report.plan){
+                                    var plan =  data.result[0].report.plan;
+                                    classInner('disease',plan.disease);
+                                    classInner('conclusion',plan.conclusion);
+                                    classInner('emotion',plan.emotion);
+                                    classInner('character',plan.character);
+                                    classInner('treatPlan',plan.treatPlan);
+                                    classInner('healthPlan',plan.healthPlan);
+                                    classInner('dietPlan',plan.dietPlan);
+                                 }
+                            }
+                        }else{  
+                            alert("error");  
+                        }  
+                    }  
+                }  
+                req.send(null);  
+            }  
+        }  
+        var id = GetQueryString("id");
+        get(__URL+"/api/diagnostic-records/"+id);
+
+    </script>
+</html>

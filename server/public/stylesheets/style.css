@@ -1,0 +1,120 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+a{
+	color: #00B7FF;
+	text-decoration:none;
+}
+ul,li{
+	list-style: none;
+}
+body{
+	background: url(../images/bg.jpg);
+}
+#box{
+	margin:0 auto;
+	width: 1080px;
+	position: relative;
+}
+.header{
+	border-bottom: solid 1px #ccc;
+	position: relative;
+}
+.header img{
+	position: absolute;
+	left: 30px;
+	top: 30px;
+}
+.header .top-title{
+	width: 860px;
+	height: 180px;
+	margin:0 auto;
+	line-height: 250px;
+	font-size: 38px;
+	text-align: center;
+	color: #47403a;
+	overflow: hidden;
+}
+.main{
+	width: 920px;
+	margin: 0 auto;
+}
+.main .aboutArticle{
+	height: 40px;
+	margin: 20px 0;
+	line-height: 40px;
+	font-size: 20px;
+}
+.aboutArticle ul li{
+	float: left;
+	padding: 0 30px;
+}
+.aboutExcellent{
+	height:40px;
+	margin: 20px 150px;
+	line-height: 40px;
+	font-size: 20px;
+}
+
+.abstract{
+	border-left: 10px solid #ccc;
+	padding-left:30px;
+	font-size: 26px;
+	line-height: 50px;
+	color: #666;
+	margin:40px 0 60px;
+}
+.content{
+	padding-left: 18px;
+	color: #666;
+	margin: 60px 0;
+}
+.content p{
+	font-size: 31px;
+	line-height: 58px;
+	letter-spacing: 2px;
+}
+.back{
+	height:74px;
+	width: 146px;
+	background-color: rgba(106,79,60,.2);
+	border-radius: 37px;
+	text-align: center;
+	position: fixed;
+	bottom: 61px;
+	right: 60px;
+}
+.back a{
+	font-size:38px;
+	line-height: 74px;
+	color: #fff;
+}
+.reportsMain{
+	margin: 70px 0;
+}
+.reportsMain li{
+	font-size: 27px;
+	line-height: 60px;
+	color: #47403a;
+}
+.reportsMain .firstLeft{
+	padding-left: 300px;
+}
+.reportsPlan dl{
+	font-size: 27px;
+	color: #47403a;
+	text-indent: 20px;
+}
+.reportsPlan dt{
+	background-color: #e1dfde;
+	height: 80px;
+	line-height: 80px;
+	border-radius: 10px;
+}
+.reportsPlan dd{
+	color: #6c6259;
+	min-height: 112px;
+	line-height: 90px;
+}

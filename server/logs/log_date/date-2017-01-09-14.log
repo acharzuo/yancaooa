@@ -1,0 +1,165 @@
+[2017-01-09 14:05:07.051] [DEBUG] console - 日志系统启动!
+[2017-01-09 14:05:07.122] [INFO] console - 开发环境模式
+[2017-01-09 14:05:07.422] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 14:05:07.542] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:05:07.546] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:05:07.857] [INFO] console - listen on 8029
+[2017-01-09 14:05:07.859] [INFO] console - Redis is ready
+[2017-01-09 14:05:07.881] [INFO] console - Connection success!
+[2017-01-09 14:05:07.894] [INFO] console - mongodb is connected
+[2017-01-09 14:06:14.614] [DEBUG] console - 日志系统启动!
+[2017-01-09 14:06:14.704] [INFO] console - 开发环境模式
+[2017-01-09 14:06:14.993] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 14:06:15.116] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:06:15.118] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:06:15.468] [INFO] console - listen on 8029
+[2017-01-09 14:06:15.473] [INFO] console - Redis is ready
+[2017-01-09 14:06:15.491] [INFO] console - Connection success!
+[2017-01-09 14:06:15.505] [INFO] console - mongodb is connected
+[2017-01-09 14:06:33.806] [INFO] console - ::1 - - "GET /api/pc/diagnostic-records/peoples?null HTTP/1.1" 200 40 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) yuntianyuan_pc/1.0.0 Chrome/53.0.2785.143 Electron/1.4.13 Safari/537.36"
+[2017-01-09 14:07:07.091] [INFO] console - ::1 - - "POST /api/pc/diagnostic-records HTTP/1.1" 200 438 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) yuntianyuan_pc/1.0.0 Chrome/53.0.2785.143 Electron/1.4.13 Safari/537.36"
+[2017-01-09 14:07:54.459] [INFO] console - { largeIntestine: ["6.2","5.4"],
+  lung: ["4.8","4.0"],
+  liver: ["6.6","5.0"],
+  gallbladder: ["7.2","6.4"],
+  sanjiao: ["4.8","5.8"],
+  pericardium: ["4.8","5.2"],
+  kidney: ["5.8","5.8"],
+  bladder: ["5.8","6.2"],
+  smallIntestine: ["5.0","4.8"],
+  heart: ["5.4","6.6"],
+  spleen: ["5.8","6.0"],
+  stomach: ["5.0","5.0"] }
+[2017-01-09 14:07:54.462] [INFO] console - 111111111111111111111111
+[2017-01-09 14:07:55.475] [DEBUG] console - 日志系统启动!
+[2017-01-09 14:07:55.532] [INFO] console - 开发环境模式
+[2017-01-09 14:07:55.760] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 14:07:55.891] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:07:55.903] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:07:56.770] [INFO] console - listen on 8029
+[2017-01-09 14:07:56.774] [INFO] console - Redis is ready
+[2017-01-09 14:07:56.838] [INFO] console - Connection success!
+[2017-01-09 14:07:56.866] [INFO] console - mongodb is connected
+[2017-01-09 14:29:50.925] [DEBUG] console - 日志系统启动!
+[2017-01-09 14:29:50.990] [INFO] console - 开发环境模式
+[2017-01-09 14:29:51.273] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 14:29:51.377] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:29:51.381] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:29:51.673] [INFO] console - listen on 8029
+[2017-01-09 14:29:51.674] [INFO] console - Listening on port 8029
+[2017-01-09 14:29:51.675] [INFO] console - Redis is ready
+[2017-01-09 14:29:51.689] [INFO] console - Connection success!
+[2017-01-09 14:29:51.702] [INFO] console - mongodb is connected
+[2017-01-09 14:31:11.984] [INFO] console - { largeIntestine: ["6.2","5.4"],
+  lung: ["4.8","4.0"],
+  liver: ["6.6","5.0"],
+  gallbladder: ["7.2","6.4"],
+  sanjiao: ["4.8","5.8"],
+  pericardium: ["4.8","5.2"],
+  kidney: ["5.8","5.8"],
+  bladder: ["5.8","6.2"],
+  smallIntestine: ["5.0","4.8"],
+  heart: ["5.4","6.6"],
+  spleen: ["5.8","6.0"],
+  stomach: ["5.0","5.0"] }
+[2017-01-09 14:31:11.988] [INFO] console - 111111111111111111111111
+[2017-01-09 14:31:41.093] [DEBUG] console - 日志系统启动!
+[2017-01-09 14:31:41.399] [INFO] console - 开发环境模式
+[2017-01-09 14:31:41.870] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 14:31:42.079] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:31:42.084] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:31:42.407] [INFO] console - listen on 8029
+[2017-01-09 14:31:42.407] [INFO] console - Listening on port 8029
+[2017-01-09 14:31:42.409] [INFO] console - Redis is ready
+[2017-01-09 14:31:42.428] [INFO] console - Connection success!
+[2017-01-09 14:31:42.444] [INFO] console - mongodb is connected
+[2017-01-09 14:31:56.092] [INFO] console - { largeIntestine: ["6.2","5.4"],
+  lung: ["4.8","4.0"],
+  liver: ["6.6","5.0"],
+  gallbladder: ["7.2","6.4"],
+  sanjiao: ["4.8","5.8"],
+  pericardium: ["4.8","5.2"],
+  kidney: ["5.8","5.8"],
+  bladder: ["5.8","6.2"],
+  smallIntestine: ["5.0","4.8"],
+  heart: ["5.4","6.6"],
+  spleen: ["5.8","6.0"],
+  stomach: ["5.0","5.0"] }
+[2017-01-09 14:31:56.096] [INFO] console - 111111111111111111111111
+[2017-01-09 14:32:57.896] [DEBUG] console - 日志系统启动!
+[2017-01-09 14:32:58.038] [INFO] console - 开发环境模式
+[2017-01-09 14:32:58.474] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 14:32:58.804] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:32:58.807] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:32:59.231] [INFO] console - listen on 8029
+[2017-01-09 14:32:59.231] [INFO] console - Listening on port 8029
+[2017-01-09 14:32:59.232] [INFO] console - Redis is ready
+[2017-01-09 14:32:59.247] [INFO] console - Connection success!
+[2017-01-09 14:32:59.258] [INFO] console - mongodb is connected
+[2017-01-09 14:33:20.665] [DEBUG] console - 日志系统启动!
+[2017-01-09 14:33:20.840] [INFO] console - 开发环境模式
+[2017-01-09 14:33:21.244] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 14:33:21.461] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:33:21.470] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:33:22.151] [INFO] console - listen on 8029
+[2017-01-09 14:33:22.180] [INFO] console - Listening on port 8029
+[2017-01-09 14:33:22.189] [INFO] console - Redis is ready
+[2017-01-09 14:33:22.229] [INFO] console - Connection success!
+[2017-01-09 14:33:22.243] [INFO] console - mongodb is connected
+[2017-01-09 14:33:31.114] [INFO] console - { largeIntestine: ["6.2","5.4"],
+  lung: ["4.8","4.0"],
+  liver: ["6.6","5.0"],
+  gallbladder: ["7.2","6.4"],
+  sanjiao: ["4.8","5.8"],
+  pericardium: ["4.8","5.2"],
+  kidney: ["5.8","5.8"],
+  bladder: ["5.8","6.2"],
+  smallIntestine: ["5.0","4.8"],
+  heart: ["5.4","6.6"],
+  spleen: ["5.8","6.0"],
+  stomach: ["5.0","5.0"] }
+[2017-01-09 14:33:31.119] [INFO] console - 111111111111111111111111
+[2017-01-09 14:50:05.506] [DEBUG] console - 日志系统启动!
+[2017-01-09 14:50:05.560] [INFO] console - 开发环境模式
+[2017-01-09 14:50:05.870] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 14:50:05.996] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:50:06.000] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:50:06.367] [INFO] console - listen on 8029
+[2017-01-09 14:50:06.368] [INFO] console - Listening on port 8029
+[2017-01-09 14:50:06.369] [INFO] console - Redis is ready
+[2017-01-09 14:50:06.382] [INFO] console - Connection success!
+[2017-01-09 14:50:06.387] [INFO] console - mongodb is connected
+[2017-01-09 14:50:22.283] [INFO] console - { largeIntestine: ["6.2","5.4"],
+  lung: ["4.8","4.0"],
+  liver: ["6.6","5.0"],
+  gallbladder: ["7.2","6.4"],
+  sanjiao: ["4.8","5.8"],
+  pericardium: ["4.8","5.2"],
+  kidney: ["5.8","5.8"],
+  bladder: ["5.8","6.2"],
+  smallIntestine: ["5.0","4.8"],
+  heart: ["5.4","6.6"],
+  spleen: ["5.8","6.0"],
+  stomach: ["5.0","5.0"] }
+[2017-01-09 14:50:22.285] [INFO] console - 111111111111111111111111
+[2017-01-09 14:50:22.372] [INFO] console - ::1 - - "POST /api/pc/datas HTTP/1.1" 200 107 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36"
+[2017-01-09 14:56:48.299] [DEBUG] console - 日志系统启动!
+[2017-01-09 14:56:48.354] [INFO] console - 开发环境模式
+[2017-01-09 14:56:48.673] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 14:56:48.777] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:56:48.780] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:56:49.099] [INFO] console - listen on 8029
+[2017-01-09 14:56:49.100] [INFO] console - Listening on port 8029
+[2017-01-09 14:56:49.101] [INFO] console - Redis is ready
+[2017-01-09 14:56:49.105] [INFO] console - Connection success!
+[2017-01-09 14:56:49.108] [INFO] console - mongodb is connected
+[2017-01-09 14:58:20.470] [DEBUG] console - 日志系统启动!
+[2017-01-09 14:58:20.527] [INFO] console - 开发环境模式
+[2017-01-09 14:58:20.845] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 14:58:20.951] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:58:20.960] [DEBUG] console - 已加载问诊模块
+[2017-01-09 14:58:21.380] [INFO] console - listen on 8029
+[2017-01-09 14:58:21.380] [INFO] console - Listening on port 8029
+[2017-01-09 14:58:21.382] [INFO] console - Redis is ready
+[2017-01-09 14:58:21.387] [INFO] console - Connection success!
+[2017-01-09 14:58:21.391] [INFO] console - mongodb is connected

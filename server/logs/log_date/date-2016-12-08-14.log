@@ -1,0 +1,282 @@
+[2016-12-08 14:04:53.015] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:04:55.452] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:04:04.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:04:55.553] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:04:55.556] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:04:55.969] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:04:55.975] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:05:03.893] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:05:03.896] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:05:03.968] [INFO] console - Listening on port 3000
+[2016-12-08 14:05:03.978] [INFO] console - Connection success!
+[2016-12-08 14:05:03.978] [INFO] console - mongodb is connected
+[2016-12-08 14:06:36.483] [INFO] console - ::1 - - "POST /api/system/database/backup HTTP/1.1" 404 90 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:07:42.216] [INFO] console - ::1 - - "GET /api/system/database/backup HTTP/1.1" 500 90 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:08:14.700] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:08:15.518] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:04:04.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:08:15.557] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:08:15.558] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:08:42.157] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:08:42.161] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:08:50.238] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:08:50.242] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:08:50.325] [INFO] console - Listening on port 3000
+[2016-12-08 14:08:50.334] [INFO] console - Connection success!
+[2016-12-08 14:08:50.335] [INFO] console - mongodb is connected
+[2016-12-08 14:09:45.532] [INFO] console - ::1 - - "GET /api/system/database/backup HTTP/1.1" 500 90 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:10:22.882] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:10:23.630] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:04:04.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:10:23.669] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:10:23.669] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:10:28.023] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:10:28.026] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:10:36.516] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:10:36.520] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:10:36.596] [INFO] console - Listening on port 3000
+[2016-12-08 14:10:36.604] [INFO] console - Connection success!
+[2016-12-08 14:10:36.604] [INFO] console - mongodb is connected
+[2016-12-08 14:11:13.529] [INFO] console - ::1 - - "GET /api/system/database/backup HTTP/1.1" 500 90 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:16:26.358] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:16:27.146] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:16:17.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:16:27.183] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:16:27.184] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:16:27.419] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:16:27.422] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:16:34.969] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:16:34.972] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:16:35.049] [INFO] console - Listening on port 3000
+[2016-12-08 14:16:35.057] [INFO] console - Connection success!
+[2016-12-08 14:16:35.057] [INFO] console - mongodb is connected
+[2016-12-08 14:18:20.128] [INFO] console - ::1 - - "GET /api/system/database/backup HTTP/1.1" 500 90 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:19:42.239] [INFO] console - ::1 - - "GET /api/system/database/backup HTTP/1.1" 500 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:23:06.985] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:23:07.819] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:16:17.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:23:07.972] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:23:07.973] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:23:08.716] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:23:08.716] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:23:10.395] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:23:10.396] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:23:10.557] [INFO] console - Listening on port 3000
+[2016-12-08 14:23:10.665] [INFO] console - Connection success!
+[2016-12-08 14:23:10.667] [INFO] console - mongodb is connected
+[2016-12-08 14:24:05.234] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:24:05.995] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:16:17.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:24:06.031] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:24:06.032] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:24:08.141] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:24:08.145] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:24:17.402] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:24:17.404] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:24:17.498] [INFO] console - Listening on port 3000
+[2016-12-08 14:24:17.507] [INFO] console - Connection success!
+[2016-12-08 14:24:17.507] [INFO] console - mongodb is connected
+[2016-12-08 14:24:46.815] [INFO] console - ::1 - - "GET /api/system/database/backup HTTP/1.1" 500 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:27:14.545] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:27:15.290] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:16:17.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:27:15.327] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:27:15.328] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:27:17.721] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:27:17.724] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:27:28.745] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:27:28.748] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:27:28.878] [INFO] console - Listening on port 3000
+[2016-12-08 14:27:28.892] [INFO] console - Connection success!
+[2016-12-08 14:27:28.892] [INFO] console - mongodb is connected
+[2016-12-08 14:27:42.107] [INFO] console - ::1 - - "GET /api/system/database/backup HTTP/1.1" 500 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:29:06.871] [INFO] console - ::1 - - "GET /api/system/database/backup HTTP/1.1" 500 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:29:34.107] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:29:34.892] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:16:17.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:29:34.928] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:29:34.929] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:29:37.519] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:29:37.522] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:29:46.977] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:29:46.981] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:29:47.073] [INFO] console - Listening on port 3000
+[2016-12-08 14:29:47.082] [INFO] console - Connection success!
+[2016-12-08 14:29:47.083] [INFO] console - mongodb is connected
+[2016-12-08 14:30:54.630] [INFO] console - ::1 - - "GET /api/system/database/backup HTTP/1.1" 500 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:42:28.372] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:42:29.200] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:16:17.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:42:29.246] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:42:29.247] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:42:31.535] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:42:31.538] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:42:40.730] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:42:40.733] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:42:40.852] [INFO] console - Listening on port 3000
+[2016-12-08 14:42:40.866] [INFO] console - Connection success!
+[2016-12-08 14:42:40.866] [INFO] console - mongodb is connected
+[2016-12-08 14:43:15.227] [INFO] console - ::1 - - "GET /api/system/database/backup HTTP/1.1" 500 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:44:59.890] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:45:00.618] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:16:17.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:45:00.653] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:45:00.654] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:45:02.966] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:45:02.969] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:45:12.120] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:45:12.123] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:45:12.212] [INFO] console - Listening on port 3000
+[2016-12-08 14:45:12.221] [INFO] console - Connection success!
+[2016-12-08 14:45:12.221] [INFO] console - mongodb is connected
+[2016-12-08 14:52:39.720] [INFO] console - ::1 - - "GET /api/system/database/backup HTTP/1.1" 500 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-08 14:53:12.356] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:53:13.162] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:16:17.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:53:13.200] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:53:13.201] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:53:15.474] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:53:15.477] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:53:24.978] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:53:24.981] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:53:25.073] [INFO] console - Listening on port 3000
+[2016-12-08 14:53:25.082] [INFO] console - Connection success!
+[2016-12-08 14:53:25.082] [INFO] console - mongodb is connected
+[2016-12-08 14:53:42.099] [DEBUG] console - 备份目录: /Users/achar/Projects/yuntianyuan_api/backup/mongodb
+[2016-12-08 14:55:49.991] [INFO] console - exec error: Error: Command failed: mongodump  -u root -p  -d yuntianyuan -o "/Users/achar/Projects/yuntianyuan_api/backup/mongodb/20161208145342"
+2016-12-08T14:55:49.986+0800	error parsing command line options: expected argument for flag `-p, --password', but got option `-d'
+2016-12-08T14:55:49.987+0800	try 'mongodump --help' for more information
+
+[2016-12-08 14:57:13.836] [DEBUG] console - 日志系统启动!
+[2016-12-08 14:57:14.632] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:16:17.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 14:57:14.669] [DEBUG] console - 加载demo模块!
+[2016-12-08 14:57:14.670] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 14:57:17.024] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 14:57:17.027] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 14:57:26.901] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 14:57:26.904] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 14:57:27.005] [INFO] console - Listening on port 3000
+[2016-12-08 14:57:27.014] [INFO] console - Connection success!
+[2016-12-08 14:57:27.015] [INFO] console - mongodb is connected
+[2016-12-08 14:57:44.126] [DEBUG] console - 备份目录: /Users/achar/Projects/yuntianyuan_api/backup/mongodb

@@ -1,0 +1,169 @@
+[2017-01-09 18:00:39.006] [DEBUG] console - 日志系统启动!
+[2017-01-09 18:00:39.061] [INFO] console - 开发环境模式
+[2017-01-09 18:00:39.378] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 18:01:47.385] [DEBUG] console - 日志系统启动!
+[2017-01-09 18:01:47.435] [INFO] console - 开发环境模式
+[2017-01-09 18:01:47.715] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 18:01:47.814] [DEBUG] console - 已加载问诊模块
+[2017-01-09 18:01:47.817] [DEBUG] console - 已加载问诊模块
+[2017-01-09 18:01:56.010] [INFO] console - listen on 8029
+[2017-01-09 18:01:56.011] [INFO] console - Listening on port 8029
+[2017-01-09 18:01:56.013] [INFO] console - Redis is ready
+[2017-01-09 18:01:56.023] [INFO] console - Connection success!
+[2017-01-09 18:01:56.029] [INFO] console - mongodb is connected
+[2017-01-09 18:01:56.116] [INFO] console - 测试诊断方案010123 init plan
+[2017-01-09 18:23:21.775] [DEBUG] console - 日志系统启动!
+[2017-01-09 18:23:21.837] [INFO] console - 开发环境模式
+[2017-01-09 18:23:22.183] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 18:23:22.278] [DEBUG] console - 已加载问诊模块
+[2017-01-09 18:23:22.288] [DEBUG] console - 已加载问诊模块
+[2017-01-09 18:23:22.511] [ERROR] console - router[post](/api/pc/datas, authority:200000, api/data/controller[create]);
+[2017-01-09 18:23:22.511] [ERROR] console - ReferenceError: async is not defined
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/matching/model.js:19:1)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:7:16)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 18:23:22.602] [ERROR] console - router[get](/api/datas/:id, authority:101801, api/data/controller[detail]);
+[2017-01-09 18:23:22.602] [ERROR] console - { MongooseError: Cannot overwrite `matching` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/matching/model.js:14:42)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:7:16)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `matching` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 18:23:22.830] [ERROR] console - router[get](/api/matchings, authority:102300, api/matching/controller[list]);
+[2017-01-09 18:23:22.830] [ERROR] console - { MongooseError: Cannot overwrite `matching` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/matching/model.js:14:42)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/matching/controller.js:3:16)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `matching` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 18:23:22.833] [ERROR] console - router[patch](/api/matchings/:id, authority:102301, api/matching/controller[update]);
+[2017-01-09 18:23:22.833] [ERROR] console - { MongooseError: Cannot overwrite `matching` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/matching/model.js:14:42)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/matching/controller.js:3:16)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `matching` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 18:23:22.859] [INFO] console - listen on 8029
+[2017-01-09 18:23:22.860] [INFO] console - Listening on port 8029
+[2017-01-09 18:23:22.865] [INFO] console - Redis is ready
+[2017-01-09 18:23:22.873] [INFO] console - Connection success!
+[2017-01-09 18:23:22.883] [INFO] console - mongodb is connected
+[2017-01-09 18:23:22.920] [INFO] console - 测试诊断方案010123 init plan
+[2017-01-09 18:24:09.430] [DEBUG] console - 日志系统启动!
+[2017-01-09 18:24:09.481] [INFO] console - 开发环境模式
+[2017-01-09 18:24:09.764] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 18:24:09.857] [DEBUG] console - 已加载问诊模块
+[2017-01-09 18:24:09.866] [DEBUG] console - 已加载问诊模块
+[2017-01-09 18:24:10.283] [ERROR] console - (node:72715) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+[2017-01-09 18:24:10.284] [INFO] console - listen on 8029
+[2017-01-09 18:24:10.284] [INFO] console - Listening on port 8029
+[2017-01-09 18:24:10.285] [INFO] console - Redis is ready
+[2017-01-09 18:24:10.291] [INFO] console - Connection success!
+[2017-01-09 18:24:10.297] [INFO] console - mongodb is connected
+[2017-01-09 18:24:10.325] [INFO] console - 测试诊断方案010123 init plan
+[2017-01-09 18:24:10.384] [INFO] console - [0] init Matching
+[2017-01-09 18:37:33.233] [INFO] console - ::1 - - "GET /api/pc/diagnostic-records/peoples?null HTTP/1.1" 200 40 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) yuntianyuan_pc/1.0.0 Chrome/53.0.2785.143 Electron/1.4.13 Safari/537.36"
+[2017-01-09 18:40:11.617] [INFO] console - ::1 - - "POST /api/pc/diagnostic-records HTTP/1.1" 200 317 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) yuntianyuan_pc/1.0.0 Chrome/53.0.2785.143 Electron/1.4.13 Safari/537.36"
+[2017-01-09 18:42:47.604] [INFO] console - ::1 - - "GET /api/pc/diagnostic-records/peoples?null HTTP/1.1" 200 40 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) yuntianyuan_pc/1.0.0 Chrome/53.0.2785.143 Electron/1.4.13 Safari/537.36"
+[2017-01-09 18:59:06.290] [INFO] console - undefined - - "POST /api/pc/datas HTTP/1.1" 200 68 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) yuntianyuan_pc/1.0.0 Chrome/53.0.2785.143 Electron/1.4.13 Safari/537.36"
+[2017-01-09 18:59:06.298] [INFO] console - Connection error: Error: connection timeout

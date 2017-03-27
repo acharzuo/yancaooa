@@ -1,0 +1,134 @@
+/*初始化*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+    font-family:"Microsoft YaHei";
+}
+a{
+    text-decoration: none;
+}
+body{
+    width:1080px;
+    margin: 0 auto !important;
+    background:url("../images/bg.jpg") repeat;
+    overflow-x: hidden;
+}
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+textarea {
+    resize: none;
+}
+/*防止多行文本框拖动*/
+
+
+.main{
+    width:920px;
+    margin: 0 auto;
+    min-height:970px;
+}
+.header{
+    height:180px;
+    width:100%;
+    border-bottom:solid 1px #cccccc ;
+    position: relative;
+}
+.header .logo {
+    width:120px;
+    height:120px;
+}
+/*.mt30{*/
+    /*font-weight: normal;*/
+    /*border-bottom: solid 1px #cccccc;*/
+    /*text-align: center;*/
+/*}*/
+.top-title{
+    width:860px;
+    height:180px;
+    margin: 0 auto;
+    line-height:250px;
+    font-size:38px;
+    font-weight: normal;
+    text-align: center;
+    color:#47403a;
+    text-indent:2em;
+    overflow: hidden;
+}
+.header a {
+    position: absolute;
+    top:30px;
+    left:30px;
+}
+
+
+/*返回按钮*/
+.main .content .cover {
+    height: 80px;
+    padding-top: 90px;
+    margin : auto 0 ;
+}
+.content .cover span {
+    display: inline-block;
+    height: 44px;
+    width: 100px;
+    background-color: #d0cac6;
+    line-height: 40px;
+    font-size: 28.9px;
+    text-align: center;
+    color:#fff;
+    border-radius: 30px;
+    float:right;
+    cursor:pointer;
+    position:fixed;
+    bottom:20px;
+    right: 115px;
+}
+ .content  .cover span a {
+    text-decoration: none;
+    color:#fff;
+}
+
+
+/*返回顶部*/
+.main #backTop {
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    position: fixed;
+    right: 10px ;
+    bottom : 10px;
+    background: url(../images/top.png) no-repeat;
+    border-radius: 10px;
+    display: none;
+    cursor : pointer;
+}
+.op{
+    display: none
+}

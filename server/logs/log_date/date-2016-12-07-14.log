@@ -1,0 +1,17 @@
+[2016-12-07 14:24:08.570] [DEBUG] console - 日志系统启动!
+[2016-12-07 14:24:08.654] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T06:24:04.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T01:52:04.000Z } ]
+[2016-12-07 14:24:08.669] [DEBUG] console - 加载demo模块!
+[2016-12-07 14:24:08.669] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-07 14:24:08.880] [DEBUG] console - 加载用户管理模块!
+[2016-12-07 14:24:08.881] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-07 14:24:08.917] [INFO] console - Connection success!
+[2016-12-07 14:24:08.918] [INFO] console - mongodb is connected
+[2016-12-07 14:59:40.444] [INFO] console - ::1 - - "POST /api/demo HTTP/1.1" 404 22 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-07 14:59:45.091] [INFO] console - ::1 - - "POST /api/demo/file HTTP/1.1" 404 27 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"

@@ -1,0 +1,44 @@
+[2016-12-06 16:45:51.412] [TRACE] console - Trace info: log.trace(message)
+[2016-12-06 16:45:51.415] [DEBUG] console - Debug info: log.debug(message)
+[2016-12-06 16:45:51.415] [INFO] console - Info info: log.info(message)
+[2016-12-06 16:45:51.415] [WARN] console - Warn info: log.warn(message)
+[2016-12-06 16:45:51.415] [ERROR] console - Error info: log.error(message)
+[2016-12-06 16:45:51.415] [ERROR] console - log-dir is : './logs/log_test/'
+[2016-12-06 16:45:51.415] [INFO] console - Console info: console.log(message), 不要使用!
+[2016-12-06 16:45:51.418] [DEBUG] console - 定义全局变量
+[2016-12-06 16:45:51.418] [DEBUG] console - 日志系统启动!
+[2016-12-06 16:45:51.520] [DEBUG] console - API Root:  /user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-06 16:45:51.557] [INFO] console - Connection success!
+[2016-12-06 16:45:51.559] [INFO] console - mongodb is connected
+[2016-12-06 16:47:58.785] [TRACE] console - Trace info: log.trace(message)
+[2016-12-06 16:47:58.788] [DEBUG] console - Debug info: log.debug(message)
+[2016-12-06 16:47:58.789] [INFO] console - Info info: log.info(message)
+[2016-12-06 16:47:58.789] [WARN] console - Warn info: log.warn(message)
+[2016-12-06 16:47:58.789] [ERROR] console - Error info: log.error(message)
+[2016-12-06 16:47:58.789] [ERROR] console - log-dir is : './logs/log_test/'
+[2016-12-06 16:47:58.789] [INFO] console - Console info: console.log(message), 不要使用!
+[2016-12-06 16:47:58.793] [DEBUG] console - 定义全局变量
+[2016-12-06 16:47:58.793] [DEBUG] console - 日志系统启动!
+[2016-12-06 16:47:58.900] [DEBUG] console - 加载用户管理模块!
+[2016-12-06 16:47:58.901] [DEBUG] console - API Root:  /user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-06 16:47:58.933] [INFO] console - Connection success!
+[2016-12-06 16:47:58.935] [INFO] console - mongodb is connected
+[2016-12-06 16:48:31.581] [INFO] console - ::1 - - "POST /api HTTP/1.1" 404 17 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-06 16:48:40.018] [INFO] console - ::1 - - "POST /api/user/login HTTP/1.1" 404 28 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-06 16:49:14.586] [INFO] console - ::1 - - "POST /register HTTP/1.1" 200 80 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-06 16:51:11.090] [INFO] console - ::1 - - "POST /user/register HTTP/1.1" 200 80 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-06 16:53:29.296] [TRACE] console - Trace info: log.trace(message)
+[2016-12-06 16:53:29.299] [DEBUG] console - Debug info: log.debug(message)
+[2016-12-06 16:53:29.300] [INFO] console - Info info: log.info(message)
+[2016-12-06 16:53:29.300] [WARN] console - Warn info: log.warn(message)
+[2016-12-06 16:53:29.300] [ERROR] console - Error info: log.error(message)
+[2016-12-06 16:53:29.300] [ERROR] console - log-dir is : './logs/log_test/'
+[2016-12-06 16:53:29.300] [INFO] console - Console info: console.log(message), 不要使用!
+[2016-12-06 16:53:29.305] [DEBUG] console - 定义全局变量
+[2016-12-06 16:53:29.306] [DEBUG] console - 日志系统启动!
+[2016-12-06 16:53:29.425] [DEBUG] console - 加载用户管理模块!
+[2016-12-06 16:53:29.426] [DEBUG] console - API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-06 16:53:29.468] [INFO] console - Connection success!
+[2016-12-06 16:53:29.470] [INFO] console - mongodb is connected
+[2016-12-06 16:53:46.028] [INFO] console - ::1 - - "POST /user/register HTTP/1.1" 404 27 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-06 16:53:50.931] [INFO] console - ::1 - - "POST /api/user/login HTTP/1.1" 200 51 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"

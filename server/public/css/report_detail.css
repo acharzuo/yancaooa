@@ -1,0 +1,172 @@
+body {
+    position: relative;
+}
+
+#main {
+    padding: 0.4rem 0.4rem 0 0.4rem;
+    width: 9.2rem;
+    background: #fff;
+    position: relative;
+}
+
+#main .content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 0.373333rem;
+    color: #666;
+    line-height: 0.773333rem;
+}
+
+#main .content .report_detail span {
+    color: #808080;
+}
+
+#main .content .report_detail strong {
+    color: #666;
+    font-weight: normal;
+}
+
+#main .content .report_detail li:nth-last-child(3) span,
+#main .content .report_detail li:nth-last-child(2) span,
+#main .content .report_detail li:nth-last-child(1) span,
+#main .content .report_sheet li:nth-last-child(1) span {
+    display: block;
+    width: 8.933333rem;
+    height: 0.8rem;
+    background: #f5f5f5;
+    font-size: 0.4rem;
+    padding-left: 0.266667rem;
+    line-height: 0.8rem;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+#main .content .report_detail li:nth-last-child(3) span {
+    margin-top: 0.533333rem;
+}
+
+#main .content .report_detail li:nth-last-child(3) strong,
+#main .content .report_detail li:nth-last-child(2) strong,
+#main .content .report_detail li:nth-last-child(1) strong,
+#main .content .report_sheet li:nth-last-child(1) strong {
+    display: block;
+    width: 8.933333rem;
+    margin-bottom: 0.293333rem;
+    font-size: 0.346667rem;
+    padding-left: 0.266667rem;
+    line-height: 0.88rem;
+    font-weight: normal;
+    color: #999999;
+    /*font-style: italic;*/
+}
+
+#main .content .report_sheet {
+    padding-left: 0.2rem;
+}
+
+.report_sheet li div {
+    position: relative;
+    margin-top: 16px;
+    margin-left: -0.2rem;
+}
+
+.report_sheet li i {
+    display: inline-block;
+    width: 10px;
+    line-height: 12px;
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    left: 3px;
+    font-style: normal;
+}
+
+.report_sheet li i:nth-child(1) {
+    top: 59px;
+}
+
+.report_sheet li i:nth-child(2) {
+    top: 96px;
+}
+
+.report_sheet li i:nth-child(3) {
+    top: 134px;
+}
+
+.report_sheet li b {
+    display: inline-block;
+    width: 26px;
+    line-height: 16px;
+    font-size: 11px;
+    color: #2e2e2e;
+    font-weight: normal;
+    text-align: center;
+    position: absolute;
+    /*left:14px;*/
+    top: -16px;
+}
+
+.report_sheet li b:nth-of-type(1) {
+    left: 16px;
+}
+
+.report_sheet li b:nth-of-type(2) {
+    left: 42px;
+}
+
+.report_sheet li b:nth-of-type(3) {
+    left: 68px;
+}
+
+.report_sheet li b:nth-of-type(4) {
+    left: 94px;
+}
+
+.report_sheet li b:nth-of-type(5) {
+    left: 120px;
+}
+
+.report_sheet li b:nth-of-type(6) {
+    left: 146px;
+}
+
+.report_sheet li b:nth-of-type(7) {
+    left: 172px;
+}
+
+.report_sheet li b:nth-of-type(8) {
+    left: 198px;
+}
+
+.report_sheet li b:nth-of-type(9) {
+    left: 224px;
+}
+
+.report_sheet li b:nth-of-type(10) {
+    left: 250px;
+}
+
+.report_sheet li b:nth-of-type(11) {
+    left: 276px;
+}
+
+.report_sheet li b:nth-of-type(12) {
+    left: 302px;
+}
+
+.report_sheet li canvas {
+    width: 312px;
+    height: 200px;
+    border: 2px solid #ccc;
+    margin-left: 14px;
+}
+
+#main .content .report_sheet h3 {
+    font-size: 0.4rem;
+    color: #808080;
+}
+
+#main .report_sheet li:nth-last-child(1) {
+    margin-left: -0.2rem;
+}

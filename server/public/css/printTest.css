@@ -1,0 +1,16 @@
+.title-p{
+    background-color: none;
+    border-top: none;
+}
+#canvas{
+    display: none;
+}
+.canvasImg{
+    display: block !important;
+    width: 624px;
+    height: 400px;
+    border: 2px solid #ccc;
+}
+.bottomBtn{
+    display: none !important;
+}

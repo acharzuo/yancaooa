@@ -1,0 +1,277 @@
+<div class="top-table">
+    <p class="title-p"><b>基础信息</b></p>
+    <table>
+        <!--<tr>
+            <td>ID号：</td>
+            <td><%=doc._id%></td>
+            <td>姓名：</td>
+            <td><%=doc.name%></td>
+            <td>性别：</td>
+            <td><%=doc.sex == 1 ? '男' : '女'%></td>
+            <td>年龄：</td>
+            <td><%=doc.birthday%></td>
+          </tr>
+          <tr>
+            <td>时辰：</td>
+            <td><%=doc.chTime%></td>
+            <td>当令经络：</td>
+            <td><%=doc.reportInfo.curMeridian%></td>
+          </tr>-->
+        <tr>
+            <td>ID号：
+                <%=doc.mathNumber%>
+            </td>
+            <td>姓名：
+                <%=doc.name%>
+            </td>
+            <td>性别：
+                <%=doc.sex == 1 ? '男' : '女'%>
+            </td>
+            <td>年龄：<span id='age'><%=doc.birthday%></span></td>
+        </tr>
+        <tr>
+            <td>时辰：
+                <%=doc.chTime%>
+            </td>
+            <td>当令经络：
+                <%=doc.reportInfo.curMeridian%>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+<div class="data-model">
+    <p class="title-p"><b>检测数据</b></p>
+    <div class="data-canvas">
+        <i>H</i>
+        <i>M</i>
+        <i>L</i>
+        <b>肺经</b>
+        <b>心包</b>
+        <b>心经</b>
+        <b>大肠</b>
+        <b>三焦</b>
+        <b>小肠</b>
+        <b>脾经</b>
+        <b>肝经</b>
+        <b>肾经</b>
+        <b>胃经</b>
+        <b>胆经</b>
+        <b>膀胱</b>
+        <canvas id="canvas" width="1248" height="800">不支持canvas</canvas>
+    </div>
+</div>
+<div class="data">
+    <p class="title-p"><b>数据报表</b></p>
+    <table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>经络</td>
+            <td>值</td>
+            <td>判断</td>
+            <td>平衡</td>
+        </tr>
+        <%for(var i=0;i<doc.result.datas.sortedData.length;i++){%>
+            <tr>
+                <td>
+                    <%=doc.result.datas.sortedData[i].meridianName%>
+                </td>
+                <td>
+                    <%=doc.result.datas.sortedData[i].percentValue.toFixed(1)%>
+                </td>
+                <td>
+                    <%=doc.result.datas.sortedData[i].determineLabel%>
+                </td>
+                <%if(doc.result.datas.sortedData[i].isBalance == true){%>
+                    <td>平衡</td>
+                    <%}else{%>
+                        <td><span style='color:red;'>失衡</span></td>
+                        <%}%>
+                            <!--<td><%=doc.result.datas.sortedData[i].isBalance == true ? '平衡' : '失衡'%></td>-->
+            </tr>
+            <%}%>
+    </table>
+</div>
+<div class="bottom">
+    <ul>
+        <li class="firstLi"><b>病症分析：</b></li>
+        <li class="firstLi">
+            <%-doc.report.plan.conclusion%>
+        </li>
+        <li class="firstLi"><b>当令时辰：</b>
+            <%=doc.reportInfo.chTime%>
+        </li>
+        <li class="firstLi">
+            <%=doc.reportInfo.curMeridianInfo%>
+        </li>
+        <li class="firstLi"><b>经络走向：</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.path%>
+        </li>
+        <li class="firstLi"><b>经络特点：</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.meridianInfo%>
+        </li>
+        <li class="firstLi"><b>提示易发生症状：</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.symptom%>
+        </li>
+    </ul>
+    <ul>
+        <li class="firstLi"><b>常用穴位建议：</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.usualAcupoint%>
+        </li>
+        <li class="firstLi"><b>饮食调理建议：</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.usualHealthSuggestion%>
+        </li>
+        <li class="firstLi"><b>养生建议-疏通经络法</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.usualKeepSuggestion%>
+        </li>
+        <li class="firstLi"><b>性格养生建议：</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.keepCharacter%>
+        </li>
+        <li class="firstLi"><b><%=doc.reportInfo.wuxing%></b></li>
+        <li class="firstLi">
+            <p><b><%=doc.reportInfo.wuxingShort%>性性格阳性方面：</b>
+                <%=doc.reportInfo.yangWuXing%>
+            </p>
+            <p><b><%=doc.reportInfo.wuxingShort%>性性格阴性方面：</b>
+                <%=doc.reportInfo.yinWuXing%>
+            </p>
+            <p><b>阴性性格对身体的影响：</b>
+                <%=doc.reportInfo.wuXingEffect%>
+            </p>
+            <p><b>性格转化建议：</b>
+                <%=doc.reportInfo.characterSuggestion%>
+            </p>
+        </li>
+    </ul>
+    <p class="title-p"><b>天人合一模块</b></p>
+    <div class="wx">
+        <ul>
+            <div class="riqi">
+                <p id="txtBeginDate" class="layui-input dateico txtBeginDate riqi-left">
+                    <%=doc.birthday%>
+                </p>
+            </div>
+            <li>
+                <div class="year-sui"><span class="syn">主气</span>
+                    <%=doc.reportInfo.xiantianInfo.zhuqi%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn">客气</span>
+                    <%=doc.reportInfo.xiantianInfo.keqi%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn"></span>
+                    <%=doc.reportInfo.xiantianInfo.curQi%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn">在泉</span>
+                    <%=doc.reportInfo.xiantianInfo.zaiquan%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn">司天</span>
+                    <%=doc.reportInfo.xiantianInfo.sitian%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn">岁运</span>
+                    <%=doc.reportInfo.xiantianInfo.suiyun%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn"><%=doc.reportInfo.xiantianInfo.jieqi%></span></div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn"><%=doc.reportInfo.xiantianInfo.nongli%></span></div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn"><%=doc.reportInfo.xiantianInfo.ganzhi%></span>年</div>
+            </li>
+        </ul>
+        <ul>
+            <div class="riqi">
+                <p id="txtFinishDate" class="layui-input dateico txtBeginDate riqi-right">
+                    <%=doc.createdAt%>
+                </p>
+            </div>
+            <li>
+                <div class="year-sui"><span class="syn">主气</span>
+                    <%=doc.reportInfo.houtianInfo.zhuqi%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn">客气</span>
+                    <%=doc.reportInfo.houtianInfo.keqi%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn"></span>
+                    <%=doc.reportInfo.houtianInfo.curQi%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn">在泉</span>
+                    <%=doc.reportInfo.houtianInfo.zaiquan%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn">司天</span>
+                    <%=doc.reportInfo.houtianInfo.sitian%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn">岁运</span>
+                    <%=doc.reportInfo.houtianInfo.suiyun%>
+                </div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn"><%=doc.reportInfo.houtianInfo.jieqi%></span></div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn"><%=doc.reportInfo.houtianInfo.nongli%></span></div>
+            </li>
+            <li>
+                <div class="year-sui"><span class="syn"><%=doc.reportInfo.houtianInfo.ganzhi%></span>年</div>
+            </li>
+        </ul>
+    </div>
+    <ul style="margin-top: 300px">
+        <li class="firstLi"><b>先天体质分析报告：</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.tizhiReport%>
+        </li>
+        <li class="firstLi"><b>对人体影响：</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.bodyEffect%>
+        </li>
+        <li class="firstLi"><b>身体特点：</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.bodyStyle%>
+        </li>
+        <li class="firstLi"><b>饮食调理建议：</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.foodSuggestion%>
+        </li>
+        <li class="firstLi"><b>情志调理建议：</b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.emotionHealth%>
+        </li>
+        <li class="firstLi"><b>现在分析 </b></li>
+        <li class="firstLi">
+            <%=doc.reportInfo.curEffect%>
+        </li>
+    </ul>
+</div>
+
+<input type='hidden' value='<%=JSON.stringify(doc.result.datas.data)%>' id='chartData'>
+<input type='hidden' value='<%=doc.mathNumber%>' id='mathNumber'>

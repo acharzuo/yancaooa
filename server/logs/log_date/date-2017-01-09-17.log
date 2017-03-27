@@ -1,0 +1,1183 @@
+[2017-01-09 17:38:11.453] [DEBUG] console - 日志系统启动!
+[2017-01-09 17:38:11.505] [INFO] console - 开发环境模式
+[2017-01-09 17:38:11.801] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 17:38:11.894] [DEBUG] console - 已加载问诊模块
+[2017-01-09 17:38:11.901] [DEBUG] console - 已加载问诊模块
+[2017-01-09 17:38:11.908] [ERROR] console - router[post](/api/plans, authority:101000, api/plan/controller[create]);
+[2017-01-09 17:38:11.908] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:81
+        }
+        ^
+SyntaxError: missing ) after argument list
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:38:11.911] [ERROR] console - router[delete](/api/plans/:id, authority:101001, api/plan/controller[delete]);
+[2017-01-09 17:38:11.912] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:81
+        }
+        ^
+SyntaxError: missing ) after argument list
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:38:11.913] [ERROR] console - router[patch](/api/plans/:id, authority:101002, api/plan/controller[update]);
+[2017-01-09 17:38:11.914] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:81
+        }
+        ^
+SyntaxError: missing ) after argument list
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:38:11.915] [ERROR] console - router[get](/api/plans, authority:101003, api/plan/controller[list]);
+[2017-01-09 17:38:11.916] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:81
+        }
+        ^
+SyntaxError: missing ) after argument list
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:38:11.918] [ERROR] console - router[get](/api/plans/:id, authority:101004, api/plan/controller[detail]);
+[2017-01-09 17:38:11.918] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:81
+        }
+        ^
+SyntaxError: missing ) after argument list
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:38:12.176] [ERROR] console - router[post](/api/pc/datas, authority:200000, api/data/controller[create]);
+[2017-01-09 17:38:12.176] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:81
+        }
+        ^
+SyntaxError: missing ) after argument list
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:6:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:38:12.266] [ERROR] console - router[get](/api/datas/:id, authority:101801, api/data/controller[detail]);
+[2017-01-09 17:38:12.266] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:81
+        }
+        ^
+SyntaxError: missing ) after argument list
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:6:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:38:12.493] [INFO] console - listen on 8029
+[2017-01-09 17:38:12.494] [INFO] console - Listening on port 8029
+[2017-01-09 17:38:12.495] [INFO] console - Redis is ready
+[2017-01-09 17:38:12.507] [INFO] console - Connection success!
+[2017-01-09 17:38:12.514] [INFO] console - mongodb is connected
+[2017-01-09 17:40:50.010] [DEBUG] console - 日志系统启动!
+[2017-01-09 17:40:50.079] [INFO] console - 开发环境模式
+[2017-01-09 17:40:50.334] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 17:40:50.419] [DEBUG] console - 已加载问诊模块
+[2017-01-09 17:40:50.422] [DEBUG] console - 已加载问诊模块
+[2017-01-09 17:40:50.428] [ERROR] console - router[post](/api/plans, authority:101000, api/plan/controller[create]);
+[2017-01-09 17:40:50.429] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:95
+});
+^
+SyntaxError: Unexpected token }
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:40:50.432] [ERROR] console - router[delete](/api/plans/:id, authority:101001, api/plan/controller[delete]);
+[2017-01-09 17:40:50.433] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:95
+});
+^
+SyntaxError: Unexpected token }
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:40:50.435] [ERROR] console - router[patch](/api/plans/:id, authority:101002, api/plan/controller[update]);
+[2017-01-09 17:40:50.436] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:95
+});
+^
+SyntaxError: Unexpected token }
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:40:50.438] [ERROR] console - router[get](/api/plans, authority:101003, api/plan/controller[list]);
+[2017-01-09 17:40:50.438] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:95
+});
+^
+SyntaxError: Unexpected token }
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:40:50.440] [ERROR] console - router[get](/api/plans/:id, authority:101004, api/plan/controller[detail]);
+[2017-01-09 17:40:50.440] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:95
+});
+^
+SyntaxError: Unexpected token }
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:40:50.674] [ERROR] console - router[post](/api/pc/datas, authority:200000, api/data/controller[create]);
+[2017-01-09 17:40:50.675] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:95
+});
+^
+SyntaxError: Unexpected token }
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:6:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:40:50.793] [ERROR] console - router[get](/api/datas/:id, authority:101801, api/data/controller[detail]);
+[2017-01-09 17:40:50.793] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/plan/model.js:95
+});
+^
+SyntaxError: Unexpected token }
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:6:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+[2017-01-09 17:40:50.973] [INFO] console - listen on 8029
+[2017-01-09 17:40:50.973] [INFO] console - Listening on port 8029
+[2017-01-09 17:40:50.975] [INFO] console - Redis is ready
+[2017-01-09 17:40:50.984] [INFO] console - Connection success!
+[2017-01-09 17:40:50.991] [INFO] console - mongodb is connected
+[2017-01-09 17:42:57.846] [DEBUG] console - 日志系统启动!
+[2017-01-09 17:42:57.897] [INFO] console - 开发环境模式
+[2017-01-09 17:42:58.144] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 17:42:58.225] [DEBUG] console - 已加载问诊模块
+[2017-01-09 17:42:58.232] [DEBUG] console - 已加载问诊模块
+[2017-01-09 17:42:58.241] [ERROR] console - router[post](/api/plans, authority:101000, api/plan/controller[create]);
+[2017-01-09 17:42:58.241] [ERROR] console - TypeError: User.findOne is not a function
+    at async.waterfall.Plan.findOne.pairedValue (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:43:15)
+    at fn (/Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:746:34)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:1213:16
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:166:37
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:706:43
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:167:37
+    at Object.async.waterfall (/Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:710:44)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:41:7)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+[2017-01-09 17:42:58.247] [ERROR] console - router[delete](/api/plans/:id, authority:101001, api/plan/controller[delete]);
+[2017-01-09 17:42:58.247] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:42:58.250] [ERROR] console - router[patch](/api/plans/:id, authority:101002, api/plan/controller[update]);
+[2017-01-09 17:42:58.250] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:42:58.255] [ERROR] console - router[get](/api/plans, authority:101003, api/plan/controller[list]);
+[2017-01-09 17:42:58.255] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:42:58.259] [ERROR] console - router[get](/api/plans/:id, authority:101004, api/plan/controller[detail]);
+[2017-01-09 17:42:58.259] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:42:58.479] [ERROR] console - router[post](/api/pc/datas, authority:200000, api/data/controller[create]);
+[2017-01-09 17:42:58.479] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:6:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:42:58.629] [ERROR] console - router[get](/api/datas/:id, authority:101801, api/data/controller[detail]);
+[2017-01-09 17:42:58.630] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:6:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:42:59.227] [INFO] console - listen on 8029
+[2017-01-09 17:42:59.228] [INFO] console - Listening on port 8029
+[2017-01-09 17:42:59.230] [INFO] console - Redis is ready
+[2017-01-09 17:42:59.249] [INFO] console - Connection success!
+[2017-01-09 17:42:59.265] [INFO] console - mongodb is connected
+[2017-01-09 17:46:18.391] [DEBUG] console - 日志系统启动!
+[2017-01-09 17:46:18.436] [INFO] console - 开发环境模式
+[2017-01-09 17:46:18.667] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 17:46:18.755] [DEBUG] console - 已加载问诊模块
+[2017-01-09 17:46:18.759] [DEBUG] console - 已加载问诊模块
+[2017-01-09 17:46:18.765] [ERROR] console - router[post](/api/plans, authority:101000, api/plan/controller[create]);
+[2017-01-09 17:46:18.765] [ERROR] console - TypeError: userModel.findOne is not a function
+    at async.waterfall.Plan.findOne.pairedValue (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:43:20)
+    at fn (/Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:746:34)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:1213:16
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:166:37
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:706:43
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:167:37
+    at Object.async.waterfall (/Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:710:44)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:41:7)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+[2017-01-09 17:46:18.771] [ERROR] console - router[delete](/api/plans/:id, authority:101001, api/plan/controller[delete]);
+[2017-01-09 17:46:18.771] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:46:18.775] [ERROR] console - router[patch](/api/plans/:id, authority:101002, api/plan/controller[update]);
+[2017-01-09 17:46:18.775] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:46:18.778] [ERROR] console - router[get](/api/plans, authority:101003, api/plan/controller[list]);
+[2017-01-09 17:46:18.778] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:46:18.781] [ERROR] console - router[get](/api/plans/:id, authority:101004, api/plan/controller[detail]);
+[2017-01-09 17:46:18.781] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:46:19.008] [ERROR] console - router[post](/api/pc/datas, authority:200000, api/data/controller[create]);
+[2017-01-09 17:46:19.008] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:6:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:46:19.117] [ERROR] console - router[get](/api/datas/:id, authority:101801, api/data/controller[detail]);
+[2017-01-09 17:46:19.117] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:6:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:46:19.301] [INFO] console - listen on 8029
+[2017-01-09 17:46:19.301] [INFO] console - Listening on port 8029
+[2017-01-09 17:46:19.303] [INFO] console - Redis is ready
+[2017-01-09 17:46:19.313] [INFO] console - Connection success!
+[2017-01-09 17:46:19.319] [INFO] console - mongodb is connected
+[2017-01-09 17:46:19.474] [ERROR] console - (node:70779) DeprecationWarning: crypto.pbkdf2 without specifying a digest is deprecated. Please specify a digest
+[2017-01-09 17:46:19.477] [INFO] console - init roles
+[2017-01-09 17:46:19.584] [INFO] console - init tech
+[2017-01-09 17:46:19.585] [INFO] console - init admin
+[2017-01-09 17:46:19.683] [INFO] console - init roles
+[2017-01-09 17:47:30.964] [DEBUG] console - 日志系统启动!
+[2017-01-09 17:47:31.009] [INFO] console - 开发环境模式
+[2017-01-09 17:47:31.217] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 17:47:31.290] [DEBUG] console - 已加载问诊模块
+[2017-01-09 17:47:31.297] [DEBUG] console - 已加载问诊模块
+[2017-01-09 17:47:31.303] [ERROR] console - router[post](/api/plans, authority:101000, api/plan/controller[create]);
+[2017-01-09 17:47:31.303] [ERROR] console - TypeError: userModel.findOne is not a function
+    at async.waterfall.Plan.findOne.pairedValue (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:43:20)
+    at fn (/Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:746:34)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:1213:16
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:166:37
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:706:43
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:167:37
+    at Object.async.waterfall (/Users/achar/Projects/yuntianyuan_api/node_modules/async/lib/async.js:710:44)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:41:7)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+[2017-01-09 17:47:31.307] [ERROR] console - router[delete](/api/plans/:id, authority:101001, api/plan/controller[delete]);
+[2017-01-09 17:47:31.308] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:47:31.311] [ERROR] console - router[patch](/api/plans/:id, authority:101002, api/plan/controller[update]);
+[2017-01-09 17:47:31.311] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:47:31.314] [ERROR] console - router[get](/api/plans, authority:101003, api/plan/controller[list]);
+[2017-01-09 17:47:31.314] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:47:31.318] [ERROR] console - router[get](/api/plans/:id, authority:101004, api/plan/controller[detail]);
+[2017-01-09 17:47:31.318] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/controller.js:3:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:47:31.517] [ERROR] console - router[post](/api/pc/datas, authority:200000, api/data/controller[create]);
+[2017-01-09 17:47:31.518] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:6:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:47:31.630] [ERROR] console - router[get](/api/datas/:id, authority:101801, api/data/controller[detail]);
+[2017-01-09 17:47:31.630] [ERROR] console - { MongooseError: Cannot overwrite `plan` model once compiled.
+    at Mongoose.model (/Users/achar/Projects/yuntianyuan_api/node_modules/mongoose/lib/index.js:376:13)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/plan/model.js:37:38)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:6:12)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+  message: 'Cannot overwrite `plan` model once compiled.',
+  name: 'OverwriteModelError' }
+[2017-01-09 17:47:31.797] [INFO] console - listen on 8029
+[2017-01-09 17:47:31.797] [INFO] console - Listening on port 8029
+[2017-01-09 17:47:31.798] [INFO] console - Redis is ready
+[2017-01-09 17:47:31.807] [INFO] console - Connection success!
+[2017-01-09 17:47:31.813] [INFO] console - mongodb is connected

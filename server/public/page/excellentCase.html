@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>优秀案例预览</title>	
+        <link rel="stylesheet" href="../stylesheets/style.css"/>
+        <script type="text/javascript"  src="../js/moment.min.js"></script>
+        <script type="text/javascript"  src="../js/comment.js"></script>
+        <script type="text/javascript"  src="../js/_url.js"></script>
+	</head>
+	<body>
+		<div id="box">
+           <div class="header">
+                <img class="logo" src="../images/logo.png"/>
+                <div class="top-title"></div>
+            </div>
+            <div class="main">
+                <div class="aboutExcellent">
+                    <ul>
+                        <li style="float: left">文章来源: <span class="source">案例详情</span> </li>
+                        <li style="float: right">发布时间: <span class="time"></li>
+                    </ul>
+                </div>
+                <div class="content"></div>
+                <div class="back">
+                    <a  href="javascript:window.opener=null;window.open('','_self');window.close();">关闭</a>
+                </div>
+            </div>
+        </div>
+	</body>
+	<script type="text/javascript">
+        function get(url){  
+            var req = createXMLHTTPRequest();  
+            if(req){  
+                req.open("GET", url, true);  
+                req.onreadystatechange = function(){  
+                    if(req.readyState == 4){  
+                        if(req.status == 200){  
+                            var data = JSON.parse(req.responseText)
+                            console.log(data)
+                            if(data.code===0){
+                                 classInner('top-title',data.result.caseName);
+                                 classInner('time',moment(data.result.updatedAt).format('YYYY-MM-DD'));
+                                 classInner('content',data.result.content);
+                            }
+                        }else{  
+                            alert("error");  
+                        }  
+                    }  
+                }  
+                req.send(null);  
+            }  
+        }  
+        var id = GetQueryString("id");
+        get(__URL+"/api/excellents/"+id);
+
+    </script>
+</html>

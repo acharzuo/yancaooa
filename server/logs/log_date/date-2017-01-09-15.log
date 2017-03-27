@@ -1,0 +1,252 @@
+[2017-01-09 15:19:39.803] [INFO] console - Connection error: Error: connection timeout
+[2017-01-09 15:19:47.233] [DEBUG] console - 日志系统启动!
+[2017-01-09 15:19:47.281] [INFO] console - 开发环境模式
+[2017-01-09 15:19:47.568] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 15:19:47.669] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:19:47.673] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:19:47.775] [ERROR] console - router[post](/api/pc/datas, authority:200000, api/data/controller[create]);
+[2017-01-09 15:19:47.775] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/data/controller.js:146
+    */
+    ^
+SyntaxError: Unexpected token *
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Timeout.Module.runMain [as _onTimeout] (module.js:605:10)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+[2017-01-09 15:19:47.778] [ERROR] console - router[get](/api/datas/:id, authority:101801, api/data/controller[detail]);
+[2017-01-09 15:19:47.778] [ERROR] console - /Users/achar/Projects/yuntianyuan_api/api/data/controller.js:146
+    */
+    ^
+SyntaxError: Unexpected token *
+    at Object.exports.runInThisContext (vm.js:78:16)
+    at Module._compile (module.js:543:28)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at /Users/achar/Projects/yuntianyuan_api/utils/config-route.js:38:26
+    at Array.forEach (native)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/config-route.js:30:14)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/app.js:56:34)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Module.require (module.js:498:17)
+    at require (internal/module.js:20:19)
+    at Object.<anonymous> (/Users/achar/Projects/yuntianyuan_api/bin/www:7:11)
+    at Module._compile (module.js:571:32)
+    at Object.Module._extensions..js (module.js:580:10)
+    at Module.load (module.js:488:32)
+    at tryModuleLoad (module.js:447:12)
+    at Function.Module._load (module.js:439:3)
+    at Timeout.Module.runMain [as _onTimeout] (module.js:605:10)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+[2017-01-09 15:19:47.986] [INFO] console - listen on 8029
+[2017-01-09 15:19:47.987] [INFO] console - Listening on port 8029
+[2017-01-09 15:19:47.988] [INFO] console - Redis is ready
+[2017-01-09 15:19:47.991] [INFO] console - Connection success!
+[2017-01-09 15:19:47.995] [INFO] console - mongodb is connected
+[2017-01-09 15:26:19.743] [DEBUG] console - 日志系统启动!
+[2017-01-09 15:26:19.799] [INFO] console - 开发环境模式
+[2017-01-09 15:26:20.120] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 15:26:20.244] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:26:20.250] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:26:20.668] [INFO] console - listen on 8029
+[2017-01-09 15:26:20.669] [INFO] console - Listening on port 8029
+[2017-01-09 15:26:20.670] [INFO] console - Redis is ready
+[2017-01-09 15:26:20.675] [INFO] console - Connection success!
+[2017-01-09 15:26:20.678] [INFO] console - mongodb is connected
+[2017-01-09 15:26:29.035] [INFO] console - ::1 - - "POST /api/pc/datas HTTP/1.1" 200 5 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.95 Safari/537.36"
+[2017-01-09 15:27:08.486] [ERROR] console - ReferenceError: avel is not defined
+    at exports.create (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:50:19)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:131:13)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/sanitize.js:25:5)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:131:13)
+    at exports.touchToken (/Users/achar/Projects/yuntianyuan_api/utils/token_manager.js:43:2)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:176:3)
+    at router (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:271:10)
+    at cookieParser (/Users/achar/Projects/yuntianyuan_api/node_modules/cookie-parser/index.js:56:14)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:271:10)
+    at expressValidator (/Users/achar/Projects/yuntianyuan_api/node_modules/express-validator/lib/express_validator.js:355:5)
+[2017-01-09 15:27:33.815] [DEBUG] console - 日志系统启动!
+[2017-01-09 15:27:33.862] [INFO] console - 开发环境模式
+[2017-01-09 15:27:34.092] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 15:27:34.175] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:27:34.178] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:27:34.519] [INFO] console - listen on 8029
+[2017-01-09 15:27:34.519] [INFO] console - Listening on port 8029
+[2017-01-09 15:27:34.520] [INFO] console - Redis is ready
+[2017-01-09 15:27:34.525] [INFO] console - Connection success!
+[2017-01-09 15:27:34.531] [INFO] console - mongodb is connected
+[2017-01-09 15:31:06.572] [DEBUG] console - 日志系统启动!
+[2017-01-09 15:31:06.618] [INFO] console - 开发环境模式
+[2017-01-09 15:31:06.848] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 15:31:06.929] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:31:06.931] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:31:07.263] [INFO] console - listen on 8029
+[2017-01-09 15:31:07.264] [INFO] console - Listening on port 8029
+[2017-01-09 15:31:07.265] [INFO] console - Redis is ready
+[2017-01-09 15:31:07.269] [INFO] console - Connection success!
+[2017-01-09 15:31:07.272] [INFO] console - mongodb is connected
+[2017-01-09 15:34:29.039] [DEBUG] console - 日志系统启动!
+[2017-01-09 15:34:29.089] [INFO] console - 开发环境模式
+[2017-01-09 15:34:29.324] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 15:34:29.403] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:34:29.406] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:34:29.739] [INFO] console - listen on 8029
+[2017-01-09 15:34:29.740] [INFO] console - Listening on port 8029
+[2017-01-09 15:34:29.741] [INFO] console - Redis is ready
+[2017-01-09 15:34:29.745] [INFO] console - Connection success!
+[2017-01-09 15:34:29.749] [INFO] console - mongodb is connected
+[2017-01-09 15:35:09.958] [ERROR] console - ReferenceError: datas is not defined
+    at exports.create (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:111:17)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:131:13)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/sanitize.js:25:5)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:131:13)
+    at exports.touchToken (/Users/achar/Projects/yuntianyuan_api/utils/token_manager.js:43:2)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:176:3)
+    at router (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:271:10)
+    at cookieParser (/Users/achar/Projects/yuntianyuan_api/node_modules/cookie-parser/index.js:56:14)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:271:10)
+    at expressValidator (/Users/achar/Projects/yuntianyuan_api/node_modules/express-validator/lib/express_validator.js:355:5)
+[2017-01-09 15:35:34.151] [DEBUG] console - 日志系统启动!
+[2017-01-09 15:35:34.203] [INFO] console - 开发环境模式
+[2017-01-09 15:35:34.490] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 15:35:34.586] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:35:34.590] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:35:35.018] [INFO] console - listen on 8029
+[2017-01-09 15:35:35.018] [INFO] console - Listening on port 8029
+[2017-01-09 15:35:35.020] [INFO] console - Redis is ready
+[2017-01-09 15:35:35.025] [INFO] console - Connection success!
+[2017-01-09 15:35:35.029] [INFO] console - mongodb is connected
+[2017-01-09 15:38:52.406] [DEBUG] console - 日志系统启动!
+[2017-01-09 15:38:52.460] [INFO] console - 开发环境模式
+[2017-01-09 15:38:52.734] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 15:38:52.832] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:38:52.836] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:38:53.234] [INFO] console - listen on 8029
+[2017-01-09 15:38:53.234] [INFO] console - Listening on port 8029
+[2017-01-09 15:38:53.236] [INFO] console - Redis is ready
+[2017-01-09 15:38:53.240] [INFO] console - Connection success!
+[2017-01-09 15:38:53.244] [INFO] console - mongodb is connected
+[2017-01-09 15:40:12.743] [ERROR] console - ReferenceError: datas is not defined
+    at exports.create (/Users/achar/Projects/yuntianyuan_api/api/data/controller.js:111:17)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:131:13)
+    at module.exports (/Users/achar/Projects/yuntianyuan_api/utils/sanitize.js:25:5)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:131:13)
+    at exports.touchToken (/Users/achar/Projects/yuntianyuan_api/utils/token_manager.js:43:2)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:176:3)
+    at router (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:271:10)
+    at cookieParser (/Users/achar/Projects/yuntianyuan_api/node_modules/cookie-parser/index.js:56:14)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/yuntianyuan_api/node_modules/express/lib/router/index.js:271:10)
+    at expressValidator (/Users/achar/Projects/yuntianyuan_api/node_modules/express-validator/lib/express_validator.js:355:5)
+[2017-01-09 15:40:47.322] [DEBUG] console - 日志系统启动!
+[2017-01-09 15:40:47.379] [INFO] console - 开发环境模式
+[2017-01-09 15:40:47.648] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 15:40:47.743] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:40:47.746] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:40:48.117] [INFO] console - listen on 8029
+[2017-01-09 15:40:48.117] [INFO] console - Listening on port 8029
+[2017-01-09 15:40:48.119] [INFO] console - Redis is ready
+[2017-01-09 15:40:48.126] [INFO] console - Connection success!
+[2017-01-09 15:40:48.130] [INFO] console - mongodb is connected
+[2017-01-09 15:41:03.876] [INFO] console - {}
+[2017-01-09 15:46:53.371] [DEBUG] console - 日志系统启动!
+[2017-01-09 15:46:53.424] [INFO] console - 开发环境模式
+[2017-01-09 15:46:53.706] [DEBUG] console - 加载权限管理模块!
+[2017-01-09 15:46:53.800] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:46:53.808] [DEBUG] console - 已加载问诊模块
+[2017-01-09 15:46:54.237] [INFO] console - listen on 8029
+[2017-01-09 15:46:54.237] [INFO] console - Listening on port 8029
+[2017-01-09 15:46:54.239] [INFO] console - Redis is ready
+[2017-01-09 15:46:54.245] [INFO] console - Connection success!
+[2017-01-09 15:46:54.251] [INFO] console - mongodb is connected
+[2017-01-09 15:46:54.405] [ERROR] console - (node:64904) DeprecationWarning: crypto.pbkdf2 without specifying a digest is deprecated. Please specify a digest
+[2017-01-09 15:46:54.408] [INFO] console - init roles
+[2017-01-09 15:46:54.562] [INFO] console - init tech
+[2017-01-09 15:46:54.563] [INFO] console - init admin
+[2017-01-09 15:46:54.650] [INFO] console - init roles
+[2017-01-09 15:47:41.996] [INFO] console - {}

@@ -1,0 +1,16 @@
+[2017-03-27 15:00:16.725] [INFO] console - ::1 - - "GET /api/app/shop HTTP/1.1" 200 60 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"
+[2017-03-27 15:00:57.726] [DEBUG] console - 日志系统启动!
+[2017-03-27 15:00:57.860] [INFO] console - 开发环境模式
+[2017-03-27 15:00:58.461] [DEBUG] console - 加载权限管理模块!
+[2017-03-27 15:00:58.992] [DEBUG] console - 已加载问诊模块
+[2017-03-27 15:00:58.997] [DEBUG] console - 已加载问诊模块
+[2017-03-27 15:00:59.523] [INFO] console - 此文件夹已经存在
+[2017-03-27 15:00:59.524] [INFO] console - uploads创建成功！
+[2017-03-27 15:00:59.524] [INFO] console - 此文件夹已经存在
+[2017-03-27 15:00:59.524] [INFO] console - avator创建成功！
+[2017-03-27 15:00:59.599] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-27 15:00:59.620] [INFO] console - Listening on port 8029
+[2017-03-27 15:00:59.625] [INFO] console - Redis is ready
+[2017-03-27 15:00:59.646] [INFO] console - Connection success!
+[2017-03-27 15:00:59.662] [INFO] console - mongodb is connected
+[2017-03-27 15:01:09.805] [INFO] console - ::1 - - "GET /api/app/shop HTTP/1.1" 200 60 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36"

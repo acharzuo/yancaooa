@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>经络仪检测报告</title>
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/compare.css" />
+    <link rel="stylesheet" href="./css/diagnose-report.css" />
+    <link href="./css/diagnose-label.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.PrintArea.js"></script>
+    <script src="./js/apicommon.js"></script>
+    <script type="text/javascript" src="./js/backTop.js"></script>
+    <script type="text/javascript" src="./js/diagnose-label.js"></script>
+    <script src="./js/moment.js"></script>
+    <link rel="stylesheet" href="./layui/css/layui.css" media="all">
+    <link href="./css/printTest.css" rel="stylesheet" type="text/css" media="print" />
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="header mt30">
+        <a><img class="logo" src="images/logo.png" alt="" /></a>
+        <h3 class="top-title">北京云天元科技经络仪检测报告</h3>
+    </div>
+    <div class="main">
+        <div class="content" id="printContent"></div>
+    </div>
+    <input type="hidden" value="<%=doc._id%>" id='ejsId'>
+</body>
+<script type="text/javascript">
+  
+    var content;
+
+    function template() {
+        // var reportid = window.location.search.replace('?id=', '');
+        var reportid = $('#ejsId').val();
+        // var reportid = '58b8c7b30a2f3f1574a0aa06';
+        ytyApiAjax('/api/report-template/' + reportid, 'get', null, function(err, reply) {
+            console.log('ejs模板渲染：', reply);
+            $('#printContent').html(reply);
+            // 年龄
+            var mmsecound = JSON.parse($('#age').text());
+            var birthYear = convertNumbToDate(mmsecound).split('-')[0];
+            var nowYear = new Date().getFullYear();
+            var age = JSON.parse(nowYear) - JSON.parse(birthYear);
+            $('#age').text(age);
+
+            // 开始日期
+            var birMs = JSON.parse($('#txtBeginDate').text());
+            var endTime = JSON.parse($('#txtFinishDate').text());
+
+            $('#txtBeginDate').text(convertNumbToDate(birMs));
+            $('#txtFinishDate').text(convertNumbToDate(endTime));
+
+            drawSheet("canvas", JSON.parse($('#chartData').val()));
+            content = $('#mathNumber').val();
+        });
+    }
+    
+    //canvas
+    //画图表
+    // drawBase("canvas");
+    var id = window.location.search.replace('?id=', '');
+
+    function drawBase(id) {
+        var canvas = document.getElementById(id);
+        if (canvas == null) return false;
+        var ctx = canvas.getContext('2d'); //获取2d上下文
+        //画直线
+        ctx.strokeStyle = "#00b686";
+        ctx.fillStyle = "#00b686";
+        ctx.lineWidth = 2; //图形边框宽度
+        //画中间水平线M
+        ctx.beginPath(); //创建路径
+        ctx.moveTo(0, 400);
+        ctx.lineTo(1248, 400);
+        ctx.closePath(); //结束路径
+        ctx.stroke(); //描绘
+        ctx.fill(); //填充
+        //画栅格
+        ctx.strokeStyle = "#ccc";
+        ctx.beginPath();
+        for (var i = 1; i < 24; i++) {
+            ctx.moveTo(52 * i, 0);
+            ctx.lineTo(52 * i, 1200);
+        }
+        ctx.closePath();
+        ctx.stroke();
+        //H1 and L1
+        ctx.strokeStyle = "#57b6f8";
+        ctx.beginPath();
+        ctx.moveTo(0, 325);
+        ctx.lineTo(1248, 325);
+        ctx.moveTo(0, 475);
+        ctx.lineTo(1248, 475);
+        ctx.closePath();
+        ctx.stroke();
+    }
+
+    function drawSheet(id, data, percentValue) { //data是各经络值
+        drawBase(id);
+        //h画柱状图
+
+        var canvas = document.getElementById(id);
+        if (canvas == null) return false;
+        var ctx = canvas.getContext('2d'); //获取2d上下文
+        ctx.font = "20px Arial";
+        //前六个经络
+        for (var i = 0; i < 6; i++) {
+            // 左六穴位
+            if (data[i].percentValue < 0) {
+                if (Math.abs(data[i].percentValue) <= 37.5) {
+                    ctx.fillStyle = "#00b686";
+                } else {
+                    ctx.fillStyle = "#f78756";
+                }
+                ctx.fillRect((104 * i + 14), 401, 36, Math.abs(data[i].percentValue * 2));
+                //字体ok
+                ctx.fillStyle = "black";
+                if (data[i].percentValue == 0) {
+                    ctx.fillText((data[i].percentValue), (104 * i + 20), 425 + Math.abs(data[i].percentValue * 2));
+                } else if (data[i].percentValue > -10) {
+                    ctx.fillText((data[i].percentValue).toFixed(1), (104 * i + 10), 425 + Math.abs(data[i].percentValue * 2));
+                } else {
+                    ctx.fillText((data[i].percentValue).toFixed(1), (104 * i + 5), 425 + Math.abs(data[i].percentValue * 2));
+                }
+            } else {
+                if (data[i].percentValue <= 37.5) {
+                    ctx.fillStyle = "#00b686";
+                } else {
+                    ctx.fillStyle = "#f78756";
+                }
+                ctx.fillRect((104 * i + 14), (399 - data[i].percentValue * 2), 36, (data[i].percentValue * 2));
+                //字体ok
+                ctx.fillStyle = "black";
+                if (data[i].percentValue < 10 && data[i].percentValue >= 0) {
+                    ctx.fillText((data[i].percentValue).toFixed(1), (104 * i + 17), (396 - data[i].percentValue * 2));
+                } else {
+                    ctx.fillText((data[i].percentValue).toFixed(1), (104 * i + 10), (396 - data[i].percentValue * 2));
+                }
+            }
+            // 右六穴位
+            if (data[i + 6].percentValue < 0) {
+                if (Math.abs(data[i + 6].percentValue) <= 37.5) {
+                    ctx.fillStyle = "#00b686";
+                } else {
+                    ctx.fillStyle = "#f78756";
+                }
+                ctx.fillRect((104 * i + 54), 401, 36, Math.abs(data[i + 6].percentValue * 2));
+                //字体ok
+                ctx.fillStyle = "black";
+                if (data[i + 6].percentValue == 0) {
+                    ctx.fillText((data[i + 6].percentValue), (104 * i + 70), 425 + Math.abs(data[i + 6].percentValue * 2));
+                } else if (data[i].percentValue > -10) {
+                    ctx.fillText((data[i + 6].percentValue).toFixed(1), (104 * i + 50), 425 + Math.abs(data[i + 6].percentValue * 2));
+                } else {
+                    ctx.fillText((data[i + 6].percentValue).toFixed(1), (104 * i + 55), 425 + Math.abs(data[i + 6].percentValue * 2));
+                }
+            } else {
+                if (data[i + 6].percentValue <= 37.5) {
+                    ctx.fillStyle = "#00b686";
+                } else {
+                    ctx.fillStyle = "#f78756";
+                }
+                ctx.fillRect((104 * i + 54), (399 - data[i + 6].percentValue * 2), 36, (data[i + 6].percentValue * 2));
+                //字体ok
+                ctx.fillStyle = "black";
+                if (data[i + 6].percentValue < 10 && data[i + 6].percentValue >= 0) {
+                    ctx.fillText((data[i + 6].percentValue).toFixed(1), (104 * i + 60), (396 - data[i + 6].percentValue * 2));
+                } else {
+                    ctx.fillText((data[i + 6].percentValue).toFixed(1), (104 * i + 55), (396 - data[i + 6].percentValue * 2));
+                }
+            }
+
+        }
+        //后六经络
+        for (var j = 12; j < 18; j++) {
+        //左六穴位
+            if (data[j].percentValue < 0) {
+                if (Math.abs(data[j].percentValue) <= 37.5) {
+                    ctx.fillStyle = "#00b686";
+                } else {
+                    ctx.fillStyle = "#f78756";
+                }
+                ctx.fillRect((104 * (j - 6) + 14), 401, 36, Math.abs(data[j].percentValue * 2));
+                //字体ok
+                ctx.fillStyle = "black";
+                if (data[j].percentValue == 0) {
+                    ctx.fillText((data[j].percentValue).toFixed(1), (104 * (j - 6) + 20), 425 + Math.abs(data[j].percentValue * 2));
+                } else if (data[j].percentValue > -10) {
+                    ctx.fillText((data[j].percentValue).toFixed(1), (104 * (j - 6) + 10), 425 + Math.abs(data[j].percentValue * 2));
+                } else {
+                    ctx.fillText((data[j].percentValue).toFixed(1), (104 * (j - 6) + 5), 425 + Math.abs(data[j].percentValue * 2));
+                }
+            } else {
+                if (data[j].percentValue <= 37.5) {
+                    ctx.fillStyle = "#00b686";
+                } else {
+                    ctx.fillStyle = "#f78756";
+                }
+                ctx.fillRect((104 * (j - 6) + 14), (399 - data[j].percentValue * 2), 36, (data[j].percentValue * 2));
+
+                //字体ok
+                ctx.fillStyle = "black";
+                if (data[j].percentValue < 10 && data[j].percentValue >= 0) {
+                    ctx.fillText((data[j].percentValue).toFixed(1), (104 * (j - 6) + 17), (396 - data[j].percentValue * 2));
+                } else {
+                    ctx.fillText((data[j].percentValue).toFixed(1), (104 * (j - 6) + 10), (396 - data[j].percentValue * 2));
+                }
+            }
+            //右六穴位
+            if (data[j + 6].percentValue < 0) {
+                if (Math.abs(data[j + 6].percentValue) <= 37.5) {
+                    ctx.fillStyle = "#00b686";
+                } else {
+                    ctx.fillStyle = "#f78756";
+                }
+                ctx.fillRect((104 * (j - 6) + 54), 401, 36, Math.abs(data[j + 6].percentValue * 2));
+                //字体ok
+                ctx.fillStyle = "black";
+                if (data[j + 6].percentValue == 0) {
+                    ctx.fillText((data[j + 6].percentValue), (104 * (j - 6) + 70), 425 + Math.abs(data[j + 6].percentValue * 2));
+                } else if (data[j + 6].percentValue > -10) {
+                    ctx.fillText((data[j + 6].percentValue).toFixed(1), (104 * (j - 6) + 50), 425 + Math.abs(data[j + 6].percentValue * 2));
+                } else {
+                    ctx.fillText((data[j + 6].percentValue).toFixed(1), (104 * (j - 6) + 55), 425 + Math.abs(data[j + 6].percentValue * 2));
+                }
+
+            } else {
+                if (data[j + 6].percentValue <= 37.5) {
+                    ctx.fillStyle = "#00b686";
+                } else {
+                    ctx.fillStyle = "#f78756";
+                }
+                ctx.fillRect((104 * (j - 6) + 54), (399 - data[j + 6].percentValue * 2), 36, (data[j + 6].percentValue * 2));
+                //字体ok
+                ctx.fillStyle = "black";
+                if (data[j + 6].percentValue < 10) {
+                    ctx.fillText((data[j + 6].percentValue).toFixed(1), (104 * (j - 6) + 57), (396 - data[j + 6].percentValue * 2));
+                } else {
+                    ctx.fillText((data[j + 6].percentValue).toFixed(1), (104 * (j - 6) + 50), (396 - data[j + 6].percentValue * 2));
+                }
+            }
+        }
+
+    }
+
+
+
+
+    template();
+</script>
+
+</html>

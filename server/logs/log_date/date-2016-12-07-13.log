@@ -1,0 +1,20 @@
+[2016-12-07 13:56:58.583] [DEBUG] console - 日志系统启动!
+[2016-12-07 13:56:58.691] [DEBUG] console - 目录列表 [ { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T01:52:04.000Z } ]
+[2016-12-07 13:56:58.726] [DEBUG] console - 加载用户管理模块!
+[2016-12-07 13:56:58.727] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-07 13:56:58.774] [INFO] console - Connection success!
+[2016-12-07 13:56:58.777] [INFO] console - mongodb is connected
+[2016-12-07 13:57:54.447] [INFO] console - ::1 - - "POST /api/user/login HTTP/1.1" 200 51 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"
+[2016-12-07 13:59:23.004] [DEBUG] console - 日志系统启动!
+[2016-12-07 13:59:23.113] [DEBUG] console - 目录列表 [ { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T01:52:04.000Z } ]
+[2016-12-07 13:59:23.430] [DEBUG] console - 加载用户管理模块!
+[2016-12-07 13:59:23.431] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-07 13:59:23.465] [INFO] console - Connection success!
+[2016-12-07 13:59:23.466] [INFO] console - mongodb is connected
+[2016-12-07 13:59:25.669] [INFO] console - ::1 - - "GET / HTTP/1.1" 200 288 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.71 Safari/537.36"

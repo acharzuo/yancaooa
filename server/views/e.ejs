@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta content="yes" name="apple-touch-fullscreen">
+    <title>报告详情</title>
+    <link rel="stylesheet" type="text/css" href="/css/reportcommon.css" />
+    <link rel="stylesheet" type="text/css" href="/css/report_detail.css" />
+
+    <!-- 引入flexible.js  手淘移动适配解决方案 -->
+    <script src="/js/flexible.js"></script>
+
+</head>
+
+<body>
+    <div id="wrap" class="flex-wrap flex-vertical">
+        <div id="header">
+            <h1>报告详情</h1>
+        </div>
+        <!-- header end -->
+
+        <section id="main">
+            <div class="content">
+                <ul class="report_detail">
+                    <li id='userName'>
+                        <span>姓名:</span>
+                        <strong></strong>
+                    </li>
+                    <li id='userAge'>
+                        <span>年龄:</span>
+                        <strong></strong>
+                    </li>
+                    <li id="userBir">
+                        <span>生辰:</span>
+                        <strong></strong>
+                    </li>
+                    <li id="disease">
+                        <span>病症:</span>
+                        <strong></strong>
+                    </li>
+                    <li id="emotion">
+                        <span>情绪:</span>
+                        <strong></strong>
+                    </li>
+                    <li id="character">
+                        <span>性格:</span>
+                        <strong></strong>
+                    </li>
+                    <li id="treatment">
+                        <span>治疗方案</span>
+                        <strong></strong>
+                    </li>
+                    <li id="healthPlan">
+                        <span>养生方案</span>
+                        <strong></strong>
+                    </li>
+                    <li id="dietPlan">
+                        <span>食疗方案</span>
+                        <strong></strong>
+                    </li>
+                </ul>
+
+                <ul class="report_sheet">
+                    <li>
+                        <h3>经络虚实图</h3>
+                        <div>
+                            <i>H</i>
+                            <i>M</i>
+                            <i>L</i>
+                            <b>肺经</b>
+                            <b>心包</b>
+                            <b>心经</b>
+                            <b>大肠</b>
+                            <b>三焦</b>
+                            <b>小肠</b>
+                            <b>脾经</b>
+                            <b>肝经</b>
+                            <b>肾经</b>
+                            <b>胃经</b>
+                            <b>胆经</b>
+                            <b>膀胱</b>
+                            <canvas id="canvas1" width="624" height="400">不支持canvas</canvas>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>经络寒热图</h3>
+                        <div>
+                            <i>H</i>
+                            <i>M</i>
+                            <i>L</i>
+                            <b>肺经</b>
+                            <b>心包</b>
+                            <b>心经</b>
+                            <b>大肠</b>
+                            <b>三焦</b>
+                            <b>小肠</b>
+                            <b>脾经</b>
+                            <b>肝经</b>
+                            <b>肾经</b>
+                            <b>胃经</b>
+                            <b>胆经</b>
+                            <b>膀胱</b>
+                            <canvas id="canvas2" width="624" height="400">不支持canvas</canvas>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>经络平衡图</h3>
+                        <div>
+                            <i>H</i>
+                            <i>M</i>
+                            <i>L</i>
+                            <b>肺经</b>
+                            <b>心包</b>
+                            <b>心经</b>
+                            <b>大肠</b>
+                            <b>三焦</b>
+                            <b>小肠</b>
+                            <b>脾经</b>
+                            <b>肝经</b>
+                            <b>肾经</b>
+                            <b>胃经</b>
+                            <b>胆经</b>
+                            <b>膀胱</b>
+                            <canvas id="canvas3" width="624" height="400">不支持canvas</canvas>
+                        </div>
+                    </li>
+                    <li>
+                        <!--<span>体质特征&nbsp;<b>阴虚</b></span>-->
+                        <span>体质特征</span>
+                        <strong>阴虚体质是以人体阴精不足，濡养，及对阳的抑制涵养能力不足的而形成的以口渴、便秘 、烦躁、 失眠、皮肤干燥、手脚心热为主要特征的</strong>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <div id="mask"></div>
+    </div>
+</body>
+<script type="text/javascript" src="/js/api.js"></script>
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/report_detail.js"></script>
+
+</html>

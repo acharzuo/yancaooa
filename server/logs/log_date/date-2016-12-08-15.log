@@ -1,0 +1,49 @@
+[2016-12-08 15:09:49.355] [DEBUG] console - 日志系统启动!
+[2016-12-08 15:09:50.175] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T06:16:17.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 15:09:50.216] [DEBUG] console - 加载demo模块!
+[2016-12-08 15:09:50.217] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 15:09:52.999] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 15:09:53.003] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 15:10:02.856] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 15:10:02.859] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 15:10:02.951] [INFO] console - Listening on port 3000
+[2016-12-08 15:10:02.960] [INFO] console - Connection success!
+[2016-12-08 15:10:02.961] [INFO] console - mongodb is connected
+[2016-12-08 15:10:14.082] [DEBUG] console - 备份目录: /Users/achar/Projects/yuntianyuan_api/backup/mongodb
+[2016-12-08 15:10:18.205] [DEBUG] console - 备份命令: mongodump  -u root -d yuntianyuan -o "/Users/achar/Projects/yuntianyuan_api/backup/mongodb/20161208151014"
+[2016-12-08 15:12:17.230] [DEBUG] console - 日志系统启动!
+[2016-12-08 15:12:17.553] [DEBUG] console - 目录列表 [ { name: 'demo',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-07T07:45:32.000Z },
+  { name: 'system',
+    type: 'folder',
+    size: 136,
+    date: 2016-12-08T07:12:03.000Z },
+  { name: 'user',
+    type: 'folder',
+    size: 170,
+    date: 2016-12-08T03:01:20.000Z } ]
+[2016-12-08 15:12:17.608] [DEBUG] console - 加载demo模块!
+[2016-12-08 15:12:17.608] [DEBUG] console - Load API Root:  /api/demo  PATH: /Users/achar/Projects/yuntianyuan_api/api/demo/demo.router
+[2016-12-08 15:12:18.343] [DEBUG] console - 系统管理模块加载....
+[2016-12-08 15:12:18.343] [DEBUG] console - Load API Root:  /api/system  PATH: /Users/achar/Projects/yuntianyuan_api/api/system/system.router
+[2016-12-08 15:12:18.934] [DEBUG] console - 加载用户管理模块!
+[2016-12-08 15:12:18.934] [DEBUG] console - Load API Root:  /api/user  PATH: /Users/achar/Projects/yuntianyuan_api/api/user/user.router
+[2016-12-08 15:12:18.953] [INFO] console - Listening on port 3000
+[2016-12-08 15:12:18.973] [INFO] console - Connection success!
+[2016-12-08 15:12:18.975] [INFO] console - mongodb is connected
+[2016-12-08 15:12:26.810] [DEBUG] console - 备份目录: /Users/achar/Projects/yuntianyuan_api/backup/mongodb
+[2016-12-08 15:12:26.811] [DEBUG] console - 备份命令: mongodump  -u root -d yuntianyuan -o "/Users/achar/Projects/yuntianyuan_api/backup/mongodb/20161208151226"
+[2016-12-08 15:33:50.820] [INFO] console - ::1 - - "GET / HTTP/1.1" 200 264 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_1) AppleWebKit/602.2.14 (KHTML, like Gecko) Version/10.0.1 Safari/602.2.14"
