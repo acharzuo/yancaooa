@@ -11,6 +11,7 @@ document.body.appendChild(load_element);
 
 
 	var httpUrl = "http://182.140.244.73:91/gateway/router?";
+	var baseUrl = "http://192.168.0.102:8029/"
 	var app_key = "9e304d4e8df1b74cfa009913198428ab";
 	var v = "v1.0";
 	var sign_method = "md5";
@@ -326,7 +327,7 @@ document.body.appendChild(load_element);
 	w.ajax_get_Recommend = function(options){
 		//startLoad();
 		// var data = getdata(options,'com.huihoo.product.get_hot_products');
-		mui.ajax("http://192.168.0.102:8029/api/app/shop",{
+		mui.ajax( baseUrl + "api/app/shop",{
 			data:options,
 			dataType:'json',
 			type:'get',
@@ -346,5 +347,57 @@ document.body.appendChild(load_element);
 		});
 	}
 	
+	w.ajax_post_shopInfo = function(options){
+		console.log(JSON.stringify(options));
+		var data = {data: JSON.stringify(options)};
+		mui.ajax(baseUrl + "api/app/shop",{
+			data:data,
+			dataType:'json',
+			type:'post',
+			timeout:10000,
+			success:function(data){
+				logData(data);
+				
+				setTimeout(function(){
+					// endLoad();
+					// getRecommendSuccess(data);
+					mui.toast("上传成功!" );
+				},500);
+				
+				
+			},
+			error:function(xhr,type,errorThrown){
+				
+			}
+		})
+	}
+	
+	w.ajax_post_file = function(options){
+		console.log(JSON.stringify(options));
+		
+		var data = {data: JSON.stringify(options)};
+		mui.ajax(baseUrl + "api/app/files",{
+			data:data,
+			dataType:'json',
+			type:'post',
+			timeout:10000,
+			contentType: false,    //不可缺
+            processData: false,    //不可缺
+			success:function(data){
+				logData(data);
+				
+				setTimeout(function(){
+					// endLoad();
+					// getRecommendSuccess(data);
+					mui.toast("上传成功!" );
+				},500);
+				
+				
+			},
+			error:function(xhr,type,errorThrown){
+				
+			}
+		})
+	}
 	
 })(window);

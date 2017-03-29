@@ -1,0 +1,446 @@
+[2017-03-28 15:05:20.094] [DEBUG] console - 日志系统启动!
+[2017-03-28 15:05:20.695] [INFO] console - 开发环境模式
+[2017-03-28 15:05:29.092] [DEBUG] console - 加载权限管理模块!
+[2017-03-28 15:05:38.297] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:05:38.409] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:05:42.787] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:05:42.788] [INFO] console - uploads创建成功！
+[2017-03-28 15:05:42.788] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:05:42.789] [INFO] console - avator创建成功！
+[2017-03-28 15:05:45.187] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-28 15:05:45.200] [INFO] console - Listening on port 8029
+[2017-03-28 15:05:45.991] [INFO] console - Redis is ready
+[2017-03-28 15:05:46.006] [INFO] console - Connection success!
+[2017-03-28 15:05:46.011] [INFO] console - mongodb is connected
+[2017-03-28 15:06:07.170] [ERROR] console - { name: 'ParamValidateError',
+  param: 'name',
+  message: '必须存在企业名称',
+  value: undefined }
+[2017-03-28 15:06:07.175] [INFO] console - ::ffff:192.168.0.110 - - "POST /api/app/shop HTTP/1.1" 200 143 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:07:29.525] [DEBUG] console - 日志系统启动!
+[2017-03-28 15:07:30.106] [INFO] console - 开发环境模式
+[2017-03-28 15:07:36.992] [DEBUG] console - 加载权限管理模块!
+[2017-03-28 15:07:46.251] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:07:46.362] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:07:50.937] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:07:50.939] [INFO] console - uploads创建成功！
+[2017-03-28 15:07:50.939] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:07:50.939] [INFO] console - avator创建成功！
+[2017-03-28 15:07:53.426] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-28 15:07:53.438] [INFO] console - Listening on port 8029
+[2017-03-28 15:07:54.553] [INFO] console - Redis is ready
+[2017-03-28 15:07:54.569] [INFO] console - Connection success!
+[2017-03-28 15:07:54.574] [INFO] console - mongodb is connected
+[2017-03-28 15:08:08.468] [ERROR] console - { name: 'ParamValidateError',
+  param: 'shop',
+  message: '店铺必须存在',
+  value: undefined }
+[2017-03-28 15:08:08.472] [INFO] console - ::ffff:192.168.0.110 - - "POST /api/app/shop HTTP/1.1" 200 137 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:08:41.476] [DEBUG] console - 日志系统启动!
+[2017-03-28 15:08:41.998] [INFO] console - 开发环境模式
+[2017-03-28 15:08:48.903] [DEBUG] console - 加载权限管理模块!
+[2017-03-28 15:08:58.501] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:08:58.613] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:09:03.011] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:09:03.014] [INFO] console - uploads创建成功！
+[2017-03-28 15:09:03.014] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:09:03.015] [INFO] console - avator创建成功！
+[2017-03-28 15:09:05.420] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-28 15:09:05.432] [INFO] console - Listening on port 8029
+[2017-03-28 15:09:06.221] [INFO] console - Redis is ready
+[2017-03-28 15:09:06.236] [INFO] console - Connection success!
+[2017-03-28 15:09:06.241] [INFO] console - mongodb is connected
+[2017-03-28 15:09:14.551] [ERROR] console - { name: 'ParamValidateError',
+  param: 'shop',
+  message: '店铺必须存在',
+  value: undefined }
+[2017-03-28 15:09:14.555] [INFO] console - ::ffff:192.168.0.110 - - "POST /api/app/shop HTTP/1.1" 200 137 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:11:20.294] [INFO] console - ::ffff:192.168.0.110 - - "GET /api/app/shop HTTP/1.1" 200 253 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:11:25.813] [ERROR] console - { name: 'ParamValidateError',
+  param: 'shop',
+  message: '店铺必须存在',
+  value: undefined }
+[2017-03-28 15:11:25.816] [INFO] console - ::ffff:192.168.0.110 - - "POST /api/app/shop HTTP/1.1" 200 137 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:12:13.525] [INFO] console - ::ffff:192.168.0.110 - - "GET /api/app/shop HTTP/1.1" 200 253 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:12:17.916] [ERROR] console - { name: 'ParamValidateError',
+  param: 'shop',
+  message: '店铺必须存在',
+  value: undefined }
+[2017-03-28 15:12:17.918] [INFO] console - ::ffff:192.168.0.110 - - "POST /api/app/shop HTTP/1.1" 200 137 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:21:26.613] [DEBUG] console - 日志系统启动!
+[2017-03-28 15:21:27.211] [INFO] console - 开发环境模式
+[2017-03-28 15:21:34.333] [DEBUG] console - 加载权限管理模块!
+[2017-03-28 15:21:43.398] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:21:43.502] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:21:47.806] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:21:47.808] [INFO] console - uploads创建成功！
+[2017-03-28 15:21:47.808] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:21:47.808] [INFO] console - avator创建成功！
+[2017-03-28 15:21:50.188] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-28 15:21:50.201] [INFO] console - Listening on port 8029
+[2017-03-28 15:21:51.039] [INFO] console - Redis is ready
+[2017-03-28 15:21:51.054] [INFO] console - Connection success!
+[2017-03-28 15:21:51.059] [INFO] console - mongodb is connected
+[2017-03-28 15:22:08.918] [INFO] console - { 'shop[licenseId]': '371621116239',
+  'shop[name]': '新意书店',
+  'shop[manager]': '李守和',
+  'shop[regist]': '2017-03-21',
+  'shop[expire]': '2018-12-31',
+  'shop[address]': '山东省滨州市惠民县胡集镇北李村',
+  'shop[status]': '初始申请',
+  'shop[image]': 'title.png',
+  'geolocation[]': [ 'gcj02', '北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处', '1490685137529' ],
+  'geolocation[address][cityCode]': '010',
+  'geolocation[address][province]': '北京市',
+  'geolocation[address][district]': '朝阳区',
+  'geolocation[address][poiName]': '元大都城垣遗址公园管理处',
+  'geolocation[address][street]': '北土城东路',
+  'geolocation[address][city]': '北京市',
+  'geolocation[address][country]': '中国',
+  'geolocation[coords][]': [ '39.976504', '116.427344', '29', '0', 'NaN', '0', '0' ] }
+[2017-03-28 15:22:08.930] [ERROR] console - { name: 'ParamValidateError',
+  param: 'shop',
+  message: '店铺必须存在',
+  value: undefined }
+[2017-03-28 15:22:08.933] [INFO] console - ::ffff:192.168.0.110 - - "POST /api/app/shop HTTP/1.1" 200 137 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:24:41.590] [DEBUG] console - 日志系统启动!
+[2017-03-28 15:24:42.108] [INFO] console - 开发环境模式
+[2017-03-28 15:24:48.872] [DEBUG] console - 加载权限管理模块!
+[2017-03-28 15:24:58.077] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:24:58.184] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:25:02.772] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:25:02.774] [INFO] console - uploads创建成功！
+[2017-03-28 15:25:02.774] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:25:02.774] [INFO] console - avator创建成功！
+[2017-03-28 15:25:05.366] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-28 15:25:05.377] [INFO] console - Listening on port 8029
+[2017-03-28 15:25:06.165] [INFO] console - Redis is ready
+[2017-03-28 15:25:06.178] [INFO] console - Connection success!
+[2017-03-28 15:25:06.182] [INFO] console - mongodb is connected
+[2017-03-28 15:25:10.889] [INFO] console - { 'shop[licenseId]': '371621116239',
+  'shop[name]': '新意书店',
+  'shop[manager]': '李守和',
+  'shop[regist]': '2017-03-21',
+  'shop[expire]': '2018-12-31',
+  'shop[address]': '山东省滨州市惠民县胡集镇北李村',
+  'shop[status]': '初始申请',
+  'shop[image]': 'title.png',
+  'geolocation[]': [ 'gcj02', '北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处', '1490685137529' ],
+  'geolocation[address][cityCode]': '010',
+  'geolocation[address][province]': '北京市',
+  'geolocation[address][district]': '朝阳区',
+  'geolocation[address][poiName]': '元大都城垣遗址公园管理处',
+  'geolocation[address][street]': '北土城东路',
+  'geolocation[address][city]': '北京市',
+  'geolocation[address][country]': '中国',
+  'geolocation[coords][]': [ '39.976504', '116.427344', '29', '0', 'NaN', '0', '0' ] }
+[2017-03-28 15:25:10.898] [ERROR] console - { name: 'ParamValidateError',
+  param: 'shop["licenseId"]',
+  message: '店铺必须存在',
+  value: undefined }
+[2017-03-28 15:25:10.902] [INFO] console - ::ffff:192.168.0.110 - - "POST /api/app/shop HTTP/1.1" 200 152 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:26:15.413] [DEBUG] console - 日志系统启动!
+[2017-03-28 15:26:16.052] [INFO] console - 开发环境模式
+[2017-03-28 15:26:24.372] [DEBUG] console - 加载权限管理模块!
+[2017-03-28 15:26:35.394] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:26:35.503] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:26:39.922] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:26:39.924] [INFO] console - uploads创建成功！
+[2017-03-28 15:26:39.924] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:26:39.924] [INFO] console - avator创建成功！
+[2017-03-28 15:26:42.586] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-28 15:26:42.606] [INFO] console - Listening on port 8029
+[2017-03-28 15:26:43.587] [INFO] console - Redis is ready
+[2017-03-28 15:26:43.602] [INFO] console - Connection success!
+[2017-03-28 15:26:43.607] [INFO] console - mongodb is connected
+[2017-03-28 15:26:48.288] [INFO] console - { 'shop[licenseId]': '371621116239',
+  'shop[name]': '新意书店',
+  'shop[manager]': '李守和',
+  'shop[regist]': '2017-03-21',
+  'shop[expire]': '2018-12-31',
+  'shop[address]': '山东省滨州市惠民县胡集镇北李村',
+  'shop[status]': '初始申请',
+  'shop[image]': 'title.png',
+  'geolocation[]': [ 'gcj02', '北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处', '1490685137529' ],
+  'geolocation[address][cityCode]': '010',
+  'geolocation[address][province]': '北京市',
+  'geolocation[address][district]': '朝阳区',
+  'geolocation[address][poiName]': '元大都城垣遗址公园管理处',
+  'geolocation[address][street]': '北土城东路',
+  'geolocation[address][city]': '北京市',
+  'geolocation[address][country]': '中国',
+  'geolocation[coords][]': [ '39.976504', '116.427344', '29', '0', 'NaN', '0', '0' ] }
+[2017-03-28 15:26:48.293] [INFO] console - { 'shop[licenseId]': '371621116239',
+  'shop[name]': '新意书店',
+  'shop[manager]': '李守和',
+  'shop[regist]': '2017-03-21',
+  'shop[expire]': '2018-12-31',
+  'shop[address]': '山东省滨州市惠民县胡集镇北李村',
+  'shop[status]': '初始申请',
+  'shop[image]': 'title.png',
+  'geolocation[]': [ 'gcj02', '北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处', '1490685137529' ],
+  'geolocation[address][cityCode]': '010',
+  'geolocation[address][province]': '北京市',
+  'geolocation[address][district]': '朝阳区',
+  'geolocation[address][poiName]': '元大都城垣遗址公园管理处',
+  'geolocation[address][street]': '北土城东路',
+  'geolocation[address][city]': '北京市',
+  'geolocation[address][country]': '中国',
+  'geolocation[coords][]': [ '39.976504', '116.427344', '29', '0', 'NaN', '0', '0' ] }
+[2017-03-28 15:26:48.300] [INFO] console - ::ffff:192.168.0.110 - - "POST /api/app/shop HTTP/1.1" 200 45 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:27:50.798] [DEBUG] console - 日志系统启动!
+[2017-03-28 15:27:51.319] [INFO] console - 开发环境模式
+[2017-03-28 15:27:58.265] [DEBUG] console - 加载权限管理模块!
+[2017-03-28 15:28:07.573] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:28:07.685] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:28:11.965] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:28:11.966] [INFO] console - uploads创建成功！
+[2017-03-28 15:28:11.966] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:28:11.966] [INFO] console - avator创建成功！
+[2017-03-28 15:28:14.349] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-28 15:28:14.361] [INFO] console - Listening on port 8029
+[2017-03-28 15:28:15.190] [INFO] console - Redis is ready
+[2017-03-28 15:28:15.204] [INFO] console - Connection success!
+[2017-03-28 15:28:15.207] [INFO] console - mongodb is connected
+[2017-03-28 15:28:39.902] [INFO] console - { 'shop[licenseId]': '371621116239',
+  'shop[name]': '新意书店',
+  'shop[manager]': '李守和',
+  'shop[regist]': '2017-03-21',
+  'shop[expire]': '2018-12-31',
+  'shop[address]': '山东省滨州市惠民县胡集镇北李村',
+  'shop[status]': '初始申请',
+  'shop[image]': 'title.png',
+  'geolocation[]': [ 'gcj02', '北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处', '1490685137529' ],
+  'geolocation[address][cityCode]': '010',
+  'geolocation[address][province]': '北京市',
+  'geolocation[address][district]': '朝阳区',
+  'geolocation[address][poiName]': '元大都城垣遗址公园管理处',
+  'geolocation[address][street]': '北土城东路',
+  'geolocation[address][city]': '北京市',
+  'geolocation[address][country]': '中国',
+  'geolocation[coords][]': [ '39.976504', '116.427344', '29', '0', 'NaN', '0', '0' ] }
+[2017-03-28 15:28:39.922] [ERROR] console - { name: 'ParamValidateError',
+  param: 'shop.licenseId',
+  message: '店铺必须存在',
+  value: undefined }
+[2017-03-28 15:28:39.925] [INFO] console - ::ffff:192.168.0.110 - - "POST /api/app/shop HTTP/1.1" 200 147 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:34:33.776] [DEBUG] console - 日志系统启动!
+[2017-03-28 15:34:34.313] [INFO] console - 开发环境模式
+[2017-03-28 15:34:41.302] [DEBUG] console - 加载权限管理模块!
+[2017-03-28 15:34:50.424] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:34:50.526] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:34:55.159] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:34:55.161] [INFO] console - uploads创建成功！
+[2017-03-28 15:34:55.161] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:34:55.161] [INFO] console - avator创建成功！
+[2017-03-28 15:34:57.741] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-28 15:34:57.755] [INFO] console - Listening on port 8029
+[2017-03-28 15:34:58.908] [INFO] console - Redis is ready
+[2017-03-28 15:34:58.925] [INFO] console - Connection success!
+[2017-03-28 15:34:58.931] [INFO] console - mongodb is connected
+[2017-03-28 15:35:15.228] [INFO] console - { 'shop[licenseId]': '371621116239',
+  'shop[name]': '新意书店',
+  'shop[manager]': '李守和',
+  'shop[regist]': '2017-03-21',
+  'shop[expire]': '2018-12-31',
+  'shop[address]': '山东省滨州市惠民县胡集镇北李村',
+  'shop[status]': '初始申请',
+  'shop[image]': 'title.png',
+  'geolocation[]': [ 'gcj02', '北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处', '1490685137529' ],
+  'geolocation[address][cityCode]': '010',
+  'geolocation[address][province]': '北京市',
+  'geolocation[address][district]': '朝阳区',
+  'geolocation[address][poiName]': '元大都城垣遗址公园管理处',
+  'geolocation[address][street]': '北土城东路',
+  'geolocation[address][city]': '北京市',
+  'geolocation[address][country]': '中国',
+  'geolocation[coords][]': [ '39.976504', '116.427344', '29', '0', 'NaN', '0', '0' ] }
+[2017-03-28 15:35:15.234] [ERROR] console - ReferenceError: name is not defined
+    at exports.create (/Users/achar/Projects/my_Projects/yancaooa/server/api/shops/controller.js:27:31)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at module.exports (/Users/achar/Projects/my_Projects/yancaooa/server/utils/sanitize.js:25:5)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at exports.touchToken (/Users/achar/Projects/my_Projects/yancaooa/server/utils/token_manager.js:44:2)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:176:3)
+    at router (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at cookieParser (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/cookie-parser/index.js:56:14)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at expressValidator (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express-validator/lib/express_validator.js:355:5)
+[2017-03-28 15:35:39.672] [INFO] console - { 'shop[licenseId]': '371621116239',
+  'shop[name]': '新意书店',
+  'shop[manager]': '李守和',
+  'shop[regist]': '2017-03-21',
+  'shop[expire]': '2018-12-31',
+  'shop[address]': '山东省滨州市惠民县胡集镇北李村',
+  'shop[status]': '初始申请',
+  'shop[image]': 'title.png',
+  'geolocation[]': [ 'gcj02', '北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处', '1490685137529' ],
+  'geolocation[address][cityCode]': '010',
+  'geolocation[address][province]': '北京市',
+  'geolocation[address][district]': '朝阳区',
+  'geolocation[address][poiName]': '元大都城垣遗址公园管理处',
+  'geolocation[address][street]': '北土城东路',
+  'geolocation[address][city]': '北京市',
+  'geolocation[address][country]': '中国',
+  'geolocation[coords][]': [ '39.976504', '116.427344', '29', '0', 'NaN', '0', '0' ] }
+[2017-03-28 15:39:27.492] [ERROR] console - ReferenceError: name is not defined
+    at exports.create (/Users/achar/Projects/my_Projects/yancaooa/server/api/shops/controller.js:27:31)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at module.exports (/Users/achar/Projects/my_Projects/yancaooa/server/utils/sanitize.js:25:5)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at exports.touchToken (/Users/achar/Projects/my_Projects/yancaooa/server/utils/token_manager.js:44:2)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:176:3)
+    at router (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at cookieParser (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/cookie-parser/index.js:56:14)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at expressValidator (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express-validator/lib/express_validator.js:355:5)
+[2017-03-28 15:39:27.500] [INFO] console - Connection error: Error: connection timeout
+[2017-03-28 15:39:27.580] [INFO] console - { data: '{"shop":{"licenseId":"371621116239","name":"新意书店","manager":"李守和","regist":"2017-03-21","expire":"2018-12-31","address":"山东省滨州市惠民县胡集镇北李村","status":"初始申请","image":"title.png"},"geolocation":{"coordsType":"gcj02","address":{"cityCode":"010","province":"北京市","district":"朝阳区","poiName":"元大都城垣遗址公园管理处","street":"北土城东路","city":"北京市","country":"中国"},"addresses":"北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处","coords":{"latitude":39.976476,"longitude":116.427288,"accuracy":29,"altitude":0,"heading":null,"speed":0,"altitudeAccuracy":0},"timestamp":1490686757358}}' }
+[2017-03-28 15:39:27.591] [ERROR] console - { name: 'ParamValidateError',
+  param: 'shop[licenseId]',
+  message: '许可证号码必须存在',
+  value: undefined }
+[2017-03-28 15:39:27.596] [INFO] console - undefined - - "POST /api/app/shop HTTP/1.1" 200 157 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:41:30.464] [DEBUG] console - 日志系统启动!
+[2017-03-28 15:41:31.042] [INFO] console - 开发环境模式
+[2017-03-28 15:41:38.190] [DEBUG] console - 加载权限管理模块!
+[2017-03-28 15:41:48.069] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:41:48.309] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:41:53.266] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:41:53.268] [INFO] console - uploads创建成功！
+[2017-03-28 15:41:53.268] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:41:53.268] [INFO] console - avator创建成功！
+[2017-03-28 15:41:57.400] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-28 15:41:57.419] [INFO] console - Listening on port 8029
+[2017-03-28 15:41:59.100] [INFO] console - Redis is ready
+[2017-03-28 15:41:59.126] [INFO] console - Connection success!
+[2017-03-28 15:41:59.139] [INFO] console - mongodb is connected
+[2017-03-28 15:42:04.107] [INFO] console - { data: '{"shop":{"licenseId":"371621116239","name":"新意书店","manager":"李守和","regist":"2017-03-21","expire":"2018-12-31","address":"山东省滨州市惠民县胡集镇北李村","status":"初始申请","image":"title.png"},"geolocation":{"coordsType":"gcj02","address":{"cityCode":"010","province":"北京市","district":"朝阳区","poiName":"元大都城垣遗址公园管理处","street":"北土城东路","city":"北京市","country":"中国"},"addresses":"北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处","coords":{"latitude":39.976476,"longitude":116.427288,"accuracy":29,"altitude":0,"heading":null,"speed":0,"altitudeAccuracy":0},"timestamp":1490686757358}}' }
+[2017-03-28 15:44:14.338] [ERROR] console - TypeError: Cannot read property 'name' of undefined
+    at exports.create (/Users/achar/Projects/my_Projects/yancaooa/server/api/shops/controller.js:27:30)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at module.exports (/Users/achar/Projects/my_Projects/yancaooa/server/utils/sanitize.js:25:5)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at exports.touchToken (/Users/achar/Projects/my_Projects/yancaooa/server/utils/token_manager.js:44:2)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:176:3)
+    at router (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at cookieParser (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/cookie-parser/index.js:56:14)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at expressValidator (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express-validator/lib/express_validator.js:355:5)
+[2017-03-28 15:51:16.408] [DEBUG] console - 日志系统启动!
+[2017-03-28 15:51:16.997] [INFO] console - 开发环境模式
+[2017-03-28 15:51:24.800] [DEBUG] console - 加载权限管理模块!
+[2017-03-28 15:51:37.336] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:51:37.684] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:51:43.828] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:51:43.829] [INFO] console - uploads创建成功！
+[2017-03-28 15:51:43.829] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:51:43.829] [INFO] console - avator创建成功！
+[2017-03-28 15:51:48.267] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-28 15:51:48.280] [INFO] console - Listening on port 8029
+[2017-03-28 15:51:49.843] [INFO] console - Redis is ready
+[2017-03-28 15:51:49.882] [INFO] console - Connection success!
+[2017-03-28 15:51:49.888] [INFO] console - mongodb is connected
+[2017-03-28 15:52:01.052] [INFO] console - { data: '{"shop":{"licenseId":"371621116239","name":"新意书店","manager":"李守和","regist":"2017-03-21","expire":"2018-12-31","address":"山东省滨州市惠民县胡集镇北李村","status":"初始申请","image":"title.png"},"geolocation":{"coordsType":"gcj02","address":{"cityCode":"010","province":"北京市","district":"朝阳区","poiName":"元大都城垣遗址公园管理处","street":"北土城东路","city":"北京市","country":"中国"},"addresses":"北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处","coords":{"latitude":39.976476,"longitude":116.427288,"accuracy":29,"altitude":0,"heading":null,"speed":0,"altitudeAccuracy":0},"timestamp":1490686757358}}' }
+[2017-03-28 15:52:22.024] [ERROR] console - ReferenceError: image is not defined
+    at exports.create (/Users/achar/Projects/my_Projects/yancaooa/server/api/shops/controller.js:26:31)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at module.exports (/Users/achar/Projects/my_Projects/yancaooa/server/utils/sanitize.js:25:5)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at exports.touchToken (/Users/achar/Projects/my_Projects/yancaooa/server/utils/token_manager.js:44:2)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:131:13)
+    at Route.dispatch (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:277:22
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at Function.handle (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:176:3)
+    at router (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:46:12)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at cookieParser (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/cookie-parser/index.js:56:14)
+    at Layer.handle [as handle_request] (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:312:13)
+    at /Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:280:7
+    at Function.process_params (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:330:12)
+    at next (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express/lib/router/index.js:271:10)
+    at expressValidator (/Users/achar/Projects/my_Projects/yancaooa/server/node_modules/express-validator/lib/express_validator.js:355:5)
+[2017-03-28 15:53:48.833] [DEBUG] console - 日志系统启动!
+[2017-03-28 15:53:49.379] [INFO] console - 开发环境模式
+[2017-03-28 15:53:56.330] [DEBUG] console - 加载权限管理模块!
+[2017-03-28 15:54:05.910] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:54:06.157] [DEBUG] console - 已加载问诊模块
+[2017-03-28 15:54:11.134] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:54:11.135] [INFO] console - uploads创建成功！
+[2017-03-28 15:54:11.135] [INFO] console - 此文件夹已经存在
+[2017-03-28 15:54:11.135] [INFO] console - avator创建成功！
+[2017-03-28 15:54:15.039] [INFO] console - 数据库:mongodb://localhost:27017/yancaooa_dev
+[2017-03-28 15:54:15.054] [INFO] console - Listening on port 8029
+[2017-03-28 15:54:16.282] [INFO] console - Redis is ready
+[2017-03-28 15:54:16.297] [INFO] console - Connection success!
+[2017-03-28 15:54:16.301] [INFO] console - mongodb is connected
+[2017-03-28 15:54:27.212] [INFO] console - { data: '{"shop":{"licenseId":"371621116239","name":"新意书店","manager":"李守和","regist":"2017-03-21","expire":"2018-12-31","address":"山东省滨州市惠民县胡集镇北李村","status":"初始申请","image":"title.png"},"geolocation":{"coordsType":"gcj02","address":{"cityCode":"010","province":"北京市","district":"朝阳区","poiName":"元大都城垣遗址公园管理处","street":"北土城东路","city":"北京市","country":"中国"},"addresses":"北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处","coords":{"latitude":39.976476,"longitude":116.427288,"accuracy":29,"altitude":0,"heading":null,"speed":0,"altitudeAccuracy":0},"timestamp":1490686757358}}' }
+[2017-03-28 15:54:43.654] [INFO] console - ::ffff:192.168.0.110 - - "POST /api/app/shop HTTP/1.1" 200 445 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:56:23.790] [INFO] console - { data: '{"shop":{"licenseId":"371621116239","name":"新意书店","manager":"李守和","regist":"2017-03-21","expire":"2018-12-31","address":"山东省滨州市惠民县胡集镇北李村","status":"初始申请","image":"title.png"},"geolocation":{"coordsType":"gcj02","address":{"cityCode":"010","province":"北京市","district":"朝阳区","poiName":"元大都城垣遗址公园管理处","street":"北土城东路","city":"北京市","country":"中国"},"addresses":"北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处","coords":{"latitude":39.976476,"longitude":116.427288,"accuracy":29,"altitude":0,"heading":null,"speed":0,"altitudeAccuracy":0},"timestamp":1490686757358}}' }
+[2017-03-28 15:57:05.696] [INFO] console - undefined - - "POST /api/app/shop HTTP/1.1" 200 445 "" "Mozilla/5.0 (Linux; Android 4.4.4; Che1-CL20 Build/Che1-CL20) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/33.0.0.0 Mobile Safari/537.36 Html5Plus/1.0"
+[2017-03-28 15:57:58.646] [INFO] console - { data: '{"shop":{"licenseId":"371621116239","name":"新意书店","manager":"李守和","regist":"2017-03-21","expire":"2018-12-31","address":"山东省滨州市惠民县胡集镇北李村","status":"初始申请","image":"title.png"},"geolocation":{"coordsType":"gcj02","address":{"cityCode":"010","province":"北京市","district":"朝阳区","poiName":"元大都城垣遗址公园管理处","street":"北土城东路","city":"北京市","country":"中国"},"addresses":"北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处","coords":{"latitude":39.976476,"longitude":116.427288,"accuracy":29,"altitude":0,"heading":null,"speed":0,"altitudeAccuracy":0},"timestamp":1490686757358}}' }

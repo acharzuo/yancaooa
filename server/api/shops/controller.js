@@ -5,34 +5,48 @@ var category = require('../category/model');
 var message = require('../../utils/returnFactory');//返回状态模块
 var _ = require('lodash');
 var log = require('../../utils/log');   //引进日志
+var async = require('async');
+var returnFactory = require('../../utils/returnFactory');
 
 
 //添加文章--完成----------------------------------------------
 
-exports.create = function(req,res,next){
+exports.create1 = function(req,res,next){
+    console.log(req.body);
+    var body = JSON.parse(req.body.data);
     //参数校验
-    req.validate('name','必须存在企业名称').notEmpty();
+    req.validate('data','无可用数据').notEmpty();
     var errors = req.validationErrors();
     if (errors) {
         return next(errors[0]);
     }
 
+    // 处理日期格式
+    body.shop.register = new Date(body.shop.register).getTime();
+    body.shop.expire = new Date(body.shop.expire).getTime();
 
-    var body = req.body;
+
+
     var data = {
         createdBy : (req.user ? req.user.id : null), //创建人
-        name:       body.name,      // 企业名称
-        image:      body.image,     // 门头图片
-        address:    body.address,   // 地址
-        licenseId:  body.licenseId, // 许可证号码
-        manager:    body.manager,   // 负责人姓名
-        register:   body.register,  // 注册日期
-        expire:     body.expire,    // 到期日期
-        status:     body.status,    // 店铺状态
+        name:       body.shop.name,      // 企业名称
+        image:      body.shop.image,     // 门头图片
+        address:    body.shop.address,   // 地址
+        licenseId:  body.shop.licenseId, // 许可证号码
+        manager:    body.shop.manager,   // 负责人姓名
+        register:   body.shop.register,  // 注册日期
+        expire:     body.shop.expire,    // 到期日期
+        status:     body.shop.status,    // 店铺状态
+        geolocation: body.geolocation,   // 地理位置
+        coords:
+            body.geolocation.coords
     };
-    //创建文章数据
+
+
+    //创建店铺
     model.create(data,function(err,doc){
         if (err) {
+            console.log(err);
             return res.send(message("ERROR",null,err));
         }
 
@@ -40,6 +54,75 @@ exports.create = function(req,res,next){
 
     });
 };
+
+
+
+exports.create = function(req, res, next) {
+    console.log(req.body);
+    var body = JSON.parse(req.body.data);
+    //参数校验
+    req.validate('data','无可用数据').notEmpty();
+    var errors = req.validationErrors();
+    if (errors) {
+        return next(errors[0]);
+    }
+
+
+    // 处理日期格式
+    body.shop.register = new Date(body.shop.register).getTime();
+    body.shop.expire = new Date(body.shop.expire).getTime();
+
+
+
+    var data = {
+        createdBy : (req.user ? req.user.id : null), //创建人
+        name:       body.shop.name,      // 企业名称
+        image:      body.shop.image,     // 门头图片
+        address:    body.shop.address,   // 地址
+        licenseId:  body.shop.licenseId, // 许可证号码
+        manager:    body.shop.manager,   // 负责人姓名
+        register:   body.shop.register,  // 注册日期
+        expire:     body.shop.expire,    // 到期日期
+        status:     body.shop.status,    // 店铺状态
+        geolocation: body.geolocation,   // 地理位置
+        coords:
+            body.geolocation.coords
+    };
+
+    async.waterfall([
+        function(cb) { // 检测店铺id是否已经存在
+            model.findOne({ "licenseId": data.licenseId }, function(err, doc) {
+                if (!err && !doc) {
+                    cb(null);
+                } else {
+                    return res.json(returnFactory('DUP_SHOPID', null, err));
+                }
+            })
+        },
+        _createShop
+    ])
+
+
+    function _createShop(cb) {
+        //创建Entity，自带参数校验
+        var newEntity = new model(data);
+
+        // 更新修改人
+        newEntity.updatedBy = newEntity.createdBy = req.user ? req.user.id : null;
+
+        // 写入数据库
+        newEntity.save(function(err, doc) {
+            if (!err) {
+
+                return res.json(returnFactory('SUCCESS', doc));
+            } else {
+                return res.json(returnFactory('ERROR', null, err));
+            }
+        });
+    }
+
+};
+
 
 // 列表
 exports.list = function(req,res){

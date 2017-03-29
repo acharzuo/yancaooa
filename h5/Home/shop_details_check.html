@@ -141,7 +141,7 @@
 <body>
 	<header class="mui-bar mui-bar-nav own-header-hidden">
 		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left own-gray-color"></a>
-		<h1 class="mui-title">商品详情</h1>
+		<h1 class="mui-title">店铺详情</h1>
 	</header>
 	
 	<div id="detailcontent" class="mui-content  own-content-padding">
@@ -173,14 +173,14 @@
 			},false);
 			
 			//获取服务器信息
-			mui.fire(paredntWebview,'getproductid',{});
+			mui.fire(paredntWebview,'getShop',{});
 			//监听返回getproductid事件
-			window.addEventListener('postproductid',function(e){
-				console.log('收到productid');
-				product_id = e.detail.product_id;
+			window.addEventListener('getShop',function(e){
+				console.log('收到Shop');
+				licenseId = e.detail.licenseId;
 				//像服务器请求
-				ajax_get_product_detail({
-					product_id:product_id
+				ajax_get_shop_detail({
+					licenseId:licenseId
 				});
 			},false);
 			
@@ -188,11 +188,15 @@
 		
 		function productDetailSuccess(data){
 			console.log(JSON.stringify(data));
-			if (data.code == '000000') {
+			if (data.code == '0') {
+				var item = data.result;
 				//成功获取可以解析
-				detail.detail_small_pictures = data.detail_small_pictures;
-				detail.product_name = data.product.product_name;
-				detail.product_price = data.product.product_price;
+				detail.name = item.name;
+				detail.address = item.address;
+				detail.image = item.image;
+				detail.licenseId = item.licenseId;
+				detail.manager = item.manager;
+				detail.isCoords = !!item.coords;
 				setHtml();
 			}
 		}

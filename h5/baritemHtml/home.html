@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>E3</title>
+    <title>首页</title>
     <link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
     <link rel="stylesheet" type="text/css" href="../css/own.css"/>
@@ -14,7 +14,7 @@
     		
     		
     		/*图片显示的时候设置为自动 因为 从服务器来的图片大小相同*/
-    		.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-object {
+    		.mui-table-view  .mui-table-view-cell .mui-media-object {
     			line-height: auto;
     			max-width: auto;
     			height: auto;
@@ -27,51 +27,64 @@
     			margin-bottom: 10px;
     		}
     		.bgDiv {
-    			border: 1px solid rgba(204,204,204,0.7); 
+    			
     			border-radius: 5px; 
     			background-color: white;
     			width: 100%;
     		}
-    		.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body {
+    		.mui-table-view  .mui-table-view-cell .mui-media-body {
     			margin-top: 2px;
     			margin-bottom: 5px;
     			height: auto;
     		}
     		
-    		.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body p {
+    		.mui-table-view  .mui-table-view-cell .mui-media-body p {
     			white-space:pre;
     			color: black;
     		}
     		
-    		.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body p.mui-ellipsis-2 {
+    		.mui-table-view  .mui-table-view-cell .mui-media-body .title {
+    			
     			height: 30px;
+    			font-size: 1.2em;
+    			color: red;
     		}
     		
-    		.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body .price-one {
-    			margin-top: 12px;
-    			float: left;
-    			font-size: 1.1em;
+    		.mui-table-view  .mui-table-view-cell .mui-media-body .licenseId {
+    			float: right;
+    			font-size: .8em;
     			margin-left: 7%;
     			color: red;
     			margin-bottom: 10px;
+    			align-items: center;
     		}
-    		.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body .price-two {
+    		.mui-table-view .mui-table-view-cell .mui-media-body .address {
     			margin-top: 12px;
-    			float: right;
-    			font-size: 1.1em;
+    			float: left;
+    			font-size: 0.8em;
     			margin-right: 7%;
-    			text-decoration: line-through;
     		}
+    		
+    		.mui-table-view .mui-table-view-cell .mui-media-body .tag {
+    			margin-top: 12px;
+    			float: left;
+    			font-size: 0.8em;
+    			margin-right: 7%;
+    		}
+    		
+
+    	
+    		
     </style>
 </head>
 <body>
 	
 	<div id="homeDiv" class="mui-content own-content-padding">
 		<div id="productSlider" class="mui-slider">
-			
 		</div>
-		<div id="recommend" class="mui-table-view mui-grid-view own-gray-color">
-			
+		<div class="">
+			<ul  id="recommend" class="mui-table-view">
+			</ul>
 		</div>
 	</div>
 	
@@ -110,13 +123,13 @@
 				var anishow = getaniShow();
 				//弹入分类商品列表
 				mui.fire(indexWebview,'newWebView',{
-					id:'Home/product-detail-needtem.html',
-					href:'Home/product-detail-needtem.html',
+					id:'Home/shop_details_check.html',
+					href:'Home/shop_details_check.html',
 					aniShow:anishow,
-					title:'商品详情',
+					title:'店铺检测内容',
 					isBars:false,
 					barsIcon:'',
-					product_id:itemID,
+					shopId:itemID,
 				});
 			});
 		});
@@ -126,7 +139,7 @@
 			if (!isLoadMarquee && marqueeArray.length<=0) {
 				//开始请求
 				isLoadMarquee  = true;
-				ajax_get_Marquee({});
+				//ajax_get_Marquee({});
 			}
 			if (!isLoadRecommend && recommendArray.length<=0) {
 				isLoadRecommend = true;
@@ -143,13 +156,32 @@
 			isLoadMarquee = false;
 		}
 		function getRecommendSuccess(data){
-			if (data.code = '000000') {
-				mui.each(data.hotSaleProducts,function(index,item){
+			if (data.code == '0') {
+				var d = [data.result.data[0],data.result.data[0],data.result.data[0],data.result.data[0]];
+				mui.each(d,function(index,item){
 					var dataItem = {};
-					dataItem.product_price = item.product_price;
-					dataItem.product_name = item.product_name;
-					dataItem.large_image_url = item.large_image_url;
-					dataItem.product_id = item.product_id;
+					// {"code":0,"message":"成功","result":{"data":
+					//[{"_id":"58da1f9d58f6acb5137247c1","createdBy":null,"name":"新意书店",
+					//"image":"title.png","address":"山东省滨州市惠民县胡集镇北李村",
+					//"licenseId":"371621116239","manager":"李守和","status":"初始申请",
+					//"geolocation":{"coordsType":"gcj02","address":{"cityCode":"010",
+					//"province":"北京市","district":"朝阳区",
+					//"poiName":"元大都城垣遗址公园管理处","street":"北土城东路",
+					//"city":"北京市","country":"中国"},"addresses":"北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处",
+					//"coords":{"latitude":39.976481,"longitude":116.427301,"accuracy":35,
+					//"altitude":0,"heading":null,"speed":0,"altitudeAccuracy":0},
+					//"timestamp":1490686721312},"coords":{"latitude":39.976481,
+					//"longitude":116.427301,"accuracy":35,"altitude":0,"heading":null,"speed":0,
+					//"altitudeAccuracy":0},"__v":0,"deleted":0,"createdAt":1490661149735,
+					//"updatedAt":1490661149737,"expire":1546214400000,"register":1490054400000}],
+					//"total":1}} at js/ajax.js:63
+
+					dataItem.name = item.name;
+					dataItem.address = item.address;
+					dataItem.image = item.image;
+					dataItem.licenseId = item.licenseId;
+					dataItem.manager = item.manager;
+					dataItem.isCoords = !!item.coords;
 					recommendArray.push(dataItem);
 				});
 				//设置推荐商品
@@ -213,19 +245,22 @@
 			var recommend = document.getElementById('recommend');
 			mui.each(recommendArray,function(index,item){
 				var li = document.createElement('li');
-				li.className = 'mui-table-view-cell mui-media mui-col-xs-6';
-				li.innerHTML = '<a href="'+item.product_id+'">\
-					<div class= "bgDiv">\
-						<img class="mui-media-object" src="http://file.huihoo.com'+item.large_image_url+'"/>\
+				li.className = 'mui-table-view-cell mui-media';
+				li.innerHTML = '<a href="'+item.licenseId+'">\
+					<div class= "bgDiv mui-media-large">\
+						<img class="mui-media-object mui-pull-left" src="../img/default.png?'+item.Image+'"/>\
 						<div class="mui-media-body">\
-							<p class="mui-ellipsis-2">'+item.product_name+'</p>\
-							<p class="price-one">¥'+item.product_price.default_price+'</p>\
-							<p class="price-two">¥'+item.product_price.list_price+'</p>\
+							<span class="title">'+item.name+'</span>\
+							<span class="licenseId">'+item.licenseId+'</span>\
+							<span class="address">'+item.address+'</span>\
 						</div>\
+						<span class="mui-badge mui-badge-primary">重点</span>\
+						<span class="mui-badge mui-badge-success">" + （dataItem.isCoords?"GPS":"无GPS") + "</span>\
 					</div>\
 				</a>';
 				recommend.appendChild(li);
 			});
+			
 		}
 	</script>
 	

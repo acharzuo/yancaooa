@@ -9,7 +9,8 @@
 			"js/ajax.js",
 			"js/load.js",
 			"fonts/iconfont.ttf",
-			"js/md5.js"
+			"js/md5.js",
+			"fonts/mui.ttf"
 		],
 		"refer": [
 			"baritemHtml/home.html",
@@ -19,7 +20,10 @@
 			"Mine/login.html",
 			"baritemHtml/category.html",
 			"baritemHtml/cart.html",
-			"product-detail-tem.html"
+			"product-detail-tem.html",
+			"tools/geolocation.html",
+			"tools/camera.html",
+			"Home/product-detail-needtem.html"
 		]
 	},
 	"baritemHtml/mine.html": {
@@ -30,7 +34,8 @@
 			"fonts/mui.ttf",
 			"css/iconfont.css",
 			"css/mui.min.css",
-			"fonts/iconfont.ttf"
+			"fonts/iconfont.ttf",
+			"js/own.js"
 		]
 	},
 	"Mine/login.html": {
@@ -45,7 +50,8 @@
 	},
 	"baritemHtml/cart.html": {
 		"resources": [
-			"js/wl_ajax.js"
+			"js/wl_ajax.js",
+			"js/own.js"
 		]
 	},
 	"product-detail-tem.html": {
@@ -57,7 +63,8 @@
 			"css/iconfont.css",
 			"css/mui.min.css",
 			"js/load.js",
-			"js/md5.js"
+			"js/md5.js",
+			"js/own.js"
 		]
 	},
 	"baritemHtml/home.html": {
@@ -67,20 +74,53 @@
 			"js/mui.min.js",
 			"css/iconfont.css",
 			"css/mui.min.css",
-			"js/ajax.js"
+			"js/ajax.js",
+			"img/default.png"
 		]
 	},
 	"baritemHtml/xinyuandan.html": {
 		"resources": [
 			"css/own.css",
 			"js/mui.min.js",
-			"css/mui.min.css"
+			"css/mui.min.css",
+			"js/own.js"
 		]
 	},
 	"baritemHtml/category.html": {
 		"resources": [
 			"js/mui.min.js",
 			"css/mui.min.css"
+		]
+	},
+	"tools/geolocation.html": {
+		"resources": [
+			"js/common.js",
+			"css/common.css",
+			"js/baseShops.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"fonts/mui.ttf",
+			"js/ajax.js"
+		]
+	},
+	"template-main.html": {
+		"resources": [
+			"img/jump.gif"
+		]
+	},
+	"tools/camera.html": {
+		"resources": [
+			"js/common.js",
+			"css/common.css"
+		],
+		"refer": [
+			"tools/camera_image.html"
+		]
+	},
+	"tools/camera_image.html": {
+		"resources": [
+			"js/common.js",
+			"css/common.css"
 		]
 	}
 }
