@@ -1,4 +1,4 @@
-// 养生资讯
+// 子订单
 "use strict";
 
 var mongoose = require('mongoose');
@@ -8,11 +8,13 @@ var tool = require('../../utils/tools');
 
 var OrderSchema = new BaseSchema({
 
+    orderId: string,  // 主订单ID
+
     date:   {          // 订单日期
         type: Number,
         default: tool.getCurUtcTimestamp
     },
-    shopsImportant: Object,     // 重要客户
+
     shopsCount: Number, // 订单中店铺的数量
     shopVisitedCount: Number, // 订单中已经分配的店铺的梳理
     shopsCheckedCount: Number, // 订单中已经
