@@ -7,6 +7,8 @@
 		<meta name="MobileOptimized" content="320"/>
 		<title>照片收集</title>
 		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js" ></script>
+
 		<script type="text/javascript">
 var i=1,gentry=null,w=null;
 var hl=null,le=null,de=null,ie=null;
@@ -211,6 +213,8 @@ function cleanHistory(){
 			</ul>
 			<div class="button" onclick="getImage()">拍照</div>
 			<div class="button" onclick="uploadImage()">上传照片</div>
+			
+			<div class="button own-button" onclick="add()">上传店铺</div>
 			<br/>
 			<!-- History list -->
 			
@@ -222,5 +226,6 @@ function cleanHistory(){
 Camera管理摄像头设备，可用于拍摄照片、录制视频文件。
 		</div>
 	</body>
+			<script src="../js/ajax.js" charset="UTF-8"></script>
 
 </html>

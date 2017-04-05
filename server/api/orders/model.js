@@ -13,11 +13,16 @@ var OrderSchema = new BaseSchema({
         default: tool.getCurUtcTimestamp
     },
     shopsImportant: Object,     // 重要客户
+    employee: Object,       // 员工列表
     shopsCount: Number, // 订单中店铺的数量
     shopVisitedCount: Number, // 订单中已经分配的店铺的梳理
     shopsCheckedCount: Number, // 订单中已经
-    shopIds:  Object,   // 要处理的店铺列表
-    subOrders: Object,  // 子订单列表
+    shops:  Object,   // 要处理的店铺列表
+    statistics: Object,  // 统计数量
+                            //shopsVisitedCount: 0,   // 被检测过的店铺数量
+                            //shopsCount: shops.length,   //总店铺数量
+                            //visitedCount: 0,    // 检测总次数
+                            //shopsNonVisitedCount: shops.length,     // 未被检测的店铺数量
 
 });
 module.exports  = mongoose.model('Order',OrderSchema);

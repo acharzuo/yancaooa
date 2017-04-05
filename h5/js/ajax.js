@@ -11,7 +11,7 @@ document.body.appendChild(load_element);
 
 
 	var httpUrl = "http://182.140.244.73:91/gateway/router?";
-	var baseUrl = "http://192.168.0.102:8029/"
+	var baseUrl = "http://192.168.31.106:8029/"
 	var app_key = "9e304d4e8df1b74cfa009913198428ab";
 	var v = "v1.0";
 	var sign_method = "md5";
@@ -105,18 +105,18 @@ document.body.appendChild(load_element);
 	//用户登陆
 	w.ajax_login = function(options){
 		//var data = getdata(options,'com.huihoo.user.login');
-		mui.ajax("http://localhost:8020//api/app/user_tokens",{
+		mui.ajax(baseUrl + "api/app/user/login",{
 			data:options,
 			dataType:'json',//服务器返回json格式数据
 			type:'post',//HTTP请求类型
 			timeout:10000,//超时时间设置为10秒；
 			success:function(data){
 				logData(data);
-				data.account = options.user_name;
+				data.account = options.username;
 				loginSuccess(data);
 			},
 			error:function(xhr,type,errorThrown){
-				
+				mui.toast("失败！" + errorThrown);
 			}
 		});
 	}
@@ -347,7 +347,7 @@ document.body.appendChild(load_element);
 		});
 	}
 	
-	w.ajax_post_shopInfo = function(options){
+	w.ajax_post_shopInfo = function(options, callback){
 		console.log(JSON.stringify(options));
 		var data = {data: JSON.stringify(options)};
 		mui.ajax(baseUrl + "api/app/shop",{
@@ -361,6 +361,33 @@ document.body.appendChild(load_element);
 				setTimeout(function(){
 					// endLoad();
 					// getRecommendSuccess(data);
+					callback(data);
+					mui.toast("上传成功!" );
+				},500);
+				
+				
+			},
+			error:function(xhr,type,errorThrown){
+				mui.toast("上传不成功！ 错误码:" + errorThrown);
+			}
+		})
+	}
+	
+	w.ajax_post_employeeInfo = function(options, callback){
+		console.log(JSON.stringify(options));
+		var data = {data: JSON.stringify(options)};
+		mui.ajax(baseUrl + "api/app/employee",{
+			data:data,
+			dataType:'json',
+			type:'post',
+			timeout:10000,
+			success:function(data){
+				logData(data);
+				
+				setTimeout(function(){
+					// endLoad();
+					// getRecommendSuccess(data);
+					callback(data);
 					mui.toast("上传成功!" );
 				},500);
 				

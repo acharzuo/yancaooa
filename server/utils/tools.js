@@ -34,3 +34,10 @@ exports.getCurUtcTimestamp = function(){
     var value = Date.now() + (new Date().getTimezoneOffset()*60*1000);
     return value;
 };
+
+// 获得当前天的UTC时间戳（当天零点时间戳）
+exports.getCurrUtcDatestamp = function(){
+    var value = (Date.now() + (new Date().getTimezoneOffset()*60*1000)) ;
+    value = value - value % 86400000;
+    return value;
+}

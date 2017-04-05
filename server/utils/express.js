@@ -39,7 +39,8 @@ module.exports = function(app) {
     //设置请求头  TODO 需要隐藏来源信息
     app.all('*', function(req, res, next) {
         res.header("Access-Control-Allow-Origin", "*");
-        res.header("Access-Control-Allow-Headers", "X-Requested-With,x-access-token,Content-Type,device-id");
+        res.header("Access-Control-Allow-Headers", "*");
+       // res.header("Access-Control-Allow-Headers", "X-Requested-With,x-access-token,Content-Type,device-id");
         res.header("Access-Control-Allow-Methods", "PUT,POST,GET,DELETE,PATCH,OPTIONS");
         res.header("Access-Control-Expose-Headers", "x-access-token, updated-x-access-token");
         next();

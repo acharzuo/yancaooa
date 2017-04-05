@@ -8,7 +8,7 @@
     {
       "category":"log_file",
       "type": "file",
-      "filename": "./logs/log_file/file.log",
+      "filename": "~/logs/log_file/file.log",
       "maxLogSize": 104800,
       "backups": 100
     },

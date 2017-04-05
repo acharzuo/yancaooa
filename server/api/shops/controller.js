@@ -69,24 +69,24 @@ exports.create = function(req, res, next) {
 
 
     // 处理日期格式
-    body.shop.register = new Date(body.shop.register).getTime();
-    body.shop.expire = new Date(body.shop.expire).getTime();
+    body.register = body.register ? new Date(body.register).getTime() : null;
+    body.expire = body.expire? new Date(body.expire).getTime() : null;
 
 
 
     var data = {
         createdBy : (req.user ? req.user.id : null), //创建人
-        name:       body.shop.name,      // 企业名称
-        image:      body.shop.image,     // 门头图片
-        address:    body.shop.address,   // 地址
-        licenseId:  body.shop.licenseId, // 许可证号码
-        manager:    body.shop.manager,   // 负责人姓名
-        register:   body.shop.register,  // 注册日期
-        expire:     body.shop.expire,    // 到期日期
-        status:     body.shop.status,    // 店铺状态
-        geolocation: body.geolocation,   // 地理位置
+        name:       body.name,      // 企业名称
+        image:      body.image,     // 门头图片
+        address:    body.address,   // 地址
+        licenseId:  body.licenseId, // 许可证号码
+        manager:    body.manager,   // 负责人姓名
+        register:   body.register,  // 注册日期
+        expire:     body.expire,    // 到期日期
+        status:     body.status? body.status : null,    // 店铺状态
+        geolocation: body.geolocation ? body.geolocation : null,   // 地理位置
         coords:
-            body.geolocation.coords
+            body.geolocation && body.geolocation.coords ?  body.geolocation.coords : null
     };
 
     async.waterfall([
@@ -95,7 +95,12 @@ exports.create = function(req, res, next) {
                 if (!err && !doc) {
                     cb(null);
                 } else {
-                    return res.json(returnFactory('DUP_SHOPID', null, err));
+                    
+        doc.geolocation= body.geolocation ? body.geolocation : null,   // 地理位置
+        doc.coords= body.geolocation && body.geolocation.coords ?  body.geolocation.coords : null
+               data = doc;
+               cb(null);
+                    //return res.json(returnFactory('DUP_SHOPID', null, err));
                 }
             })
         },

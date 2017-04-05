@@ -46,7 +46,7 @@
     		.mui-table-view  .mui-table-view-cell .mui-media-body .title {
     			
     			height: 30px;
-    			font-size: 1.2em;
+    			font-size: 1.1em;
     			color: red;
     		}
     		
@@ -72,26 +72,41 @@
     			margin-right: 7%;
     		}
     		
-
+	/*Android平台使用父子webview，因此需要修改顶部进度条的显示位置*/
+			.mui-plus.mui-android>.mui-progressbar{
+				top:0
+			}
     	
     		
     </style>
 </head>
 <body>
-	
 	<div id="homeDiv" class="mui-content own-content-padding">
+		<div id="loading" style="margin-top: 70px; text-align: center;">
+			<a>
+				<span ><img src="../img/jump.gif" style="max-width:2em; height:auto;"/></span>
+			</a>
+			<br />
+			<span>加载中...</span>
+		</div>
 		<div id="productSlider" class="mui-slider">
 		</div>
 		<div class="">
 			<ul  id="recommend" class="mui-table-view">
 			</ul>
 		</div>
+		<div>
+				
 	</div>
 	
+	
 	<script src="../js/mui.min.js" charset="UTF-8"></script>
-	<script src="../js/ajax.js" charset="UTF-8"></script>
 	<script src="../js/own.js" charset="UTF-8"></script>
+	<script src="../js/ajax.js" charset="UTF-8"></script>
+
 	<script type="text/javascript" charset="UTF-8">
+
+			
 		mui.init({
 			swipeBack:false
 		});
@@ -115,6 +130,7 @@
 				pasueLink();
 			},false);
 			
+	
 			//添加每个item点击的监听事件
 			mui('#recommend').on('tap','a',function(){
 				var item = this;
@@ -143,7 +159,10 @@
 			}
 			if (!isLoadRecommend && recommendArray.length<=0) {
 				isLoadRecommend = true;
-				ajax_get_Recommend();
+				    var value = (Date.now() + (new Date().getTimezoneOffset()*60*1000)) ;
+    					value = value - value % 86400000;
+    					var user = localStorage.getItem("user")
+				ajax_get_Recommend({date:value, licenseId: user.licenseId});
 			}
 		}
 		
@@ -157,24 +176,15 @@
 		}
 		function getRecommendSuccess(data){
 			if (data.code == '0') {
+ 				if(!data.result.data.length) {
+ 					mui.toast("未获取数据");
+ 					return;
+ 				}
 				var d = [data.result.data[0],data.result.data[0],data.result.data[0],data.result.data[0]];
 				mui.each(d,function(index,item){
 					var dataItem = {};
-					// {"code":0,"message":"成功","result":{"data":
-					//[{"_id":"58da1f9d58f6acb5137247c1","createdBy":null,"name":"新意书店",
-					//"image":"title.png","address":"山东省滨州市惠民县胡集镇北李村",
-					//"licenseId":"371621116239","manager":"李守和","status":"初始申请",
-					//"geolocation":{"coordsType":"gcj02","address":{"cityCode":"010",
-					//"province":"北京市","district":"朝阳区",
-					//"poiName":"元大都城垣遗址公园管理处","street":"北土城东路",
-					//"city":"北京市","country":"中国"},"addresses":"北京市朝阳区北土城东路靠近元大都城垣遗址公园管理处",
-					//"coords":{"latitude":39.976481,"longitude":116.427301,"accuracy":35,
-					//"altitude":0,"heading":null,"speed":0,"altitudeAccuracy":0},
-					//"timestamp":1490686721312},"coords":{"latitude":39.976481,
-					//"longitude":116.427301,"accuracy":35,"altitude":0,"heading":null,"speed":0,
-					//"altitudeAccuracy":0},"__v":0,"deleted":0,"createdAt":1490661149735,
-					//"updatedAt":1490661149737,"expire":1546214400000,"register":1490054400000}],
-					//"total":1}} at js/ajax.js:63
+				
+			
 
 					dataItem.name = item.name;
 					dataItem.address = item.address;
@@ -243,6 +253,7 @@
 		//设置推荐商品
 		function setRecommend(){
 			var recommend = document.getElementById('recommend');
+			var loading = document.getElementById("loading");
 			mui.each(recommendArray,function(index,item){
 				var li = document.createElement('li');
 				li.className = 'mui-table-view-cell mui-media';
@@ -255,13 +266,16 @@
 							<span class="address">'+item.address+'</span>\
 						</div>\
 						<span class="mui-badge mui-badge-primary">重点</span>\
-						<span class="mui-badge mui-badge-success">" + （dataItem.isCoords?"GPS":"无GPS") + "</span>\
+						<span class="mui-badge mui-badge-success">' + (item.isCoords?"GPS":"无GPS") + '</span>\
 					</div>\
 				</a>';
 				recommend.appendChild(li);
 			});
+			loading.className = "mui-hidden" ;
 			
 		}
+		
+		
 	</script>
 	
 </body>

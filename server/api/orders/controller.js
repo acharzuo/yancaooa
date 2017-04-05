@@ -1,10 +1,14 @@
 'use strict';
 
 var model = require('./model');
+var employeeModel =  require('../employee/model');  // 员工列表
+var shopsModel =  require('../shops/model');  // 员工列表
 var message = require('../../utils/returnFactory');//返回状态模块
 var _ = require('lodash');
 var log = require('../../utils/log');   //引进日志
 var async = require('async');
+var returnFactory = require('../../utils/returnFactory');
+var tool = require('../../utils/tools');
 
 
 //添加文章--完成----------------------------------------------
@@ -19,18 +23,122 @@ exports.create = function(req,res,next){
     var employee=[];                // 员工集合
 
     // 获取当前员工说列表
+    async.waterfall([
+        // 获取员工列表
+        function(cb) {
+            employeeModel.find({}, function(err, doc) {
+                if (!err) {
+                    console.log("employee:",doc.length);
+                    employee = doc;
+                    cb(null);
+                } else {
+                    console.log(err);
+                    cb(new Error(err));
+                }
+            });
+        },
+        // 获取店铺列表
+        function(cb) {
+            console.log("获取用户列表");
+            shopsModel.find({}, function(err, doc) {
+                if (!err) {
+                    shops = doc;
+                    cb(null);
+                } else {
+                    console.log(err);
+                }
+            });
+        },
 
+        // 获取重点用户列表
+        function(cb){
+
+            console.log("获取重点用户列表");
+            shopsImportant = [
+                "371621100015",
+                "371621100043",
+                "371621100051",
+                "371621100058",
+                "371621100102",
+                "371621100126",
+                "371621100142",
+                "371621100157",
+                "371621100087",
+                "371621100173",
+            ];
+            cb(null);
+        },
+        // 生成订单的处理
+        function(cb){
+            console.log("生成订单");
+            order.date = tool.getCurUtcTimestamp();
+
+            order.shopsImportant = shopsImportant;
+
+
+            // 整理员工数据
+            var employeeIds={};
+            for(var i = 0;i < employee.length; i++){
+                var emp = {
+                    licenseId:employee[i].licenseId
+                };
+                employeeIds["" + employee[i].licenseId] = emp;
+            }
+            employeeIds.size = employee.length;
+            order.employee = employeeIds;
+
+            var shopIds = {};
+            for(var i = 0;i < shops.length; i++){
+                var shop = {
+                    licenseId :  shops[i].licenseId,    // 许可证号码
+                    visitCount: 0,      // 被访问次数
+                }
+                shopIds[shops[i].licenseId] = shop;
+            }
+            shopIds.size = shops.length;
+            order.shops = shopIds;
+
+            order.statistics = {};
+            order.statistics.shopsVisitedCount = 0;
+            order.statistics.shopsCount = shops.length;
+            order.statistics.visitedCount = 0;
+            order.statistics.shopsNonVisitedCount = shops.length;
+
+
+            //创建Entity，自带参数校验
+            var newEntity = new model(order);
+
+            // 更新修改人
+            newEntity.updatedBy = newEntity.createdBy = req.user ? req.user.id : null;
+
+            // 写入数据库
+            newEntity.save(function(err, doc) {
+                if (!err) {
+                    return res.json(returnFactory('SUCCESS', doc));
+                } else {
+                    return res.json(returnFactory('ERROR', null, err));
+                }
+            });
+
+            //_create(order);
+        },
+        // 错误处理
+        function(err){
+            console.log("错误处理" + err);
+            res.send(message("ERROR"),null,null);
+        }
+        ]);
 
     // 获取当前最新的用户列表
 
     // 生成一个订单
-
+    console.log("生成一个订单");
     // 返回订单号
 
     //===在前台调用生成子订单
 
 
-
+/*
 
     // 重要客户
     var shopsImportent = [
@@ -165,7 +273,9 @@ exports.create = function(req,res,next){
 
 
 
+*/
 
+    /*
 
 
 
@@ -198,104 +308,15 @@ exports.create = function(req,res,next){
         res.send(message("SUCCESS",doc));
 
     });
+    */
+
 };
 
-//删除文章---------------------------------------------------
+// 生成主订单
+function _create(order){
 
-/**
- * @alias /api/articles/:id[DELETE]
- * @description  删除文章
- * @param {String} id 文章id
- *
- * @return {Object} 删除文章的状态信息
- */
-exports.delete = function(req,res){
-    article.findByIdAndRemove({"_id":req.params.id},function(err,doc){
-        if (!doc) {//判断错误
-            return res.send(message("NOT_FOUND",null));
-        }else if (err) {
-            return res.send(message("ERROR",null,err));
-        }
-        category.findById(doc.category).exec(function(err,docs){
-            for (var i = 0; i < docs.article.length; i++) {//删除category保存的id
-                if (JSON.stringify(docs.article[i]) == JSON.stringify( req.params.id)) {
-                    docs.article.splice(i,1);
-                }
-            }
-            docs.save(function(err,doc){
-                console.log('删除完后的category',doc);
-            });
-        });
-        res.send(message("SUCCESS",doc));
-    });
-};
+}
 
-//修改文章 ---------------------------------
-
-/**
- * @alias /api/articles/:id[PATCH]
- * @description  修改文章
- * @param {String} id 文章id
- * @param {String=} title 文章标题
- * @param {String=} tag tag标签
- * @param {String=} image 文章封面
- * @param {String=} source 文章来源
- * @param {Number=} pushDate 发布时间
- * @param {String=} abstract 文章摘要
- * @param {String=} category 文章分类
- * @param {String=} content 文章内容
- * @param {String} author 文章作者
- *
- * @return {Object} 文章修改后的信息
-
- */
-exports.update = function(req,res){
-    article.findById(req.params.id,function(err,doc){
-        if (!doc) {
-            return res.send(message("NOT_FOUND",null));
-        }else if (err) {
-            return res.send(message("ERROR",err));
-        }
-        //先删除原来的分类
-        if (doc.category) {
-            category.findById(doc.category).exec(function(err,docs){
-                for (var i = 0; i < docs.article.length; i++) {//删除category保存的id
-                    if (JSON.stringify(docs.article[i]) == JSON.stringify( req.params.id)) {
-                        docs.article.splice(i,1);
-                    }
-                }
-                docs.save(function(err,doc){
-                    console.log('删除完后的category',doc);
-                });
-            });
-        }
-        //把文章id保存到新的分类中
-        category.findById(req.body.category).exec(function(err,cates){
-            cates.article.push(doc._id);
-            cates.save(function(err,doc){
-                // res.send(message("SUCCESS",doc));
-                console.log('修改后的category',doc);
-            });
-        });
-        var updateData = req.body;
-        var data = _.merge(doc,updateData);  //将传入的参数合并到原来的数据上
-        data.updatedBy = (req.user ? req.user.id : null); //修改人
-        // 写入数据库
-        data.save(function(err){
-            if (!err) {
-    			article.findById(req.params.id,function(err,doc){
-    				if (!err&&doc) {
-    					res.send(message("SUCCESS",doc));
-    				}else{
-    					return res.send(message("ERROR",null,err));
-    				}
-    			});
-    		}else{
-                return res.send(message("ERROR",null,err));
-            }
-        });
-    });
-};
 
 //查询，返回文章列表--------完成----------------------------------
 
@@ -331,7 +352,7 @@ exports.list = function(req,res){
     //if (req.query.category) {//匹配标签
     //    query = article.find({"category":req.query.category});
     //}else{
-        query = article.find({});//所有内容
+        query = model.find({});//所有内容
     //}
     //if (req.query.title) {//匹配文章标题
     //    query = query.where("title",new RegExp(req.query.title,'ig'));
@@ -362,9 +383,7 @@ exports.list = function(req,res){
     //默认排序
     query = query.sort({"updatedAt":"desc"});
     //显示分类名称
-    query.populate({
-        path:'category'
-    }).paginate(req.query.page, req.query.count, function(err, doc, total) {
+    query.paginate(req.query.page, req.query.count, function(err, doc, total) {
         if (!err) {
             res.send(message('SUCCESS', {data: doc,total: total}));
         } else {
@@ -405,110 +424,19 @@ exports.detail = function(req,res,next){
 
     });
 };
-//批量删除--------------------------------------
-/**
- * @alias /api/batch/articles/:ids[DELETE]
- * @description  批量删除文章
- * @param {String} ids 要删除的多个id字符串
- *
- * @return {Object} 删除后返回的状态
 
- */
-exports.batchDelete = function(req, res) {
-    var ids = req.params.ids.split(","); //拆分字符串，得到id数组
-    article.remove({"_id":{"$in" : ids}},function(err,doc){//$in 一个键对应多个值
-        if (!doc) {
-            return res.send(message("NOT_FOUND",null));
-        }else if (err) {
-            return res.send(message("ERROR",null,err));
-        }
-        category.findById(doc.category).exec(function(err,docs){
-            for (var i = 0; i < docs.article.length; i++) {//删除category保存的id
-                if (JSON.stringify(docs.article[i]) == JSON.stringify( req.params.id)) {
-                    docs.article.splice(i,1);
-                }
-            }
-            docs.save(function(err,doc){
-                console.log('删除完后的category',doc);
-            });
-        });
-        res.send(message("SUCCESS",doc));
-    });
-};
-//推荐文章--------------------------------------------------------------
-/**
- * @alias /api/articles/highlight/:ids[PATCH]
- * @description  批量推荐文章
- * @param {String} ids 要推荐的多个id字符串
- * @param {String} highlight 0为不推荐，1为推荐
-
- * @return {Object} 返回的状态
-
- */
-exports.highlight = function(req,res){
-    var ids = req.params.ids.split(","); //拆分字符串，得到id数组
-    article.update({"_id":{"$in" : ids}},{ "multi": true },{"highlight":req.body.highlight},function(err,doc){
-        if (!doc) {
-            return res.send(message("NOT_FOUND",null));
-        }else if (err) {
-            return res.send(message("ERROR",null,err));
-        }
-        res.send(message("SUCCESS",doc));
-    });
-};
-
-
-
-//置顶文章--------------------------------------------------------------
-/**
- * @alias /api/articles/top/:ids[PATCH]
- * @description  批量置顶文章
- * @param {String} ids 要置顶的多个id字符串
- * @param {String} top 0为不推荐，1为推荐
- *
- * @return {Object} 返回的状态
-
- */
-exports.top = function(req,res){
-    var ids = req.params.ids.split(","); //拆分字符串，得到id数组
-    article.update({"_id":{"$in" : ids}},{ "multi": true },{"top":req.body.top},function(err,doc){
-        if (!doc) {
-            return res.send(message("NOT_FOUND",null));
-        }else if (err) {
-            return res.send(message("ERROR",null,err));
-        }
-        res.send(message("SUCCESS",doc));
-    });
-};
-
-// pc端 查看某一文章----------------------------------------
-/**
- * @alias /api/pc/articles/:id[PATCH]
- * @description  添加文章
- * @param {String} id 文章id
- *
- * @return {Object} 查询到的文章信息
- */
-exports.detailpc = function(req,res,next){
-    req.validate('id', '必须制定删除的id').notEmpty();
-    req.validate('id', '必须是合法的id').isMongoId();
-    var errors = req.validationErrors();
-    if(errors){
-        return next(errors[0]);
+exports.login = function(req,res,next){
+    var username = req.body.username;
+    var password = req.body.password;
+    var user = {
+        "37162120": { username:"37162120", licenseId: "37162120", password:"123"},
+        "37162124": { username:"37162124", licenseId: "37162124", password:"123"},
+        "37162128": { username:"37162128", licenseId: "37162128", password:"123"},
+        "37162132": { username:"37162132", licenseId: "37162132", password:"123"},
     }
-    article.update({"_id":req.params.id},{"$inc":{"clicks" : 1}},function(err,docs){
-        var query = article.findById(req.params.id);
-        query.populate({
-            path: "category"
-        }).exec(function(err,doc){
-            if(!doc){
-                return res.send(message("NOT_FOUND",null));
-            }else if (err) {
-                res.send(message("ERROR",null,err));
-                return false;
-            }else{
-            res.send(message("SUCCESS",doc));
-            }
-        });
-    });
+    if( user[username] && username === user[username].licenseId  && password === user[username].password ){
+        return res.send(message("SUCCESS",{username:username, licenseId:username}));
+    } else {
+       return res.send(message("ERROR",null)); 
+    }
 };

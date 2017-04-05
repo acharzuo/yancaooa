@@ -105,7 +105,8 @@ var UserSchema = new BaseSchema({
         default: true
     },
     asFamilies: [FamilySchema], // 是谁的家人 
-    address: String // 地区
+    address: String, // 地区
+    licenseId:String, // "执法编号"
 });
 
 /**

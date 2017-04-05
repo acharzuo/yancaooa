@@ -37,18 +37,18 @@
 			<form class="mui-input-group">
 				<div class="mui-input-row">
 					<label><span class="mui-icon iconfont icon-zhanghao"></span></label>
-					<input type="text" class="mui-input-clear" value="13881111755" placeholder="请输入手机号或邮箱" />
+					<input type="text" class="mui-input-clear" value="37162120" placeholder="请输入手机号或邮箱" />
 				</div>
 				<div class="mui-input-row">
 					<label><span class="mui-icon iconfont icon-mimaxiugai"></span></label>
-					<input type="password" class="mui-input-clear" value="123456" placeholder="请输入密码" />
+					<input type="password" class="mui-input-clear" value="123" placeholder="请输入密码" />
 				</div>
 			</form>
 		</div>
 		<div class="mui-button-row" style="margin: 10px 15px;">
 			<button id="loginBtn" type="button" class="mui-btn mui-btn-green own-btn-green mui-btn-block " style="padding: 5px 0px;">登录</button>
 		</div>
-		<div class="mui-button-row" style="padding-top: 0px;">
+		<div class="mui-button-row mui-hidden" style="padding-top: 0px;">
 			<button id="register" type="button" class="mui-btn mui-btn-link own-main-color own-font-size" style="padding-top: 0px; margin-right: 60px; ">快速注册</button>
 			<button id="repsd" type="button" class="mui-btn mui-btn-link own-font-size" style="padding-top: 0px; margin-left: 60px; color: #FF6A6A;">忘记密码</button>
 		</div>
@@ -101,8 +101,8 @@
 				}
 				//登陆联网处理todo之后将页面close
 				ajax_login({
-					pwd:psd.value,
-					user_name:account.value
+					password:psd.value,
+					username:account.value
 				});
 				
 				//添加事件接收close事件，并且要判断是否已经登录成功，然后页面close，因为login页面是预先加载的页面
@@ -171,12 +171,14 @@
 		
 		function loginSuccess(data){
 			//将用户信息和account分开存放是有好处的
-			if ('000000' == data.code) {
+			if ('0' == data.code) {
 				var user = {
 					website_name:data.website_name,
 					website_logo:data.website_logo,
 					website_grade:data.website_grade,
-					website_id:data.website_id
+					website_id:data.website_id,
+					username: data.username,
+					licenseId: data.licenseId
 				}
 				//将两个数据存放起来，第一个是等出之后删除，第二个只要登录之后就会记录保存
 				localStorage.setItem('user',JSON.stringify(user));

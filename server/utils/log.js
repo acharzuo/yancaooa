@@ -4,10 +4,10 @@
 var log4js = require("log4js");
 
 // 读取log4js配置
-var log4js_config = require("./log4js.json");
+//var log4js_config = require("./log4js.json");
 
 // 加载配置文件
-log4js.configure(log4js_config);
+//log4js.configure(log4js_config);
 
 // 使用console格式输出文件系统
 var log = log4js.getLogger('console');

@@ -181,9 +181,9 @@
 				"android": {
 					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
 					"ldpi": "", /*大屏启动图片，分辨率：320x442*/
-					"hdpi": "", /*高分屏启动图片，分辨率：480x762*/
-					"xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
-					"xxhdpi": ""
+					"hdpi": "/Users/achar/Documents/P02_陈元祥/480p.png", /*高分屏启动图片，分辨率：480x762*/
+					"xhdpi": "/Users/achar/Documents/P02_陈元祥/720P.png", /*720P高分屏启动图片，分辨率：720x1242*/
+					"xxhdpi": "/Users/achar/Documents/P02_陈元祥/1080P.png"
 				}
 			},"debug":true
 		}
@@ -213,7 +213,8 @@
 					"product-detail-tem.html",
 					"tools/geolocation.html",
 					"tools/camera.html",
-					"Home/product-detail-needtem.html"
+					"Home/product-detail-needtem.html",
+					"tools/initial.html"
 				],
 				"priority": 0
 			},
@@ -226,7 +227,9 @@
 					"css/iconfont.css",
 					"css/mui.min.css",
 					"fonts/iconfont.ttf",
-					"js/own.js"
+					"js/own.js",
+					"Mine/my-dingdan-needtem.html",
+					"js/ajax.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -274,7 +277,8 @@
 					"css/iconfont.css",
 					"css/mui.min.css",
 					"js/ajax.js",
-					"img/default.png"
+					"img/default.png",
+					"img/jump.gif"
 				],
 				"refer": [],
 				"priority": 0
@@ -305,7 +309,9 @@
 					"js/mui.min.js",
 					"css/mui.min.css",
 					"fonts/mui.ttf",
-					"js/ajax.js"
+					"js/ajax.js",
+					"css/own.css",
+					"js/own.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -320,7 +326,9 @@
 			"tools/camera.html": {
 				"resources": [
 					"js/common.js",
-					"css/common.css"
+					"css/common.css",
+					"js/mui.min.js",
+					"js/ajax.js"
 				],
 				"refer": [
 					"tools/camera_image.html"
@@ -334,11 +342,21 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"tools/initial.html": {
+				"resources": [
+					"js/common.js",
+					"css/common.css",
+					"js/mui.min.js",
+					"css/mui.min.css",
+					"js/ajax.js"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
 			"resources": [
-				"Mine/my-dingdan-needtem.html",
 				"js/mui.pullToRefresh.js",
 				"js/mui.picker.min.js",
 				"js/mui.pullToRefresh.material.js",

@@ -1,2 +1,0 @@
-[2017-01-05 17:07:07.918] [INFO] console - ::1 - - "GET /api/pc/excellent HTTP/1.1" 200 60 "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) yuntianyuan_pc/1.0.0 Chrome/53.0.2785.143 Electron/1.4.13 Safari/537.36"
-[2017-01-05 17:07:16.812] [INFO] console - ::1 - - "GET /api/pc/excellent HTTP/1.1" 304 - "" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_2) AppleWebKit/537.36 (KHTML, like Gecko) yuntianyuan_pc/1.0.0 Chrome/53.0.2785.143 Electron/1.4.13 Safari/537.36"

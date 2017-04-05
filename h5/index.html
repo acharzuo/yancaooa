@@ -41,9 +41,9 @@
 			<span class="mui-icon iconfont icon-xinyuandan"></span>
 			<span class="mui-tab-label">测试</span>
 		</a>
-		<a class="mui-tab-item" href="baritemHtml/cart.html">
+		<a class="mui-tab-item" href="tools/initial.html">
 			<span class="mui-icon iconfont icon-cart"></span>
-			<span class="mui-tab-label">购物车</span>
+			<span class="mui-tab-label">初始化</span>
 		</a>
 		<a class="mui-tab-item" href="baritemHtml/mine.html">
 			<span class="mui-icon iconfont icon-wode"></span>
@@ -64,7 +64,7 @@
 			'baritemHtml/home.html',
 			'tools/geolocation.html', 
 			'tools/camera.html', 
-			'baritemHtml/cart.html', 
+			'tools/initial.html', 
 			'baritemHtml/mine.html'
 		];
 		var barItemWebView = {}; //每个tabitem所对应显示的页面对象
@@ -109,8 +109,9 @@
 		
 		//判断是否已经登陆
 		function judgelogin(){
+			console.log("judgelogin")
 //			//测试语句
-//			localStorage.removeItem('user');
+			localStorage.removeItem('user');
 			//判断是否已经登录成功//localstorage在页面关闭的时候也同样存在，sessionstorage页面关闭数据不存在
 			if (!localStorage.getItem('user')) {
 				mui.preload({

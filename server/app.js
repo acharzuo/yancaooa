@@ -119,7 +119,7 @@ app.use(function(err, req, res, next) {
 });
 
 
-module.exports = app;
-// app.listen(8029,function(err){
-//     console.log('listen on 8029');
-// });
+//module.exports = app;
+app.listen(8029,function(err){
+    console.log('listen on 8029');
+});
