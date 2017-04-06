@@ -8,6 +8,8 @@ var tool = require('../../utils/tools');
 
 var schema = new BaseSchema({
     name:       String,  // 企业(字号)名称
+    spellShortName: String, // 拼音简写
+    spellName:  String,  // 名称拼音
     image:      String,  // 门头图片
     licenseId:  String,  // 许可证号
     register: {          // 许可时间

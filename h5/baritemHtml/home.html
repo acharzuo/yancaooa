@@ -7,10 +7,11 @@
     <link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
     <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
     <link rel="stylesheet" type="text/css" href="../css/own.css"/>
+    		<link href="../css/mui.indexedlist.css" rel="stylesheet" />
     <style type="text/css">
-    		.mui-table-view:after {
+    		/*.mui-table-view:after {
     			height: 0px;
-    		}
+    		}*/
     		
     		
     		/*图片显示的时候设置为自动 因为 从服务器来的图片大小相同*/
@@ -31,6 +32,7 @@
     			border-radius: 5px; 
     			background-color: white;
     			width: 100%;
+    			height: 100%;
     		}
     		.mui-table-view  .mui-table-view-cell .mui-media-body {
     			margin-top: 2px;
@@ -76,13 +78,21 @@
 			.mui-plus.mui-android>.mui-progressbar{
 				top:0
 			}
-    	
+    			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+		
     		
     </style>
 </head>
 <body>
 	<div id="homeDiv" class="mui-content own-content-padding">
-		<div id="loading" style="margin-top: 70px; text-align: center;">
+		<div class="mui-input-row mui-search">
+			<input type="search" class="mui-input-clear" placeholder="搜索店铺/拼音/许可证号">
+		</div>
+		<div id="loading"  class="mui-hidden" style="margin-top: 70px; text-align: center;">
 			<a>
 				<span ><img src="../img/jump.gif" style="max-width:2em; height:auto;"/></span>
 			</a>
@@ -99,14 +109,15 @@
 				
 	</div>
 	
-	
 	<script src="../js/mui.min.js" charset="UTF-8"></script>
 	<script src="../js/own.js" charset="UTF-8"></script>
 	<script src="../js/ajax.js" charset="UTF-8"></script>
-
+	<script src="../js/mui.indexedlist.js"></script>
+	<script type="text/javascript" src="../js/baseShops.js" ></script>
+	<script type="text/javascript" src="../js/pinyin_dict_notone.js" ></script>
+	<script type="text/javascript" src="../js/pinyinUtil.js" ></script>
 	<script type="text/javascript" charset="UTF-8">
 
-			
 		mui.init({
 			swipeBack:false
 		});
@@ -121,6 +132,7 @@
 		var marqueeArray = [];//跑马灯数据数组
 		var recommendArray = [];//推荐商品数组
 		mui.plusReady(function(){
+			
 			currentWebview = plus.webview.currentWebview();
 			homeDiv = document.getElementById('homeDiv');
 			//进到这个函数说明plusready可以通信(解决为什么第一个显示的界面不没有触发show函数)
@@ -129,8 +141,7 @@
 			currentWebview.addEventListener('show',function(){
 				pasueLink();
 			},false);
-			
-	
+
 			//添加每个item点击的监听事件
 			mui('#recommend').on('tap','a',function(){
 				var item = this;
@@ -149,7 +160,7 @@
 				});
 			});
 		});
-		
+	
 		//与服务器通信
 		function pasueLink(){
 			if (!isLoadMarquee && marqueeArray.length<=0) {
@@ -161,8 +172,11 @@
 				isLoadRecommend = true;
 				    var value = (Date.now() + (new Date().getTimezoneOffset()*60*1000)) ;
     					value = value - value % 86400000;
-    					var user = localStorage.getItem("user")
-				ajax_get_Recommend({date:value, licenseId: user.licenseId});
+    					var user = localStorage.getItem("user");
+    					//var licenseId = user.licenseId ? user.licenseId : "";
+    					
+    					document.getElementById("loading").className = "";
+					ajax_get_Recommend({count: 10, page: 0 });
 			}
 		}
 		
@@ -176,16 +190,13 @@
 		}
 		function getRecommendSuccess(data){
 			if (data.code == '0') {
- 				if(!data.result.data.length) {
- 					mui.toast("未获取数据");
- 					return;
- 				}
-				var d = [data.result.data[0],data.result.data[0],data.result.data[0],data.result.data[0]];
+   				if(!data.result.data.length) {
+   					mui.toast("未获取数据");
+   					return;
+   				}
+				var d = shops;
 				mui.each(d,function(index,item){
 					var dataItem = {};
-				
-			
-
 					dataItem.name = item.name;
 					dataItem.address = item.address;
 					dataItem.image = item.image;
@@ -198,6 +209,7 @@
 				setRecommend();
 			}
 			isLoadRecommend = false;
+			document.getElementById("loading").className = "mui-hidden";
 		}
 		
 		function setMarquee(){
@@ -271,11 +283,10 @@
 				</a>';
 				recommend.appendChild(li);
 			});
-			loading.className = "mui-hidden" ;
+			
 			
 		}
-		
-		
+
 	</script>
 	
 </body>

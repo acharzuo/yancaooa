@@ -201,7 +201,8 @@
 					"js/load.js",
 					"fonts/iconfont.ttf",
 					"js/md5.js",
-					"fonts/mui.ttf"
+					"fonts/mui.ttf",
+					"tools/geolocation.html"
 				],
 				"refer": [
 					"template-main.html",
@@ -211,10 +212,10 @@
 					"baritemHtml/category.html",
 					"baritemHtml/cart.html",
 					"product-detail-tem.html",
-					"tools/geolocation.html",
 					"tools/camera.html",
 					"Home/product-detail-needtem.html",
-					"tools/initial.html"
+					"tools/initial.html",
+					"Home/shop_details_check.html"
 				],
 				"priority": 0
 			},
@@ -278,7 +279,13 @@
 					"css/mui.min.css",
 					"js/ajax.js",
 					"img/default.png",
-					"img/jump.gif"
+					"img/jump.gif",
+					"js/baseShops.js",
+					"css/mui.indexedlist.css",
+					"js/mui.indexedlist.js",
+					"fonts/mui.ttf",
+					"js/pinyin_dict_notone.js",
+					"js/pinyinUtil.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -318,7 +325,8 @@
 			},
 			"template-main.html": {
 				"resources": [
-					"img/jump.gif"
+					"img/jump.gif",
+					"fonts/mui.ttf"
 				],
 				"refer": [],
 				"priority": 0

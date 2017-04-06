@@ -20,7 +20,7 @@
 			<form class="mui-input-group">
 				<div class="mui-input-row">
 					<label>许可证</label>
-					<input type="text" class="mui-input-clear mui-numbox-input" value="371621116239" id="licenseIdText" placeholder="请输入许可证号码">
+					<input type="text" class="mui-input-clear mui-numbox-input" value="37162111" id="licenseIdText" placeholder="请输入许可证号码">
 				</div>
 				<div class="button" onclick="searchId()">1. 查询许可证
 				</div>
@@ -183,7 +183,19 @@
 			}
 			var shop = currShop;
 			shop.geolocation = currPosition
-			ajax_post_shopInfo(shop);
+			ajax_post_shopInfo(shop, function(data){
+				
+				outSet("提交成功:");
+				var str = "";
+				str += data.result.licenseId + "提交成功！"
+				outLine(str);
+				address.value = "";
+				licenseIdText.value = "37162111";
+				licenseIdShow.value = "";
+				document.getElementById("gpsAddress").value="";
+				document.getElementById("gps").value="";
+				
+			});
 		}
 	</script>
 

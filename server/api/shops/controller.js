@@ -11,50 +11,6 @@ var returnFactory = require('../../utils/returnFactory');
 
 //添加文章--完成----------------------------------------------
 
-exports.create1 = function(req,res,next){
-    console.log(req.body);
-    var body = JSON.parse(req.body.data);
-    //参数校验
-    req.validate('data','无可用数据').notEmpty();
-    var errors = req.validationErrors();
-    if (errors) {
-        return next(errors[0]);
-    }
-
-    // 处理日期格式
-    body.shop.register = new Date(body.shop.register).getTime();
-    body.shop.expire = new Date(body.shop.expire).getTime();
-
-
-
-    var data = {
-        createdBy : (req.user ? req.user.id : null), //创建人
-        name:       body.shop.name,      // 企业名称
-        image:      body.shop.image,     // 门头图片
-        address:    body.shop.address,   // 地址
-        licenseId:  body.shop.licenseId, // 许可证号码
-        manager:    body.shop.manager,   // 负责人姓名
-        register:   body.shop.register,  // 注册日期
-        expire:     body.shop.expire,    // 到期日期
-        status:     body.shop.status,    // 店铺状态
-        geolocation: body.geolocation,   // 地理位置
-        coords:
-            body.geolocation.coords
-    };
-
-
-    //创建店铺
-    model.create(data,function(err,doc){
-        if (err) {
-            console.log(err);
-            return res.send(message("ERROR",null,err));
-        }
-
-        res.send(message("SUCCESS",doc));
-
-    });
-};
-
 
 
 exports.create = function(req, res, next) {
@@ -131,9 +87,22 @@ exports.create = function(req, res, next) {
 
 // 列表
 exports.list = function(req,res){
+    
+    var key = req.body.key;
+    var page = req.body.page;
+    var count = req.body.count;
 
     var query;
     query = model.find({});//所有内容
+
+ if(key){//简单查询
+        query = query.or([
+            { 'name': new RegExp(key, 'ig')},
+             {'spellName': new RegExp(key, 'ig')},
+             {'splellShortName': new RegExp(key, 'ig')},
+
+        ]);
+    }
 
     // 选择排序
     if(req.query.fields){
@@ -149,7 +118,7 @@ exports.list = function(req,res){
     //默认排序
     query = query.sort({"updatedAt":"desc"});
     //显示分类名称
-    query.paginate(req.query.page, req.query.count, function(err, doc, total) {
+    query.paginate(page, count, function(err, doc, total) {
         if (!err) {
             res.send(message('SUCCESS', {data: doc,total: total}));
         } else {
