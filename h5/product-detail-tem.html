@@ -25,7 +25,7 @@
 	
 	<header class="mui-bar mui-bar-nav">
 		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-		<h1 class="mui-title">商品详情</h1>
+		<h1 class="mui-title">店铺详情</h1>
 	</header>
 	
 	
@@ -64,6 +64,7 @@
 					console.log(JSON.stringify(e.detail));
 					detailsub.loadURL(e.detail.id);
 					self.show(e.detail.aniShow);
+					console.log(e.detail.id + "打开");
 				}
 			},false);
 			

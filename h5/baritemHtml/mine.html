@@ -186,6 +186,7 @@
 			//点击等出
 			logoutBtn.addEventListener('tap',function(){
 				var account = localStorage.getItem('account');
+				logoutSuccess({code : "0"});
 				ajax_logout({
 					account:account
 				});
@@ -208,7 +209,7 @@
 		//退出登录成功
 		function logoutSuccess(data){
 			mui.toast('已经退出登录，需要重新登录');
-			if (data.code == '000000') {
+			if (data.code == '0') {
 				localStorage.removeItem('user');
 				logoutBtn.style.display = 'none';
 				touxiangimg.style.display = 'inline';

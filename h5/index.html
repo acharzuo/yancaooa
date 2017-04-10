@@ -33,7 +33,7 @@
 			<span class="mui-icon iconfont icon-home"></span>
 			<span class="mui-tab-label">首页</span>
 		</a>
-		<a class="mui-tab-item" href="tools/geolocation.html">
+		<a class="mui-tab-item" href="baritemHtml/geolocation.html">
 			<span class="mui-icon mui-icon-map"></span>
 			<span class="mui-tab-label">定位</span>
 		</a>
@@ -62,7 +62,7 @@
 		var curTabItem; //当前被选中tabitem
 		var barItemUrl = [
 			'baritemHtml/home.html',
-			'tools/geolocation.html', 
+			'baritemHtml/geolocation.html', 
 //			'tools/camera.html', 
 //			'tools/initial.html', 
 			'baritemHtml/mine.html'
@@ -109,9 +109,11 @@
 		
 		//判断是否已经登陆
 		function judgelogin(){
-			console.log("judgelogin")
+			console.log("judgelogin");
+			console.log(localStorage.user);
 //			//测试语句
-			localStorage.removeItem('user');
+			//localStorage.removeItem('user');
+			
 			//判断是否已经登录成功//localstorage在页面关闭的时候也同样存在，sessionstorage页面关闭数据不存在
 			if (!localStorage.getItem('user')) {
 				mui.preload({
@@ -260,6 +262,8 @@
 //				mui.each(list,function(index,item){
 //					console.log(item.id);
 //				});
+				console.log("window.addEventListener('newWebView'");
+				console.log(JSON.stringify(options.detail));
 				
 				var id = options.detail.id;
 				var href = options.detail.href;
@@ -295,7 +299,7 @@
 							loginWebView.show(aniShow);
 						},false);
 					}
-				}else if(id == 'Home/product-detail-needtem.html'){ 
+				}else if(id == 'baritemHtml/geolocation.html'){ 
 					var productID = options.detail.product_id;
 					mui.fire(detailTem,'detailTemplate',{
 						id:id,

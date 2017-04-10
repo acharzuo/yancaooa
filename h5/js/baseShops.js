@@ -2409,4 +2409,5 @@ var shops = {
 "371621116236":{"licenseId":"371621116236","name":"三农酒水超市","manager":"杜元军","register":"2017-03-06","expire":"2018-12-31","address":"山东省滨州市惠民县皂户李镇大杜村","status":"初始申请","spellShortName":"snjscs","spellName":"sannongjiushuichaoshi","image":"title.png"},
 "371621116237":{"licenseId":"371621116237","name":"瑞瑞副食批发","manager":"陈士军","register":"2017-03-06","expire":"2018-12-31","address":"山东省滨州市惠民县何坊街道八里庄村","status":"初始申请","spellShortName":"rrfspf","spellName":"ruiruifusipifa","image":"title.png"},
 "371621116238":{"licenseId":"371621116238","name":"晶晶酒水副食批发","manager":"朱文晶","register":"2017-03-21","expire":"2018-12-31","address":"山东省滨州市惠民县何坊街道刘集村","status":"初始申请","spellShortName":"jjjsfspf","spellName":"jingjingjiushuifusipifa","image":"title.png"},
-"371621116239":{"licenseId":"371621116239","name":"新意书店","manager":"李守和","register":"2017-03-21","expire":"2018-12-31","address":"山东省滨州市惠民县胡集镇北李村","status":"初始申请","spellShortName":"xysd","spellName":"xinyishudian","image":"title.png"},};
+"371621116239":{"licenseId":"371621116239","name":"新意书店","manager":"李守和","register":"2017-03-21","expire":"2018-12-31","address":"山东省滨州市惠民县胡集镇北李村","status":"初始申请","spellShortName":"xysd","spellName":"xinyishudian","image":"title.png"},
+};

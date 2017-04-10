@@ -1,7 +1,7 @@
 {
 	"@platforms": ["android", "iPhone", "iPad"],
 	"id": "H5AA14495",/*应用的标识，创建应用时自动生成，勿手动修改*/
-	"name": "烟草监察",/*应用名称，程序桌面图标名称*/
+	"name": "烟草智能监察",/*应用名称，程序桌面图标名称*/
 	"version": {
 		"name": "1.0.0",/*应用版本名称*/
 		"code": "83"
@@ -215,7 +215,8 @@
 					"tools/camera.html",
 					"Home/product-detail-needtem.html",
 					"tools/initial.html",
-					"Home/shop_details_check.html"
+					"Home/shop_details_check.html",
+					"baritemHtml/geolocation.html"
 				],
 				"priority": 0
 			},
@@ -230,7 +231,8 @@
 					"fonts/iconfont.ttf",
 					"js/own.js",
 					"Mine/my-dingdan-needtem.html",
-					"js/ajax.js"
+					"js/ajax.js",
+					"img/touxiang.jpg"
 				],
 				"refer": [],
 				"priority": 0
@@ -265,7 +267,8 @@
 					"css/mui.min.css",
 					"js/load.js",
 					"js/md5.js",
-					"js/own.js"
+					"js/own.js",
+					"js/ajax.js"
 				],
 				"refer": [],
 				"priority": 0
@@ -361,6 +364,20 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"baritemHtml/geolocation.html": {
+				"resources": [
+					"css/own.css",
+					"js/common.js",
+					"js/own.js",
+					"js/mui.min.js",
+					"css/common.css",
+					"css/mui.min.css",
+					"js/ajax.js",
+					"js/baseShops.js"
+				],
+				"refer": [],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -375,7 +392,6 @@
 				"css/mui.css",
 				"js/city.data-3.js",
 				"Mine/changepsd-needtem.html",
-				"img/touxiang.jpg",
 				"Mine/change-address-needtem.html",
 				"Mine/remenberpsd-needtem.html",
 				"css/mui.picker.all.css",

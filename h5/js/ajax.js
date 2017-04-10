@@ -11,8 +11,10 @@ document.body.appendChild(load_element);
 
 
 	var httpUrl = "http://182.140.244.73:91/gateway/router?";
-	var baseUrl = "http://192.168.0.111:8029/"
-//	var baseUrl = "http://114.215.145.176:8029/";
+//	var baseUrl = "http://192.168.0.111:8029/"
+ 
+ //	var baseUrl = "http://192.168.31.103:8029/"
+	var baseUrl = "http://114.215.145.176:8029/";
 	var app_key = "9e304d4e8df1b74cfa009913198428ab";
 	var v = "v1.0";
 	var sign_method = "md5";

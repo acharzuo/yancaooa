@@ -8,114 +8,60 @@
     <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
     <link rel="stylesheet" type="text/css" href="../css/own.css"/>
     		<link href="../css/mui.indexedlist.css" rel="stylesheet" />
-    <style type="text/css">
-    		/*.mui-table-view:after {
-    			height: 0px;
-    		}*/
-    		
-    		
-    		/*图片显示的时候设置为自动 因为 从服务器来的图片大小相同*/
-    		.mui-table-view  .mui-table-view-cell .mui-media-object {
-    			line-height: auto;
-    			max-width: auto;
-    			height: auto;
-    			
-    			border-top-right-radius: 4px; 
-    			border-top-left-radius: 4px;
-    		}
-    		
-    		.mui-table-view-cell {
-    			margin-bottom: 10px;
-    		}
-    		.bgDiv {
-    			
-    			border-radius: 5px; 
-    			background-color: white;
-    			width: 100%;
-    			height: 100%;
-    		}
-    		.mui-table-view  .mui-table-view-cell .mui-media-body {
-    			margin-top: 2px;
-    			margin-bottom: 5px;
-    			height: auto;
-    		}
-    		
-    		.mui-table-view  .mui-table-view-cell .mui-media-body p {
-    			white-space:pre;
-    			color: black;
-    		}
-    		
-    		.mui-table-view  .mui-table-view-cell .mui-media-body .title {
-    			
-    			height: 30px;
-    			font-size: 1.1em;
-    			color: red;
-    		}
-    		
-    		.mui-table-view  .mui-table-view-cell .mui-media-body .licenseId {
-    			float: right;
-    			font-size: .8em;
-    			margin-left: 7%;
-    			color: red;
-    			margin-bottom: 10px;
-    			align-items: center;
-    		}
-    		.mui-table-view .mui-table-view-cell .mui-media-body .address {
-    			margin-top: 12px;
-    			float: left;
-    			font-size: 0.8em;
-    			margin-right: 7%;
-    		}
-    		
-    		.mui-table-view .mui-table-view-cell .mui-media-body .tag {
-    			margin-top: 12px;
-    			float: left;
-    			font-size: 0.8em;
-    			margin-right: 7%;
-    		}
-    		
-	/*Android平台使用父子webview，因此需要修改顶部进度条的显示位置*/
-			.mui-plus.mui-android>.mui-progressbar{
-				top:0
-			}
-    			html,
-			body {
-				height: 100%;
+    	
+		<style type="text/css">
+			/*.abs {
+				position: fixed;
+				
 				overflow: hidden;
+				background-color: #FFFFFF;
+				z-index: 15;
+			}*/
+			
+			.mui-table-view-cell .cell-body {
+				height:30px;
+				
 			}
+			.mui-table-view-cell .cell-body .title{
+				color: red;
+				display:inline-block;
+				font-size: 1.1em;
+			}
+			.mui-table-view-cell .cell-body .body{
+				
+				 
+			}
+			
+			.mui-table-view-cell .cell-body .licenseId{
+				color: gray;
+				float: left;
+				font-size: 0.8em;
+			}
+			
+			.mui-table-view-cell .cell-body .address{
+				color: black;
+				float: right;
+				font-size:0.8em;
+			}
+	
 		
-    		
     </style>
 </head>
 <body>
-	<div id="homeDiv" class="mui-content own-content-padding">
-		<div class="mui-input-row mui-search">
-			<input type="search" class="mui-input-clear" placeholder="搜索店铺/拼音/许可证号">
+	<div class="mui-content">
+			<div class="mui-input-row mui-search abs">
+					<input type="search" id="search" class="mui-input-clear" placeholder="搜索店铺/拼音/许可证号">
+			</div>
+				<ul id="recommend" class="mui-table-view padingtop">
+							
+				</ul>
+			
 		</div>
-		<div id="loading"  class="mui-hidden" style="margin-top: 70px; text-align: center;">
-			<a>
-				<span ><img src="../img/jump.gif" style="max-width:2em; height:auto;"/></span>
-			</a>
-			<br />
-			<span>加载中...</span>
-		</div>
-		<div id="productSlider" class="mui-slider">
-		</div>
-		<div class="">
-			<ul  id="recommend" class="mui-table-view">
-			</ul>
-		</div>
-		<div>
-				
-	</div>
-	
+			
 	<script src="../js/mui.min.js" charset="UTF-8"></script>
 	<script src="../js/own.js" charset="UTF-8"></script>
 	<script src="../js/ajax.js" charset="UTF-8"></script>
-	<script src="../js/mui.indexedlist.js"></script>
 	<script type="text/javascript" src="../js/baseShops.js" ></script>
-	<script type="text/javascript" src="../js/pinyin_dict_notone.js" ></script>
-	<script type="text/javascript" src="../js/pinyinUtil.js" ></script>
 	<script type="text/javascript" charset="UTF-8">
 
 		mui.init({
@@ -128,11 +74,13 @@
 		var isLoadMarquee = false;
 		var isLoadRecommend = false;
 		var currentWebview;
+		var parentWebView ;
 		var homeDiv;
 		var marqueeArray = [];//跑马灯数据数组
 		var recommendArray = [];//推荐商品数组
+	
 		mui.plusReady(function(){
-			
+			parentWebView = plus.webview.currentWebview().parent();
 			currentWebview = plus.webview.currentWebview();
 			homeDiv = document.getElementById('homeDiv');
 			//进到这个函数说明plusready可以通信(解决为什么第一个显示的界面不没有触发show函数)
@@ -140,23 +88,33 @@
 			//监听show事件请求数据
 			currentWebview.addEventListener('show',function(){
 				pasueLink();
+				isLogin();
 			},false);
-
+			
+			isLogin();
+	
+	
+			setRecommend("");
+			
 			//添加每个item点击的监听事件
 			mui('#recommend').on('tap','a',function(){
+				if(!isLogin()) return;
 				var item = this;
 				var itemID = this.getAttribute('href');
 				var indexWebview = plus.webview.getWebviewById('HBuilder');
 				var anishow = getaniShow();
-				//弹入分类商品列表
+				var extendOptions = {
+					licenseId: itemID
+				};
+				//弹入分类商品列表  商品详情
 				mui.fire(indexWebview,'newWebView',{
-					id:'Home/shop_details_check.html',
-					href:'Home/shop_details_check.html',
+					id:'baritemHtml/geolocation.html',
+					href:'baritemHtml/geolocation.html',
 					aniShow:anishow,
 					title:'店铺检测内容',
 					isBars:false,
 					barsIcon:'',
-					shopId:itemID,
+					product_id: itemID
 				});
 			});
 		});
@@ -175,9 +133,28 @@
     					var user = localStorage.getItem("user");
     					//var licenseId = user.licenseId ? user.licenseId : "";
     					
-    					document.getElementById("loading").className = "";
-					ajax_get_Recommend({count: 10, page: 0 });
+    					//document.getElementById("loading").className = "";
+					//ajax_get_Recommend({count: 10, page: 0 });
 			}
+		}
+	
+		function isLogin(){
+			if(!localStorage.getItem("user")){
+				var parentWebView = plus.webview.currentWebview().parent();
+				var href = "Mine/login.html";
+				var id = "Mine/login.html";
+				var aniShow = 'slide-in-bottom';
+				var title = '登录';
+				
+				mui.fire(parentWebView,'newWebView',{
+					id:id,
+					href:href,
+					aniShow:aniShow,
+					title:title
+				});
+				return false;
+			}
+			return true;
 		}
 		
 		function getMarqueeSuccess(data){
@@ -209,7 +186,6 @@
 				setRecommend();
 			}
 			isLoadRecommend = false;
-			document.getElementById("loading").className = "mui-hidden";
 		}
 		
 		function setMarquee(){
@@ -263,30 +239,66 @@
 		}
 		
 		//设置推荐商品
-		function setRecommend(){
+		function setRecommend(keyword){
 			var recommend = document.getElementById('recommend');
-			var loading = document.getElementById("loading");
-			mui.each(recommendArray,function(index,item){
-				var li = document.createElement('li');
-				li.className = 'mui-table-view-cell mui-media';
-				li.innerHTML = '<a href="'+item.licenseId+'">\
-					<div class= "bgDiv mui-media-large">\
-						<img class="mui-media-object mui-pull-left" src="../img/default.png?'+item.Image+'"/>\
-						<div class="mui-media-body">\
-							<span class="title">'+item.name+'</span>\
-							<span class="licenseId">'+item.licenseId+'</span>\
-							<span class="address">'+item.address+'</span>\
-						</div>\
-						<span class="mui-badge mui-badge-primary">重点</span>\
-						<span class="mui-badge mui-badge-success">' + (item.isCoords?"GPS":"无GPS") + '</span>\
-					</div>\
-				</a>';
-				recommend.appendChild(li);
-			});
-			
-			
+			//if(keyword)recommend.removeChild();
+			var childs = recommend.childNodes;
+			for(var i = childs.length - 1; i >= 0; i--) { 
+				  //alert(childs[i].nodeName); 
+				  recommend.removeChild(childs[i]); 
+			}
+			var count = 0; 	// 显示的行数
+			var MaxCount = 30; // 最大显示行数
+			for(var key in shops){
+				if(count >= MaxCount) return;	// 超过行数则跳出不继续增加
+				var name = (shops[key].name || '').toLowerCase();
+				var spellName = (shops[key].spellName || '').toLowerCase();
+				var spellShortName = (shops[key].spellShortName || '').toLowerCase();
+				var licenseId = (shops[key].licenseId || '').toLowerCase();
+				
+				if (name && ( name.indexOf(keyword) >= 0 ||
+					spellName.indexOf(keyword) >= 0 ||
+					spellShortName.indexOf(keyword) >= 0 ||
+					licenseId.indexOf(keyword) >= 0) ){
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '<a href="'+shops[key].licenseId+'">\
+							<div class="cell-body">\
+								<span class="title">' +shops[key].name+'</span>\
+								<span class="mui-badge mui-badge-primary">重点</span>\
+								<span class="mui-badge mui-badge-success">' + (shops[key].isCoords?"GPS":"无GPS") + '</span>\
+								<div class="body">\
+									<span class="licenseId">'+shops[key].licenseId+'</span>\
+								</div>\
+								<div class="address">'+shops[key].address+'</div>\
+							</div>\
+						</a>';	
+						recommend.appendChild(li);
+						count ++;
+				}
+				if(count == MaxCount){
+					var li = document.createElement('li');
+					li.className = 'mui-table-view-cell';
+					li.innerHTML = '<div class= "more">\
+										需要继续输入条件后显示\
+									</div>\
+					';
+					recommend.appendChild(li);
+				}
 		}
-
+	}
+		
+		var searchInput = document.getElementById("search");
+			searchInput.addEventListener('input', function() {
+				var keyword = this.value;
+				//self.search(keyword);
+				setRecommend(keyword);
+			}, false);
+		
+			mui(".mui-search").on('tap', ".mui-icon-clear", function() {
+				setRecommend("");
+			}, false);
+			
 	</script>
 	
 </body>
