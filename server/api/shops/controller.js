@@ -52,10 +52,10 @@ exports.create = function(req, res, next) {
                     cb(null);
                 } else {
                     
-        doc.geolocation= body.geolocation ? body.geolocation : null,   // 地理位置
-        doc.coords= body.geolocation && body.geolocation.coords ?  body.geolocation.coords : null
-               data = doc;
-               cb(null);
+                doc.geolocation= body.geolocation ? body.geolocation : null,   // 地理位置
+                doc.coords= body.geolocation && body.geolocation.coords ?  body.geolocation.coords : null
+                data = doc;
+                cb(null);
                     //return res.json(returnFactory('DUP_SHOPID', null, err));
                 }
             })
@@ -66,6 +66,7 @@ exports.create = function(req, res, next) {
 
     function _createShop(cb) {
         //创建Entity，自带参数校验
+        console.log(typeof data);
         var newEntity = new model(data);
 
         // 更新修改人
@@ -74,7 +75,6 @@ exports.create = function(req, res, next) {
         // 写入数据库
         newEntity.save(function(err, doc) {
             if (!err) {
-
                 return res.json(returnFactory('SUCCESS', doc));
             } else {
                 return res.json(returnFactory('ERROR', null, err));
