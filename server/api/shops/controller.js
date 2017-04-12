@@ -72,10 +72,19 @@ exports.create = function(req, res, next) {
         // 更新修改人
         newEntity.updatedBy = newEntity.createdBy = req.user ? req.user.id : null;
 
+// Pro.update({'_id': {'$in': _id}},{deleted:1},{ "multi": true },function(err, doc){
+//     if(!err) {
+//       //返回被删除的对象
+//       return res.json(returnFactory('SUCCESS', doc));
+//     }else{
+//       return res.json(returnFactory('ERROR', null, err));
+//     }
+//   });
+
         // 写入数据库
-        newEntity.save(function(err, doc) {
+        model.update( newEntity , {upsert:true} , data, function(err, doc) {
             if (!err) {
-                return res.json(returnFactory('SUCCESS', doc));
+                return res.json(returnFactory('SUCCESS', newEntity));
             } else {
                 return res.json(returnFactory('ERROR', null, err));
             }
