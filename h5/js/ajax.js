@@ -1,12 +1,12 @@
 
 var new_element=document.createElement("script");
 new_element.setAttribute("type","text/javascript");
-new_element.setAttribute("src","js/md5.js");// 在这里引入了a.js
+new_element.setAttribute("src","../js/md5.js");// 在这里引入了a.js
 document.body.appendChild(new_element);
 
 var load_element=document.createElement("script");
 load_element.setAttribute("type","text/javascript");
-load_element.setAttribute("src","js/load.js");// 在这里引入了a.js
+load_element.setAttribute("src","../js/load.js");// 在这里引入了a.js
 document.body.appendChild(load_element);
 
 
