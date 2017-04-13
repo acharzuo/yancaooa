@@ -1,16 +1,16 @@
 {
 	"@platforms": ["android", "iPhone", "iPad"],
-	"id": "H5AA14495",/*应用的标识，创建应用时自动生成，勿手动修改*/
-	"name": "烟草智能监察",/*应用名称，程序桌面图标名称*/
+	"id": "H53740AB2",/*应用的标识，创建应用时自动生成，勿手动修改*/
+	"name": "DR-APCD市场监管",/*应用名称，程序桌面图标名称*/
 	"version": {
-		"name": "1.0.7",/*应用版本名称*/
+		"name": "1.0.8",/*应用版本名称*/
 		"code": "83"
 	},
 	"description": "",/*应用描述信息*/
 	"icons": {
 		"72": "icon.png"
 	},
-	"launch_path": "index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+	"launch_path": "html/shops_list.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
 	"developer": {
 		"name": "acharless",/*开发者名称*/
 		"email": "zuolifeng@sina.com",/*开发者邮箱地址*/
@@ -382,6 +382,37 @@
 				],
 				"refer": [],
 				"priority": 0
+			},
+			"html/geolocation.html": {
+				"resources": [
+					"js/common.js",
+					"js/mui.min.js",
+					"css/common.css",
+					"css/own.css",
+					"js/own.js",
+					"css/mui.min.css",
+					"js/ajax.js",
+					"js/baseShops.js",
+					"fonts/mui.ttf"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"html/shops_list.html": {
+				"resources": [
+					"css/own.css",
+					"js/own.js",
+					"fonts/mui.ttf",
+					"css/iconfont.css",
+					"css/mui.min.css",
+					"js/baseShops.js",
+					"js/ajax.js",
+					"js/mui.js"
+				],
+				"refer": [
+					"html/geolocation.html"
+				],
+				"priority": 0
 			}
 		},
 		"idle": {
@@ -400,7 +431,6 @@
 				"Mine/remenberpsd-needtem.html",
 				"css/mui.picker.all.css",
 				"css/mui.picker.min.css",
-				"js/mui.js",
 				"css/mui.poppicker.css",
 				"img/3.jpg",
 				"Mine/register-needtem.html",

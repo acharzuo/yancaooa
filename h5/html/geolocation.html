@@ -1,0 +1,245 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="MobileOptimized" content="320" />
+		<title>地理位置收集</title>
+
+		
+		<link rel="stylesheet" href="../css/mui.min.css" type="text/css" charset="utf-8" />
+		<link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="../css/own.css" />
+		<style>
+			.mui-content {
+				height : 100%
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="homeDiv" class="mui-content own-content-padding">
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>许可证</label>
+					<input type="text" class="mui-input-clear mui-numbox-input" value="37162111" id="licenseIdText" placeholder="请输入许可证号码">
+				</div>
+				<div class="button" onclick="searchId()">1. 查询许可证
+				</div>
+
+				<div class="mui-input-row">
+					<label>名称</label>
+					<input type="text" class="mui-input" readonly="true" id="licenseIdShow" placeholder="输入许可证号码自动显示">
+				</div>
+				<div class="mui-input-row">
+					<label>地址</label>
+					<input type="text" class="mui-input" readonly="true" id="address" placeholder="输入许可证号码自动显示">
+				</div>
+
+				<br/>
+
+				<div class="button" onclick="getGeocode()">
+					2. 获取定位 （需要打开GPS）
+				</div>
+				<div class="mui-input-row">
+					<label>GPS地址</label>
+					<input type="text" class="mui-input" readonly="true" id="gpsAddress" placeholder="点击获取定位取得">
+				</div>
+				<div class="mui-input-row">
+					<label>经纬度</label>
+					<input type="text" class="mui-input" readonly="true" id="gps" placeholder="点击获取定位取得">
+				</div>
+				<div class="button" onclick="sendData()">
+					3. 提交位置
+				</div>
+		</div>
+		</form>
+		<div id="output">
+			可获取设备位置信息，包括经度、纬度、高度等信息。
+		</div>
+
+	</body>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/baseShops.js"></script>
+
+	<script src="../js/own.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="../js/mui.min.js"></script>
+<!--	<script type="text/javascript" src="../js/immersed.js"></script>-->
+	<script src="../js/ajax.js" charset="UTF-8"></script>
+	<script>
+		mui.init({
+			swipeBack: true
+		});
+		var isLoadMarquee = false;
+		var isLoadRecommend = false;
+		var currentWebview;
+		var homeDiv;
+			
+		mui.plusReady(function() {
+			parentWebView = plus.webview.currentWebview().parent();
+			currentWebview = plus.webview.currentWebview();
+			console.log(JSON.stringify(currentWebview));
+			homeDiv = document.getElementById('homeDiv');
+			
+			document.getElementById("licenseIdText").value = currentWebview.licenseId;
+			searchId();
+			getPos();
+		
+		//进到这个函数说明plusready可以通信(解决为什么第一个显示的界面不没有触发show函数)
+			pasueLink();
+			//监听show事件请求数据
+			currentWebview.addEventListener('show',function(e){
+				console.log(JSON.stringify(e));
+				pasueLink();
+			},false);
+			
+			//获取服务器信息
+			mui.fire(parentWebView,'getproductid',{});
+			//监听返回getproductid事件
+			window.addEventListener('postproductid',function(e){
+				console.log('收到productid');
+				product_id = e.detail.product_id;
+				console.log('收到productid' + product_id);
+				document.getElementById("licenseIdText").value = product_id;
+				searchId();
+				getPos();
+				//像服务器请求
+//				ajax_get_product_detail({
+//					product_id:product_id
+//				});
+			},false);
+			
+		});
+		
+		//与服务器通信
+		function pasueLink(){
+		}
+		var watchId;
+		var currPosition;
+		var currShop;
+
+		function geoInf(position) {
+			currPosition = position;
+			document.getElementById("gpsAddress").value = position.addresses;
+
+			var str = "";
+			str += "地址：" + position.addresses + "\n"; //获取地址信息
+			str += "坐标类型：" + position.coordsType + "\n";
+			var timeflag = position.timestamp; //获取到地理位置信息的时间戳；一个毫秒数；
+			str += "时间戳：" + timeflag + "\n";
+			var codns = position.coords; //获取地理坐标信息；
+			var lat = codns.latitude; //获取到当前位置的纬度；
+			str += "纬度：" + lat + "\n";
+			var longt = codns.longitude; //获取到当前位置的经度
+			str += "经度：" + longt + "\n";
+
+			document.getElementById("gps").value = "(" + lat + "," + longt + ")";
+			var alt = codns.altitude; //获取到当前位置的海拔信息；
+			str += "海拔：" + alt + "\n";
+			var accu = codns.accuracy; //地理坐标信息精确度信息；
+			str += "精确度：" + accu + "\n";
+			var altAcc = codns.altitudeAccuracy; //获取海拔信息的精确度；
+			str += "海拔精确度：" + altAcc + "\n";
+			var head = codns.heading; //获取设备的移动方向；
+			str += "移动方向：" + head + "\n";
+			var sped = codns.speed; //获取设备的移动速度；
+			str += "移动速度：" + sped;
+			console.log(JSON.stringify(position));
+			outLine(str);
+		}
+
+		function getPos() {
+			outSet("获取位置信息:");
+			plus.geolocation.getCurrentPosition(geoInf, function(e) {
+				outSet("获取位置信息失败：" + e.message);
+			}, { geocode: false });
+		}
+
+		function watchPos() {
+			if(watchId) {
+				return;
+			}
+			watchId = plus.geolocation.watchPosition(function(p) {
+				outSet("监听位置变化信息:");
+				geoInf(p);
+			}, function(e) {
+				outSet("监听位置变化信息失败：" + e.message);
+			}, { geocode: false });
+		}
+
+		function clearWatch() {
+			if(watchId) {
+				outSet("停止监听位置变化信息");
+				plus.geolocation.clearWatch(watchId);
+				watchId = null;
+			}
+		}
+		// 通过定位模块获取位置信息
+		function getGeocode() {
+			outSet("获取定位位置信息:");
+			plus.geolocation.getCurrentPosition(geoInf, function(e) {
+				outSet("获取定位位置信息失败：" + e.message);
+			}, { geocode: true, provider: 'amap' });
+		}
+
+		// 许可证变化事件处理
+		var licenseIdText = document.getElementById("licenseIdText");
+		var licenseIdShow = document.getElementById("licenseIdShow");
+		var address = document.getElementById("address");
+		licenseIdText.addEventListener('blur', function() {
+			searchId();
+		});
+		// 查询许可证号码
+		function searchId() {
+			var id = licenseIdText.value;
+			if(!id || !shops[id]) {
+				mui.toast('请输入许可证后查询！');
+				return;
+			}
+			
+			var name = shops[id].name;
+			currShop = shops[id];
+			name = name ? name : "请输入完整的许可证号码";
+			licenseIdShow.value = name;
+
+			address.value = shops[id].address ? shops[id].address : "请输入完整的许可证号码";
+
+		}
+
+		function sendData() {
+			if(!currShop) {
+				mui.toast("请输入许可证号，选择店铺");
+				return;
+			}
+			if(!currPosition) {
+				mui.toast("请先获取定位");
+				return;
+			}
+			var shop = currShop;
+			shop.geolocation = currPosition
+			ajax_post_shopInfo(shop, function(data){
+				if(data.code == "0") {
+					outSet("提交成功:");
+					var str = "";
+					str += data.result.licenseId + "提交成功！"
+					outLine(str);
+					address.value = "";
+					licenseIdText.value = "3716211";
+					licenseIdShow.value = "";
+					document.getElementById("gpsAddress").value="";
+					document.getElementById("gps").value="";
+					
+				} else {
+					outSet("提交失败！请重新提交");
+				}
+				currShop = undefined;
+					currPosition = undefined;
+					shop = undefined;
+				
+			});
+		}
+	</script>
+
+</html>

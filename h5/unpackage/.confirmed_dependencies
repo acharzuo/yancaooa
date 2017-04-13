@@ -1,184 +1,30 @@
 {
-  "index.html": {
+  "html/geolocation.html": {
     "resources": [
-      "baritemHtml/home.html",
-      "css/own.css",
+      "js/common.js",
       "js/mui.min.js",
-      "css/iconfont.css",
+      "css/common.css",
+      "css/own.css",
+      "js/own.js",
       "css/mui.min.css",
       "js/ajax.js",
-      "js/load.js",
-      "fonts/iconfont.ttf",
-      "js/md5.js",
-      "fonts/mui.ttf"
-    ],
-    "refer": [
-      "baritemHtml/home.html",
-      "template-main.html",
-      "baritemHtml/mine.html",
-      "baritemHtml/xinyuandan.html",
-      "Mine/login.html",
-      "baritemHtml/category.html",
-      "baritemHtml/cart.html",
-      "product-detail-tem.html",
-      "tools/geolocation.html",
-      "tools/camera.html",
-      "Home/product-detail-needtem.html",
-      "tools/initial.html",
-      "Home/shop_details_check.html",
-      "baritemHtml/geolocation.html"
-    ]
-  },
-  "baritemHtml/mine.html": {
-    "resources": [
-      "img/bg.jpeg",
-      "css/own.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/iconfont.css",
-      "css/mui.min.css",
-      "fonts/iconfont.ttf",
-      "js/own.js",
-      "Mine/my-dingdan-needtem.html",
-      "js/ajax.js",
-      "img/touxiang.jpg",
-      "js/load.js",
-      "js/md5.js"
-    ],
-    "refer": [
-      "Mine/my-dingdan-needtem.html"
-    ]
-  },
-  "Mine/login.html": {
-    "resources": [
-      "js/own.js",
-      "fonts/mui.ttf",
-      "css/own.css",
-      "css/iconfont.css",
-      "css/mui.min.css",
-      "fonts/iconfont.ttf"
-    ],
-    "refer": []
-  },
-  "baritemHtml/cart.html": {
-    "resources": [
-      "js/wl_ajax.js",
-      "js/own.js"
-    ],
-    "refer": []
-  },
-  "product-detail-tem.html": {
-    "resources": [
-      "img/jump.gif",
-      "css/own.css",
-      "js/mui.min.js",
-      "fonts/mui.ttf",
-      "css/iconfont.css",
-      "css/mui.min.css",
-      "js/load.js",
-      "js/md5.js",
-      "js/own.js",
-      "js/ajax.js"
-    ],
-    "refer": []
-  },
-  "baritemHtml/home.html": {
-    "resources": [
-      "css/own.css",
-      "js/own.js",
-      "js/mui.min.js",
-      "css/iconfont.css",
-      "css/mui.min.css",
-      "js/ajax.js",
-      "img/default.png",
-      "img/jump.gif",
       "js/baseShops.js",
-      "css/mui.indexedlist.css",
-      "js/mui.indexedlist.js",
-      "fonts/mui.ttf",
-      "js/pinyin_dict_notone.js",
-      "js/pinyinUtil.js",
-      "js/load.js",
-      "js/md5.js"
-    ],
-    "refer": []
-  },
-  "baritemHtml/xinyuandan.html": {
-    "resources": [
-      "css/own.css",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/own.js"
-    ],
-    "refer": []
-  },
-  "baritemHtml/category.html": {
-    "resources": [
-      "js/mui.min.js",
-      "css/mui.min.css"
-    ],
-    "refer": []
-  },
-  "tools/geolocation.html": {
-    "resources": [
-      "js/common.js",
-      "css/common.css",
-      "js/baseShops.js",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "fonts/mui.ttf",
-      "js/ajax.js",
-      "css/own.css",
-      "js/own.js"
-    ],
-    "refer": []
-  },
-  "template-main.html": {
-    "resources": [
-      "img/jump.gif",
       "fonts/mui.ttf"
-    ],
-    "refer": []
-  },
-  "tools/camera.html": {
-    "resources": [
-      "js/common.js",
-      "css/common.css",
-      "js/mui.min.js",
-      "js/ajax.js"
-    ],
-    "refer": [
-      "tools/camera_image.html"
     ]
   },
-  "tools/camera_image.html": {
-    "resources": [
-      "js/common.js",
-      "css/common.css"
-    ],
-    "refer": []
-  },
-  "tools/initial.html": {
-    "resources": [
-      "js/common.js",
-      "css/common.css",
-      "js/mui.min.js",
-      "css/mui.min.css",
-      "js/ajax.js"
-    ],
-    "refer": []
-  },
-  "baritemHtml/geolocation.html": {
+  "html/shops_list.html": {
     "resources": [
       "css/own.css",
-      "js/common.js",
       "js/own.js",
-      "js/mui.min.js",
-      "css/common.css",
+      "fonts/mui.ttf",
+      "css/iconfont.css",
       "css/mui.min.css",
+      "js/baseShops.js",
       "js/ajax.js",
-      "js/baseShops.js"
+      "js/mui.js"
     ],
-    "refer": []
+    "refer": [
+      "html/geolocation.html"
+    ]
   }
 }

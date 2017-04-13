@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../css/mui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/own.css"/>
+    	
+		<style type="text/css">
+			/*.abs {
+				position: fixed;
+				
+				overflow: hidden;
+				background-color: #FFFFFF;
+				z-index: 15;
+			}*/
+			
+			.mui-table-view-cell .cell-body {
+				height:30px;
+				
+			}
+			.mui-table-view-cell .cell-body .title{
+				color: red;
+				display:inline-block;
+				font-size: 1.1em;
+			}
+			.mui-table-view-cell .cell-body .body{
+				
+				 
+			}
+			
+			.mui-table-view-cell .cell-body .licenseId{
+				color: gray;
+				float: left;
+				font-size: 0.8em;
+			}
+			
+			.mui-table-view-cell .cell-body .address{
+				color: black;
+				float: right;
+				font-size:0.8em;
+			}
+	
+		
+    </style>
+</head>
+<body>
+	<div class="mui-content">
+			<div class="mui-input-row mui-search abs">
+					<input type="search" id="search" class="mui-input-clear" placeholder="搜索店铺/拼音/许可证号">
+			</div>
+				<ul id="recommend" class="mui-table-view padingtop">
+							
+				</ul>
+			
+		</div>
+			
+	<script src="../js/mui.js" charset="UTF-8"></script>
+	<script src="../js/own.js" charset="UTF-8"></script>
+	<script src="../js/ajax.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="../js/baseShops.js" ></script>
+	<script type="text/javascript" charset="UTF-8">
+
+		mui.init({
+			swipeBack:false
+		});
+		
+		
+		//将ios中独有的东西在android上屏蔽
+		
+		var isLoadMarquee = false;
+		var isLoadRecommend = false;
+		var currentWebview;
+		var parentWebView ;
+		var homeDiv;
+		var marqueeArray = [];//跑马灯数据数组
+		var recommendArray = [];//推荐商品数组
+	
+		mui.plusReady(function(){
+			parentWebView = plus.webview.currentWebview().parent();
+			currentWebview = plus.webview.currentWebview();
+			homeDiv = document.getElementById('homeDiv');
+			//进到这个函数说明plusready可以通信(解决为什么第一个显示的界面不没有触发show函数)
+			pasueLink();
+			//监听show事件请求数据
+			currentWebview.addEventListener('show',function(){
+				pasueLink();
+				isLogin();
+			},false);
+			
+			isLogin();
+	
+	
+			setRecommend("");
+			
+			//添加每个item点击的监听事件
+			mui('#recommend').on('tap','a',function(){
+			
+				var item = this;
+				var itemID = this.getAttribute('href');
+				var indexWebview = plus.webview.getWebviewById('HBuilder');
+				var anishow = getaniShow();
+				var href = "geolocation.html";
+var webview_style = {
+					popGesture: "close"
+			};
+
+			
+				//非plus环境，直接走href跳转
+				if(!mui.os.plus){
+					location.href = href;
+					return;
+				};
+				//mui.openWindow("geolocation.html","geolocation.html",{});
+				
+			
+				mui.openWindowWithTitle({
+						url:href,
+						id:href,
+						styles:webview_style,
+						show:{
+							event:"loaded"
+						},
+						extras:{
+							licenseId: itemID
+						}
+					},{
+						title:{
+							text:"店铺签到"
+						},
+						back:{
+							image:{
+								base64Data:"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEUAAAAAev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8Aev8AAACubimgAAAAI3RSTlMAGfUTGfQTGPMSGPIYGhgaGBsXGxcbFxwXHBccFhwWHRYdHWufDPQAAAABYktHRACIBR1IAAAAB3RJTUUH4QETEBwooeTlkQAAAJVJREFUSMft1EkSgkAQRNFGUXFWHBDBibr/HTUwD5B/48Ig1y+io7u6MqUhf5hsNEY+j5hMgZ/FJ8Xc9ovos3T96utjbfqN/Nb0O/m96Uv5g+mP8ifTn+Ur01/ka9Nf5RvTt/I309/lH6Z/yr9Mn+Q71/MT8B34K/E58Enzv8R/K98HvnF8p3lr8F7izce7lbf3kJ/lDQp9HdBhgg3PAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE3LTAxLTE5VDE2OjI4OjQwKzA4OjAwpTDFwQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNy0wMS0xOVQxNjoyODo0MCswODowMNRtfX0AAAAASUVORK5CYII="
+							}
+						}
+					});
+					
+				//弹入分类商品列表  商品详情
+//				mui.fire(indexWebview,'newWebView',{
+//					id:'baritemHtml/geolocation.html',
+//					href:'baritemHtml/geolocation.html',
+//					aniShow:anishow,
+//					title:'店铺检测内容',
+//					isBars:false,
+//					barsIcon:'',
+//					product_id: itemID
+//				});
+			});
+		});
+	
+		//与服务器通信
+		function pasueLink(){
+			if (!isLoadMarquee && marqueeArray.length<=0) {
+				//开始请求
+				isLoadMarquee  = true;
+				//ajax_get_Marquee({});
+			}
+			if (!isLoadRecommend && recommendArray.length<=0) {
+				isLoadRecommend = true;
+				    var value = (Date.now() + (new Date().getTimezoneOffset()*60*1000)) ;
+    					value = value - value % 86400000;
+    					var user = localStorage.getItem("user");
+    					//var licenseId = user.licenseId ? user.licenseId : "";
+    					
+    					//document.getElementById("loading").className = "";
+					//ajax_get_Recommend({count: 10, page: 0 });
+			}
+		}
+	
+		function isLogin(){
+			if(!localStorage.getItem("user")){
+				var parentWebView = plus.webview.currentWebview().parent();
+				var href = "Mine/login.html";
+				var id = "Mine/login.html";
+				var aniShow = 'slide-in-bottom';
+				var title = '登录';
+				
+				mui.fire(parentWebView,'newWebView',{
+					id:id,
+					href:href,
+					aniShow:aniShow,
+					title:title
+				});
+				return false;
+			}
+			return true;
+		}
+		
+		function getMarqueeSuccess(data){
+			if (data.code == '000000') {
+				marqueeArray = data.paomadeng;
+				//设置跑马灯
+				setMarquee();
+			}
+			isLoadMarquee = false;
+		}
+		function getRecommendSuccess(data){
+			if (data.code == '0') {
+   				if(!data.result.data.length) {
+   					mui.toast("未获取数据");
+   					return;
+   				}
+				var d = shops;
+				mui.each(d,function(index,item){
+					var dataItem = {};
+					dataItem.name = item.name;
+					dataItem.address = item.address;
+					dataItem.image = item.image;
+					dataItem.licenseId = item.licenseId;
+					dataItem.manager = item.manager;
+					dataItem.isCoords = !!item.coords;
+					recommendArray.push(dataItem);
+				});
+				//设置推荐商品
+				setRecommend();
+			}
+			isLoadRecommend = false;
+		}
+		
+		function setMarquee(){
+			var sliderMarquee = document.getElementById('productSlider');
+			var sliderGroup = document.createElement('div');
+			sliderGroup.className = 'mui-slider-group mui-slider-loop';
+			sliderMarquee.appendChild(sliderGroup);
+			var sliderIndicator = document.createElement('div');
+			sliderIndicator.className = 'mui-slider-indicator';
+			sliderMarquee.appendChild(sliderIndicator);
+			
+			for (var i = 0; i < marqueeArray.length; i++) {
+				
+				if (0 == i) {
+					var sliderItemDuplicate = document.createElement('div');
+					sliderItemDuplicate.className = 'mui-slider-item mui-slider-item-duplicate';
+					sliderItemDuplicate.innerHTML = '<a href="'+marqueeArray[marqueeArray.length-1].contentId+'">\
+							<img src="'+marqueeArray[marqueeArray.length-1].imagerpath+'" />\
+						</a>';
+					sliderGroup.appendChild(sliderItemDuplicate);
+				}
+				
+				
+				var sliderItem = document.createElement('div');
+				sliderItem.className = 'mui-slider-item';
+				sliderItem.innerHTML = '<a href="'+marqueeArray[i].contentId+'">\
+						<img src="'+marqueeArray[i].imagerpath+'" />\
+					</a>';
+				sliderGroup.appendChild(sliderItem);
+					
+				var indicatorItme = document.createElement('div');
+				if (i == 0) {
+					indicatorItme.className = 'mui-indicator mui-active';
+				}else {
+					indicatorItme.className = 'mui-indicator';
+				}
+				sliderIndicator.appendChild(indicatorItme);
+				
+				if (marqueeArray.length-1 == i) {
+					var sliderItemDuplicate = document.createElement('div');
+					sliderItemDuplicate.className = 'mui-slider-item mui-slider-item-duplicate';
+					sliderItemDuplicate.innerHTML = '<a href="'+marqueeArray[0].contentId+'">\
+							<img src="'+marqueeArray[0].imagerpath+'" />\
+						</a>';
+					sliderGroup.appendChild(sliderItemDuplicate);
+				}
+				
+				var slider = mui('.mui-slider');
+				slider.slider();
+			}
+		}
+		
+		//设置推荐商品
+		function setRecommend(keyword){
+			var recommend = document.getElementById('recommend');
+			//if(keyword)recommend.removeChild();
+			var childs = recommend.childNodes;
+			for(var i = childs.length - 1; i >= 0; i--) { 
+				  //alert(childs[i].nodeName); 
+				  recommend.removeChild(childs[i]); 
+			}
+			var count = 0; 	// 显示的行数
+			var MaxCount = 30; // 最大显示行数
+			for(var key in shops){
+				if(count >= MaxCount) return;	// 超过行数则跳出不继续增加
+				var name = (shops[key].name || '').toLowerCase();
+				var spellName = (shops[key].spellName || '').toLowerCase();
+				var spellShortName = (shops[key].spellShortName || '').toLowerCase();
+				var licenseId = (shops[key].licenseId || '').toLowerCase();
+				
+				if (name && ( name.indexOf(keyword) >= 0 ||
+					spellName.indexOf(keyword) >= 0 ||
+					spellShortName.indexOf(keyword) >= 0 ||
+					licenseId.indexOf(keyword) >= 0) ){
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+						li.innerHTML = '<a href="'+shops[key].licenseId+'">\
+							<div class="cell-body">\
+								<span class="title">' +shops[key].name+'</span>\
+								<span class="mui-badge mui-badge-primary">重点</span>\
+								<span class="mui-badge mui-badge-success">' + (shops[key].isCoords?"GPS":"无GPS") + '</span>\
+								<div class="body">\
+									<span class="licenseId">'+shops[key].licenseId+'</span>\
+								</div>\
+								<div class="address">'+shops[key].address+'</div>\
+							</div>\
+						</a>';	
+						recommend.appendChild(li);
+						count ++;
+				}
+				if(count == MaxCount){
+					var li = document.createElement('li');
+					li.className = 'mui-table-view-cell';
+					li.innerHTML = '<div class= "more">\
+										需要继续输入条件后显示\
+									</div>\
+					';
+					recommend.appendChild(li);
+				}
+		}
+	}
+		
+		var searchInput = document.getElementById("search");
+			searchInput.addEventListener('input', function() {
+				var keyword = this.value;
+				//self.search(keyword);
+				setRecommend(keyword);
+			}, false);
+		
+			mui(".mui-search").on('tap', ".mui-icon-clear", function() {
+				setRecommend("");
+			}, false);
+			
+	</script>
+	
+</body>
+</html>
